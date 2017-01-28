@@ -1,0 +1,26 @@
+{
+  "name": "wdi_team_project",
+  "version": "1.0.0",
+  "description": "Team Byte Project",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.9",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raginidua/WDI_TEAM_PROJECT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raginidua/WDI_TEAM_PROJECT/issues"
+  },
+  "homepage": "https://github.com/raginidua/WDI_TEAM_PROJECT#readme"
+}
