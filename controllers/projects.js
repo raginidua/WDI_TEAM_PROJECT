@@ -24,7 +24,7 @@ function projectsIndex(req, res) {
 //to create and save a new mongo document using the
 //information in the requests body
 function projectsCreate(req, res) {
-  const newProject = new Project(req.body);
+  const newProject = new Project(req.body.project);
   newProject.save((err, project) => {
     if (err) return res.status(500).json({
       message: 'something went wrong',
@@ -51,8 +51,44 @@ function projectsShow(req, res){
     if (!project) return res.status(400).json({
       message: 'no project found'
     });
-    return res.status(400).json({
+    return res.status(200).json({
       message: 'project shown',
+      project: project
+    });
+  });
+}
+
+//when project update function used project id taken from req parameters
+//and updated document taken from req body
+//mongoose used to find by id and update relevant document
+//pre update document send back in response
+function projectsUpdate(req, res) {
+  Project.findByIdAndUpdate(req.params.projectId, req.body.project, (err, project) => {
+    if (err) res.status(500).json({
+      message: 'something went wrong',
+      error: err
+    });
+    if (!project) res.status(400).json({
+      message: 'no project found'
+    });
+    res.status(200).json({
+      message: 'project updated',
+      project: project
+    });
+  });
+}
+
+function projectsDelete(req, res) {
+  Project.findByIdAndRemove(req.params.projectId, (err, project) => {
+    if (err) return res.status(500).json({
+      message: 'something went wrong',
+      error: err
+    });
+    if (!project) return res.status(400).json({
+      message: 'no project found'
+    });
+    return res.status(200).json({
+      message: 'project deleted',
       project: project
     });
   });
@@ -61,5 +97,7 @@ function projectsShow(req, res){
 module.exports = {
   index: projectsIndex,
   create: projectsCreate,
-  show: projectsShow
+  show: projectsShow,
+  update: projectsUpdate,
+  delete: projectsDelete
 };

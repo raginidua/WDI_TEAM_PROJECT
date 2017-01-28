@@ -11,7 +11,11 @@ router.route('/')
 
 //if get request made to localhost ... /api/projects/projectid
 //use projects show controller
+//if put use projects update controller
+//if delete use projects delete controller
 router.route('/:projectId')
-  .get(projects.show);
+  .get(projects.show)
+  .put(projects.update)
+  .delete(projects.delete);
 
 module.exports = router;
