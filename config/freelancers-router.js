@@ -14,8 +14,8 @@ router.route('/')
   .get(freelancers.index);
 
 router.route('/:id')
-  .get(freelancers.show);
-
-
+  .get(freelancers.show)
+  .put(freelancers.update)
+  .delete(freelancers.delete);
 
 module.exports = router;

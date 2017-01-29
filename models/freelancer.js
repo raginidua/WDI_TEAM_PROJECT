@@ -14,19 +14,25 @@ const freelancerSchema = new mongoose.Schema({
 }, {
   timestamps: true
 });
-
+//creating virtual of password
+//runs a set pw function which sets the value of the pw virtual & value of pw hash
 freelancerSchema
   .virtual('password')
   .set(setPassword);
 
+//create virtual of pw confirmation
+//runs the set pw confirmation which sets the value of pw confirmation
 freelancerSchema
   .virtual('passwordConfirmation')
   .set(setPasswordConfirmation);
 
+//path to passwordHash
+//run validatePasswordHash function which checks to see if there's a pw & if matches pw confirmation
 freelancerSchema
   .path('passwordHash')
   .validate(validatePasswordHash);
 
+//creating a method as part of the freelancers model which checks pw against the pw hash.
 freelancerSchema.methods.validatePassword = validatePassword;
 
 module.exports = mongoose.model('Freelancer', freelancerSchema);

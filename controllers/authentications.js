@@ -7,6 +7,8 @@ const Freelancer = require('../models/freelancer.js');
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
 
+//authenticationsRegister is used to create a new instance of a freelancer, based on the mongoose freelancer model.
+//This returns the freelancer object and a JWTtoken which enables information from the api to be accessed.
 function authenticationsRegister(req, res) {
   Freelancer.create(req.body.freelancer, (err, freelancer) => {
     console.log(req.body.freelancer);
@@ -26,6 +28,7 @@ function authenticationsRegister(req, res) {
   });
 }
 
+//authenticationsLogin searches for the email property of an existing freelancer object & returns and runs the validate pw function, and returns the freelancer json object & token.
 function authenticationsLogin(req, res) {
   Freelancer.findOne({ email: req.body.email }, (err, freelancer) => {
     console.log(req.body.email);
