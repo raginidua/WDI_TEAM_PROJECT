@@ -9,8 +9,8 @@ const freelancerSchema = new mongoose.Schema({
   githubAccount: { type: String, trim: true },
   personalWebsite: { type: String, trim: true },
   linkedIn: { type: String, trim: true },
-  projects: [{ type: mongoose.Schema.ObjectId, ref: 'Projects' }],
-  myProjects: [{ type: mongoose.Schema.ObjectId, ref: 'Projects' }]
+  projects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }],
+  myProjects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }]
 }, {
   timestamps: true
 });

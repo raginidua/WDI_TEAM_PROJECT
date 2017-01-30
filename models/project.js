@@ -5,11 +5,11 @@ const Project = new mongoose.Schema({
   description: {type: String, required: true},
   publicId: {type: String, required: true},
   leadFreelancer: {type: mongoose.Schema.ObjectId, ref: 'Freelancer'},
-  requiredTeamMembers: [{ type: mongoose.Schema.ObjectId, ref: 'Freelancer', required: true }],
-  pendingTeamMembers: [{ type: mongoose.Schema.ObjectId, ref: 'Freelancer', required: true }],
-  activeTeamMembers: [{ type: mongoose.Schema.ObjectId, ref: 'Freelancer', required: true }],
+  requiredTeamMembers: { type: Object, required: true },
+  pendingTeamMembers: [{ type: mongoose.Schema.ObjectId, ref: 'Freelancer' }],
+  activeTeamMembers: [{ type: mongoose.Schema.ObjectId, ref: 'Freelancer' }],
   budget: {type: Number, required: true},
-  deadLine: {type: Date, required: true}
+  timeframe: {type: Date, required: true}
 });
 
 module.exports = mongoose.model('Project', Project);

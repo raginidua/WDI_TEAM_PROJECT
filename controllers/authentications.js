@@ -11,7 +11,6 @@ const config = require('../config/config');
 //This returns the freelancer object and a JWTtoken which enables information from the api to be accessed.
 function authenticationsRegister(req, res) {
   Freelancer.create(req.body.freelancer, (err, freelancer) => {
-    console.log(req.body.freelancer);
     if (err) return res.status(500).json({
       message: 'Something went wrong',
       err
@@ -34,7 +33,7 @@ function authenticationsLogin(req, res) {
     console.log(req.body.email);
     if (err) return res.status(500).json({ message: 'Something went wrong' });
     if (!freelancer || !freelancer.validatePassword(req.body.password)) {
-      return res.status(401).json({ message: ' Unauthorized ' });
+      return res.status(401).json({ message: 'Incorrect login details' });
     }
 
     const token = jwt.sign(freelancer._id, config.secret, { expiresIn: 60*60*24});
