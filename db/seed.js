@@ -45,6 +45,29 @@ f3.save((err, user) => {
   console.log(`${user.firstName} was saved`);
 });
 
+const f4 = new Freelancer({
+  firstName: 'Davinder4',
+  lastName: 'Kaur',
+  email: 'dkaur4@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f4.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
+
+const f5 = new Freelancer({
+  firstName: 'Davinder5',
+  lastName: 'Kaur',
+  email: 'dkaur5@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f5.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
 
 const p1 = new Project({
   name: 'Davinder\'s project',
@@ -61,8 +84,8 @@ const p1 = new Project({
     IOSDev: 0,
     AndroidDev: 0
   },
-  pendingTeamMembers: [f2._id],
-  activeTeamMembers: [f3._id],
+  pendingTeamMembers: [f2._id, f4._id],
+  activeTeamMembers: [f3._id, f5._id],
 
   budget: 5000,
   timeframe: '10 Days'
@@ -87,8 +110,8 @@ const p2 = new Project({
     IOSDev: 0,
     AndroidDev: 0
   },
-  pendingTeamMembers: [f1._id],
-  activeTeamMembers: [f3._id],
+  pendingTeamMembers: [f1._id, f5._id ],
+  activeTeamMembers: [f3._id, f4._id],
 
   budget: 15000,
   timeframe: '13 Days'
