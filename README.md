@@ -10,13 +10,12 @@ in the project schema. CHANGED
 { freelancer: {                {
   //information         VS       //information
   }}                            }
-- Not sure that error handling is correct in register controller. - THIS HAS BEEN CHANGED SO THAT THE ERROR MESSAGE IS CLEARER. 
+- Not sure that error handling is correct in register controller. - THIS HAS BEEN CHANGED SO THAT THE ERROR MESSAGE IS CLEARER.
 - Project not Projects in freelancer model - CHANGED
 - deadLine to deadline in project controller - AS PER THE BELOW, CHANGED TO TIMEFRAME
 
-
 WIREFRAME DISCUSSION
 
-- Deadline vs timeframe - THIS HAS BEEN CHANGED TO TIMEFRAME
+- Deadline vs timeframe - THIS HAS BEEN CHANGED TO TIMEFRAME AND CHANGED TO A STRING
 - budget sliders
 - project show and user show need more info

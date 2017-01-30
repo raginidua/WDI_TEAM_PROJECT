@@ -1,0 +1,106 @@
+API EndPoints Based on User Flow
+
+Test 1
+{
+	"freelancer":
+	{ 
+	"firstName": "Davinder",
+	"lastName": "K",
+	"email": "davinder@ga.com", 
+	"password": "password",
+	"passwordConfirmation": "password"
+}	
+}
+
+Test 2
+
+	{ 
+	"email": "davinder@ga.com", 
+	"password": "password"
+}	
+
+Test 3
+http://localhost:3000/api/freelancers/588f23b807f0090cf4f93ae8
+
+Test 4
+{
+	"project": {
+		"name": "Davinders project", 
+	"description": "amazing",
+	"leadFreelancer": {
+		"_id": "588f23b807f0090cf4f93ae8"
+	}, 
+	"requiredTeamMembers": {
+		"UI": 1,
+		"UX": 2,
+		"frontEndDev": 0,
+		"backEndDev": 0,
+		"dataScientist": 0,
+		"marketing": 0,
+		"projectManager": 0,
+		"IOSDev": 1,
+		"AndroidDev": 1
+	},
+	"budget": 5000,
+	"timeframe": "10 Days"
+	}
+}	
+
+Test 5
+{
+	"freelancer": {
+		"firstName": "Davinder",
+		"lastName": "K",
+		"email": "davinder@ga.com",
+		"myProjects": [{
+			"_id": "588f289cc473180f9f57422b"
+		}],
+		"projects": []
+	}
+}
+
+Test 6
+http://localhost:3000/api/freelancers/588f2988c473180f9f57422c
+{
+	"freelancer":
+	{ 
+	"firstName": "Ragini",
+	"lastName": "D",
+	"email": "ragini@ga.com", 
+	"password": "password",
+	"passwordConfirmation": "password"
+}	
+}
+
+Test 7
+http://localhost:3000/api/projects
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfYnNvbnR5cGUiOiJPYmplY3RJRCIsImlkIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjpbODgsMTQzLDM1LDE4NCw3LDI0MCw5LDEyLDI0NCwyNDksNTgsMjMyXX0sImlhdCI6MTQ4NTc3NTgyOCwiZXhwIjoxNDg1ODYyMjI4fQ.EZgHxTkE7k7aJZkHzQoOclu_KPZtENGaoO4pEryDPa4
+
+Test 8
+http://localhost:3000/api/projects/588f289cc473180f9f57422b
+
+Test 9
+http://localhost:3000/api/projects/588f289cc473180f9f57422b
+{
+	"project": {
+		"name": "Davinders project",
+		"description": "amazing",
+		"activeTeamMembers": [],
+		"pendingTeamMembers": [{ 
+			"_id": "588f2988c473180f9f57422c"}]
+	}
+}
+
+
+Test 10
+http://localhost:3000/api/freelancers/588f2988c473180f9f57422c
+{
+	"freelancer": {
+		"projects": [{
+			"_id": "588f289cc473180f9f57422b"
+		}]
+	}
+}
+
+
