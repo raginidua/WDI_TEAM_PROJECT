@@ -1,14 +1,14 @@
 angular
   .module('teamBuilder')
-  .controller('UsersShowCtrl', UsersShowCtrl);
+  .controller('ProjectsShowCtrl', ProjectsShowCtrl);
 
-UsersShowCtrl.$inject = ['$stateParams', '$http'];
-function UsersShowCtrl($stateParams, $http) {
+ProjectsShowCtrl.$inject = ['$stateParams', '$http'];
+function ProjectsShowCtrl($stateParams, $http) {
   const vm = this;
   $http
-    .get(`http://localhost:3000/api/projects/${$stateParams.id}`)
+    .get(`http://localhost:3000/api/projects/${$stateParams.projectId}`)
     .then(response => {
-      vm.project = response.data;
+      console.log(response);
+      vm.project = response.data.project;
     });
-
 }
