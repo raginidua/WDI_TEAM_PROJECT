@@ -1,34 +1,197 @@
 
+<div class="row basic-project-info">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="name" type="text" class="validate" ng-model="projectsNew1.newProject.name">
+        <label for="name">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="customer" type="text" class="validate" ng-model="projectsNew1.newProject.customer">
+        <label for="customer">Customer</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="description" type="text" class="validate" ng-model="projectsNew1.newProject.description">
+        <label for="description">Description</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="budget" type="text" class="validate" ng-model="projectsNew1.newProject.budget">
+        <label for="budget">Budget</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="deadline" type="text" class="validate" ng-model="projectsNew1.newProject.deadline">
+        <label for="deadline">Deadline</label>
+      </div>
+    </div>
+    {{ projectsNew1.newProject }}
+    <a ui-sref="projectsNew2" class="waves-effect waves-light btn">Team Builder</a>
+  </form>
+</div>
+<div class="row project-requiredMembers-info">
+  <form class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          UX Designers
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          UI Designers
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          Front-End Devs
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          Back-End Devs
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          Data Scientists
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          Marketers
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          Project Managers
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          IOS Devs
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p class="range-field">
+          Andriod Devs
+          <input type="range" min="0" max="6" />
+        </p>
+      </div>
+    </div>
+    <a ui-sref="projectsNew3" class="waves-effect waves-light btn">Team Member Invites</a>
+  </form>
+  <!-- <form class="col s12">
   <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="name" type="text" class="validate">
-          <label for="name">Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="customer" type="text" class="validate">
-          <label for="customer">Customer</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="description" type="text" class="validate">
-          <label for="description">Description</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="budget" type="text" class="validate">
-          <label for="budget">Budget</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="deadline" type="text" class="validate">
-          <label for="deadline">Deadline</label>
-        </div>
-      </div>
-      <a ui-sref="projectsNew2" class="waves-effect waves-light btn">Team Builder</a>
-    </form>
-  </div>
+  <div class="row">
+  <div class="col s12">
+  <ul class="collapsible" data-collapsible="accordion">
+  <li>
+  <div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">4</span><i class="material-icons">assignment_ind</i>UX Designer</div>
+  <div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">2</span><i class="material-icons">assignment_ind</i>UI Designer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">1</span><i class="material-icons">assignment_ind</i> Front-End Devs</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">2</span><i class="material-icons">assignment_ind</i> Data Scientists</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">0</span><i class="material-icons">assignment_ind</i> Back-End Development</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">2</span><i class="material-icons">assignment_ind</i> Marketeer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">3</span><i class="material-icons">assignment_ind</i> IOS Developer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">1</span><i class="material-icons">assignment_ind</i>Andriod Developers</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+<a href="./member-invites.html" class="waves-effect waves-light btn">Team Member Invites</a>
+</div>
+</div>
+</form> -->
+</div>
