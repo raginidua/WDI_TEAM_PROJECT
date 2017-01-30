@@ -9,9 +9,9 @@ function UsersEditCtrl($stateParams, $state, $http) {
 
   function usersShow(){
     return $http
-      .get(`http://localhost:3000/api/users/${$stateParams.id}`)
+      .get(`http://localhost:3000/api/projects/${$stateParams.id}`)
       .then(response => {
-        vm.user = response.data;
+        vm.project = response.data;
       });
   }
 
