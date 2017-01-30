@@ -24,13 +24,13 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/projects/new/part3',
       templateUrl: '/js/views/projects/newPart3.html'
     })
-    .state('projectsApply', {
-      url: '/projects/:projectId/apply',
-      templateUrl: '/js/views/projects/apply.html'
+    .state('projectsShow', {
+      url: '/projects/:projectId/show',
+      templateUrl: '/js/views/projects/show.html'
     })
-    .state('projectsUpdate', {
-      url: '/projects/:projectId/update',
-      templateUrl: '/js/views/projects/update.html'
+    .state('projectsEdit', {
+      url: '/projects/:projectId/edit',
+      templateUrl: '/js/views/projects/edit.html'
     });
 
   $urlRouterProvider.otherwise('/');
