@@ -15,7 +15,9 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('projectsNew1', {
       url: '/projects/new/part1',
-      templateUrl: '/js/views/projects/newPart1.html'
+      templateUrl: '/js/views/projects/newPart1.html',
+      controller: 'ProjectsNew1Ctrl',
+      controllerAs: 'projectsNew1'
     })
     .state('projectsNew2', {
       url: '/projects/new/part2',
@@ -23,7 +25,9 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('projectsNew3', {
       url: '/projects/new/part3',
-      templateUrl: '/js/views/projects/newPart3.html'
+      templateUrl: '/js/views/projects/newPart3.html',
+      controller: 'ProjectsNew3Ctrl',
+      controllerAs: 'projectsNew3'
     })
     .state('projectsShow', {
       url: '/projects/:projectId/show',
