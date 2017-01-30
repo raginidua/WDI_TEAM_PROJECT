@@ -3,10 +3,10 @@ console.log('JS loaded');
 
 angular
   .module('teamBuilder', [
-
+    'ui.router'
   ]);
 
-// 
+//
 // (function($){
 //   $(function(){
 //

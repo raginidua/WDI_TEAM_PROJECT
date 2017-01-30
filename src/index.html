@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="teamBuilder">
 <head>
   <meta charset="utf-8">
   <title>Team Builder</title>
+  <base href="/">
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -12,20 +13,23 @@
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="./index.html" class="brand-logo">Team Builder</a>
+      <a ui-sref="/" class="brand-logo">Team Builder</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./projects.html">Projects</a></li><li><a href="./profile.html">Profile</a></li>
+        <li><a ui-sref="freelancersLogin">Login</a></li>
+        <li><a ui-sref="freelancersRegister">Register</a></li>
+        <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./projects.html">Projects</a></li><li><a href="./profile.html">Profile</a></li>
+        <li><a ui-sref="freelancersLogin">Login</a></li>
+        <li><a ui-sref="freelancersRegister">Register</a></li>
+        <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
       </ul>
     </div>
   </nav>
+
+  <main class="container" ui-view></main>
+
   <div class="row">
     <div class="col s12">
       <div class="card large blue-grey darken-1">
