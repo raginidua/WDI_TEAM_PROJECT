@@ -19,7 +19,8 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
     })
     .state('freelancersShow', {
       url: '/freelancers/:id',
-      templateUrl: '/js/views/freelancers/show.html'
+      templateUrl: '/js/views/freelancers/show.html',
+      controller: 'FreelancersShowCtrl as freelancers'
     })
     .state('freelancersEdit', {
       url: '/freelancers/:id/edit',
