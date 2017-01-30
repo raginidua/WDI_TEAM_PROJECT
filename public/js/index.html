@@ -1,53 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="teamBuilder">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
-
-  <!-- CSS  -->
+  <meta charset="utf-8">
+  <title>Team Builder</title>
+  <base href="/">
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="./index.html" class="brand-logo">Team Builder</a>
+      <a ui-sref="/" class="brand-logo">Team Builder</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./projects.html">Projects</a></li><li><a href="./profile.html">Profile</a></li>
+        <li><a ui-sref="freelancersLogin">Login</a></li>
+        <li><a ui-sref="freelancersRegister">Register</a></li>
+        <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./projects.html">Projects</a></li><li><a href="./profile.html">Profile</a></li>
+        <li><a ui-sref="freelancersLogin">Login</a></li>
+        <li><a ui-sref="freelancersRegister">Register</a></li>
+        <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
       </ul>
     </div>
   </nav>
+
+  <main class="container" ui-view></main>
+
   <div class="row">
-  <div class="col s12">
-    <div class="card large blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Team Builder</span>
-        <p>Simple web app to help build your team.</p>
-      </div>
-      <div class="card-action">
-        <a href="./login.html">Login</a>
-        <a href="./register.html">Register</a>
-        <a href="./projects.html">Projects</a>
+    <div class="col s12">
+      <div class="card large blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Team Builder</span>
+          <p>Simple web app to help build your team.</p>
+        </div>
+        <div class="card-action">
+          <a href="./login.html">Login</a>
+          <a href="./register.html">Register</a>
+          <a href="./projects.html">Projects</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-  <!--  Scripts-->
-  <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script> -->
-
 </body>
 </html>
