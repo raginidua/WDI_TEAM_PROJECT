@@ -10,7 +10,8 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('projectsIndex', {
       url: '/projects/index',
-      templateUrl: '/js/views/projects/index.html'
+      templateUrl: '/js/views/projects/index.html',
+      controller: 'ProjectsIndexCtrl as projects'
     })
     .state('projectsNew', {
       url: '/projects/new',
