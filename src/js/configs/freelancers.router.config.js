@@ -1,10 +1,10 @@
 angular
   .module('teamBuilder')
-  .config(Router);
+  .config(freelancerRouter);
 
-Router.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
+freelancerRouter.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 
-function Router($locationProvider, $stateProvider, $urlRouterProvider) {
+function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
 
   $stateProvider
@@ -21,7 +21,7 @@ function Router($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/js/views/freelancers/show.html'
     })
     .state('freelancersEdit', {
-      url: '/freelancers/:freelancerId',
+      url: '/freelancers/:freelancerId/edit',
       templateUrl: '/js/views/freelancers/edit.html'
     });
 
