@@ -8,8 +8,7 @@ const expressJWT        = require('express-jwt');
 const config            = require('./config/config');
 const projectsRouter    = require('./config/projects-router');
 const freelancersRouter = require('./config/freelancers-router');
-
-
+// const dest              = `${__dirname}/public`;
 const app               = express();
 
 //connect to mongoose database
@@ -25,6 +24,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+app.use('/', express.static('public'));
+app.use('/', express.static('bower_components'));
 app.use('/api', expressJWT({ secret: config.secret })
 .unless({
   path: [
@@ -47,6 +48,14 @@ function jwtErrorHandler(err, req, res, next){
 app.use('/api/projects', projectsRouter);
 app.use('/api/freelancers', freelancersRouter);
 
+app.get('/*', (req, res) => res.sendFile(`${__dirname}/public/index.html`));
 
 //telling app to listen at port 3000 and logging message at start
 app.listen(config.port, () => console.log(`server listening at port ${config.port}`));
+
+
+//can someone explain the below?
+
+// app.use('/', express.static('public'));
+// app.use('/', express.static('bower_components'));
+// app.get('/*', (req, res) => res.sendFile(`${__dirname}/public/index.html`));

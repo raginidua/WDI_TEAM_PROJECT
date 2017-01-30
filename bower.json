@@ -1,0 +1,21 @@
+{
+  "name": "wdi_team_project",
+  "description": "Team Byte Project",
+  "main": "index.js",
+  "authors": [
+    "raginidua <raginidua1@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/raginidua/WDI_TEAM_PROJECT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "materialize": "^0.98.0"
+  }
+}
