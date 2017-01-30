@@ -5,7 +5,11 @@ const Project = require('../models/project');
 //some error handling built into controller
 //messages sent with all responses to be more verbose
 function projectsIndex(req, res) {
-  Project.find({}, (err, projects) => {
+  Project
+  .find({})
+  .populate('activeTeamMembers', 'email')
+  .populate('pendingTeamMembers', 'email')
+  .exec((err, projects) => {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err
@@ -18,6 +22,7 @@ function projectsIndex(req, res) {
       projects: projects
     });
   });
+
 }
 
 //when projects create function used mongoose is used
