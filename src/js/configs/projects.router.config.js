@@ -13,21 +13,21 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/js/views/projects/index.html',
       controller: 'ProjectsIndexCtrl as projects'
     })
-    .state('projectsNew1', {
-      url: '/projects/new/part1',
-      templateUrl: '/js/views/projects/newPart1.html',
-      controller: 'ProjectsNew1Ctrl',
-      controllerAs: 'projectsNew1'
+    .state('projectsNew', {
+      url: '/projects/new',
+      templateUrl: '/js/views/projects/new.html',
+      controller: 'ProjectsNewCtrl',
+      controllerAs: 'projectsNew'
     })
-    .state('projectsNew2', {
-      url: '/projects/new/part2',
-      templateUrl: '/js/views/projects/newPart2.html'
-    })
-    .state('projectsNew3', {
-      url: '/projects/new/part3',
-      templateUrl: '/js/views/projects/newPart3.html',
-      controller: 'ProjectsNew3Ctrl',
-      controllerAs: 'projectsNew3'
+    // .state('projectsNew2', {
+    //   url: '/projects/new/part2',
+    //   templateUrl: '/js/views/projects/newPart2.html'
+    // })
+    .state('projectsInvites', {
+      url: '/projects/new/invites',
+      templateUrl: '/js/views/projects/invites.html',
+      controller: 'ProjectsInvitesCtrl',
+      controllerAs: 'projectsInvites'
     })
     .state('projectsShow', {
       url: '/projects/:id/show',
