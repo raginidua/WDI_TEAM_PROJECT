@@ -10,7 +10,8 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
   $stateProvider
     .state('freelancersRegister', {
       url: '/freelancers/register',
-      templateUrl: '/js/views/freelancers/register.html'
+      templateUrl: '/js/views/freelancers/register.html',
+      controller: 'FreelancersNewCtrl as freelancers'
     })
     .state('freelancersLogin', {
       url: '/freelancers/login',
@@ -22,7 +23,8 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
     })
     .state('freelancersEdit', {
       url: '/freelancers/:freelancerId/edit',
-      templateUrl: '/js/views/freelancers/edit.html'
+      templateUrl: '/js/views/freelancers/edit.html',
+      controller: 'FreelancersEditCtrl as freelancers'
     });
 
   $urlRouterProvider.otherwise('/');
