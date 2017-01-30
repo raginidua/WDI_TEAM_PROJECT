@@ -7,7 +7,6 @@ function FreelancersNewCtrl($http, $state) {
   const vm = this;
 
   vm.freelancersCreate = function freelancersCreate() {
-    console.log(vm.freelancer);
     return $http
       .post('http://localhost:3000/api/freelancers/register', vm.freelancer)
       .then(() => {
