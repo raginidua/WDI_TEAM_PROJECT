@@ -13,7 +13,7 @@ router.route('/login')
 router.route('/')
   .get(freelancers.index);
 
-router.route('/:freelancerId')
+router.route('/:id')
   .get(freelancers.show)
   .put(freelancers.update)
   .delete(freelancers.delete);
