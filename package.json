@@ -54,6 +54,9 @@
     "method-override": "^2.3.7",
     "mongoose": "^4.7.9",
     "morgan": "^1.7.0",
+    "nodemailer": "^2.7.2",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "sendgrid": "^4.7.1",
     "validator": "^6.2.1"
   },
   "devDependencies": {
