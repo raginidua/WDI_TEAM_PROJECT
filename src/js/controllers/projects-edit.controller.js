@@ -9,22 +9,34 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
   projectsShow();
 
   function projectsShow(){
-    console.log($stateParams.id);
     return $http
     .get(`http://localhost:3000/api/projects/${$stateParams.id}`)
     .then(response => {
-      vm.project = response.data;
+      vm.project = response.data.project;
     });
   }
 
-  vm.update = function projectsUpdate(memberid){
+  vm.acceptApplication =  acceptApplication;
+
+  function acceptApplication(role, memberid) {
+    console.log('ROLE', role);
+    console.log('MEMBERID', memberid);
+
+
+    console.log();
+
+    const applicantsArray = vm.project.waitingTeamMembers[role];
+    applicantsArray.indexOf(memberid);
+
     //the push and pull from the arrays needs to happen here
-    console.log(memberid);
+
+
+
     // return $http
     // .put(`http://localhost:3000/api/projects/${vm.project._id}`, vm.project)
     // .then(() => {
     //   $state.go('usersIndex');
     // });
-  };
+  }
 
 }

@@ -1,32 +1,28 @@
 <h1>Project edit page!!!</h1>
-<h1>hello</h1>
 <div class="row">
   <h1>{{ projects.project.name }}</h1>
   <h6>{{ projects.project.description }}</h6>
 
   <div class="col s12 m3">
     <div class="card">
-        <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
-        <!-- </a> -->
-      <div class="card-content">
-        <ul class="collection with-header">
-          <li class="collection-header">Budget</li>
-          <li class="collection-item">{{ projects.project.budget }}</li>
-        </ul>
-        <ul class="collection with-header">
-          <li class="collection-header">TimeFrame</li>
-          <li class="collection-item">{{ projects.project.timeframe }}</li>
-        </ul>
-        <ul class="collection with-header">
-          <li class="collection-header">Filled Positions</li>
-          <li class="collection-item" ng-repeat="member in projects.project.activeTeamMembers">{{ member.firstName }} {{ member.lastName }}</li>
-        </ul>
-        <ul class="collection with-header">
-          <li class="collection-header">Open Positions</li>
-          <li class="collection-item" ng-repeat="member in projects.project.pendingTeamMembers">{{ member.firstName }} {{ member.lastName }}
-            <button ng-submit="projects.projectsUpdate(member._id)"> Accept</button> </li>
+      <ul class="collection with-header">
+        <li class="collection-header">Required Team</li>
+        <li ng-repeat="(key, value) in projects.project.requiredTeamMembers" ng-if="value">{{ key }} {{ value }} </li>
         </ul>
       </div>
+      <div class="card">
+        <ul class="collection with-header">
+          <li class="collection-header">Open Positions</li>
+          <li ng-repeat="(key, value) in projects.project.openTeamMembers" ng-if="value">{{ key }} {{ value }} </li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="collection with-header">
+            <li class="collection-header">Pending Applications</li>
+            <li ng-repeat="(key, value) in projects.project.waitingTeamMembers"> {{ key }} {{ value }}
+            <button ng-click="projects.acceptApplication(key, value)"> Accept </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
