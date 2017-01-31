@@ -19,22 +19,32 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
   vm.acceptApplication =  acceptApplication;
 
   function acceptApplication(role, memberid) {
-    // console.log('ROLE', role);
-    // console.log('MEMBERID', memberid);
+    //remove applicant from waiting applicants list
+    const applicantsIndex = vm.project.waitingTeamMembers[role].indexOf(memberid);
+    vm.project.waitingTeamMembers[role].splice(applicantsIndex, 1);
 
-    const applicantsArray = vm.project.waitingTeamMembers[role];
-    // console.log(applicantsArray);
-    const index = applicantsArray.indexOf(memberid);
-    // console.log(index);
-    //the push and pull from the arrays needs to happen here
+    //add applicant to live team
+    vm.project.liveTeamMembers[role].push(memberid);
 
+    //open positions needs to go down
+    var availablePositions = vm.project.openTeamMembers[role];
+    availablePositions--;
+    vm.project.openTeamMembers[role] = availablePositions;
 
+    //update the applicant active array
+    $http
+    .get(`http://localhost:3000/api/users/${memberid}`)
+    .then(response => {
+      vm.freelancer = response.data.freelancer;
+      vm.freelancer.pendingProjects.push(vm.project._id);
+    });
 
-    // return $http
-    // .put(`http://localhost:3000/api/projects/${vm.project._id}`, vm.project)
-    // .then(() => {
-    //   $state.go('usersIndex');
-    // });
+    //redirect back to project show page
+    return $http
+    .put(`http://localhost:3000/api/projects/${vm.project._id}`, vm.project)
+    .then(() => {
+      $state.go('projectsShow', {id: vm.project._id});
+    });
   }
 
 }

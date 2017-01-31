@@ -84,7 +84,7 @@ function projectsShow(req, res){
 //mongoose used to find by id and update relevant document
 //pre update document send back in response
 function projectsUpdate(req, res) {
-  Project.findByIdAndUpdate(req.params.projectId, req.body.project, (err, project) => {
+  Project.findByIdAndUpdate(req.params.id, req.body, (err, project) => {
     if (err) res.status(500).json({
       message: 'something went wrong',
       error: err
@@ -93,8 +93,8 @@ function projectsUpdate(req, res) {
       message: 'no project found'
     });
     res.status(200).json({
-      message: 'project updated'
-      // project: project
+      message: 'project updated',
+      project: project
     });
   });
 }
