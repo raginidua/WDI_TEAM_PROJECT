@@ -9,7 +9,7 @@ function ProjectsIndexCtrl($http) {
   $http
     .get('http://localhost:3000/api/projects')
     .then(response => {
-      vm.projects = response.data;
+      vm.projects = response.data.projects;
     });
 
 }
