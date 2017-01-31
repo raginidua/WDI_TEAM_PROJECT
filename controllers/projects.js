@@ -1,12 +1,16 @@
 const Project = require('../models/project');
+const Freelancer = require('../models/freelancer');
 
 //when proectsIndex function used mongoose is used to
 //search projects collection and return all documents
 //some error handling built into controller
 //messages sent with all responses to be more verbose
 function projectsIndex(req, res) {
+  const query = {};
+  if (req.query.leadFreelancer) query.leadFreelancer = req.query.leadFreelancer;
   Project
   .find({ })
+  .find(query)
   .populate('activeTeamMembers', 'email')
   .populate('pendingTeamMembers', 'email')
   .exec((err, projects) => {
@@ -34,6 +38,15 @@ function projectsCreate(req, res) {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err
+    });
+    //get leadFreelancer id and update thier profile. will break if more than 1!
+    const freelancerId = req.body.project.leadFreelancer;
+    console.log(freelancerId);
+    Freelancer.findByIdAndUpdate(freelancerId, {
+      myProjects: [freelancerId]
+    }, (err, freelancer) => {
+      if(err) console.log(err);
+      if(freelancer) console.log(freelancer);
     });
     return res.status(200).json({
       message: 'project created!',

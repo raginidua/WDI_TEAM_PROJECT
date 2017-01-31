@@ -8,6 +8,10 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
   $locationProvider.html5Mode(true);
 
   $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: '/js/views/home.html'
+    })
     .state('freelancersRegister', {
       url: '/freelancers/register',
       templateUrl: '/js/views/freelancers/register.html',
@@ -15,7 +19,9 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
     })
     .state('freelancersLogin', {
       url: '/freelancers/login',
-      templateUrl: '/js/views/freelancers/login.html'
+      templateUrl: '/js/views/freelancers/login.html',
+      controller: 'FreelancersLoginCtrl',
+      controllerAs: 'freelancers'
     })
     .state('freelancersShow', {
       url: '/freelancers/:id',

@@ -9,7 +9,7 @@
       <div class="card-content">
         {{freelancers.freelancer.email}}
         <ul class="collection with-header">
-          <li ui-sref="" class="collection-header"><h4>My Projects</h4></li>
+          <li ng-click="freelancers.fetchProjects()" class="collection-header"><h4>My Projects</h4></li>
           <a class="collection-item" ng-repeat="project in freelancers.freelancer.myProjects"> {{ project.name }} </a>
         </ul>
         <ul class="collection with-header">
