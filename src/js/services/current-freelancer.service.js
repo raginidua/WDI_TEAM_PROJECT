@@ -2,8 +2,8 @@ angular
   .module('teamBuilder')
   .service('CurrentFreelancerService', CurrentFreelancerService);
 
-CurrentFreelancerService.$inject = ['TokenService', 'Freelancer'];
-function CurrentFreelancerService(TokenService, Freelancer){
+CurrentFreelancerService.$inject = ['TokenService', 'Freelancer', '$rootScope'];
+function CurrentFreelancerService(TokenService, Freelancer, $rootScope){
   const self = this;
 
   self.getUser = () => {
@@ -16,6 +16,8 @@ function CurrentFreelancerService(TokenService, Freelancer){
         .$promise
         .then(data => {
           console.log(data);
+          self.currentFreelancer = data;
+          $rootScope.$broadcast('loggedIn');
         });
     }
   };
