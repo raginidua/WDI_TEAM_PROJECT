@@ -19,13 +19,13 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
   vm.acceptApplication =  acceptApplication;
 
   function acceptApplication(role, memberid) {
-    console.log('ROLE', role);
-    console.log('MEMBERID', memberid);
+    // console.log('ROLE', role);
+    // console.log('MEMBERID', memberid);
 
     const applicantsArray = vm.project.waitingTeamMembers[role];
-    console.log(applicantsArray)
-    applicantsArray.indexOf(memberid);
-
+    // console.log(applicantsArray);
+    const index = applicantsArray.indexOf(memberid);
+    // console.log(index);
     //the push and pull from the arrays needs to happen here
 
 
