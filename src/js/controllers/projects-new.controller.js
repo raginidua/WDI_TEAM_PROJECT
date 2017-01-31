@@ -10,32 +10,31 @@ function ProjectsNewCtrl($http, $state) {
   vm.part1 = true;
 
   vm.createProject = function() {
+    //logic to create arras with required length
     const object = {};
-    for (var role in vm.newProject.project.teamMembers) {
+    for (var role in vm.newProject.teamMembers) {
       console.log(role);
-      console.log(vm.newProject.project.teamMembers[role]);
+      console.log(vm.newProject.teamMembers[role]);
       const array = [];
-      const numberRequired = vm.newProject.project.teamMembers[role];
+      const numberRequired = vm.newProject.teamMembers[role];
       for (var i = 0; i < numberRequired; i++) {
         array.push(true);
       }
       object[role] = array;
     }
-    vm.newProject.project.requiredTeamMembers = object;
-    vm.newProject.project.openTeamMembers = object;
-    vm.newProject.project.waitingTeamMembers = object;
-    vm.newProject.project.liveTeamMembers = object;
+    vm.newProject.requiredTeamMembers = object;
+    vm.newProject.openTeamMembers = object;
+    vm.newProject.waitingTeamMembers = object;
+    vm.newProject.liveTeamMembers = object;
 
-    console.log(vm.newProject.project);
+    console.log(vm.newProject);
 
     //hard coded in freelancer ID pre authetication work
-    vm.project.leadFreelancer = '5890815eb8e04e5622833cba';
-    vm.project.activeTeamMembers = {};
-    vm.project.openTeamMembers = {};
-    vm.project.pendingTeamMembers = {};
-    console.log(vm.project);
+    vm.newProject.leadFreelancer = '5890815eb8e04e5622833cba';
+
+    console.log(vm.newProject);
     return $http
-      .post('http://localhost:3000/api/projects', {project: vm.project})
+      .post('http://localhost:3000/api/projects', {project: vm.newProject})
       .then(response => {
         console.log(response);
         //redirect to project show page of newly created project
