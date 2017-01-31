@@ -27,15 +27,11 @@
         <li class="collection-header">Filled Positions</li>
         <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers" ng-if="value.length !== 0"><span ng-repeat="id in value">{{ key }}: {{ id }} </span></li>
       </ul>
-      <!-- <ul class="collection with-header">
-      <li class="collection-header">Open Positions</li>
-      <li class="collection-item" ng-repeat="member in projects.project.waitingTeamMembers">{{ member.email}}</li>
-    </ul> -->
     <ul class="collection with-header">
       <li class="collection-header">Open Positions</li>
       <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
         {{ value }} {{ key }} Positions
-        <button class="btn waves-effect waves-light" type="submit" name="action">Apply
+        <button ng-click="projects.freelancerApply(key, projects.project._id)" class="btn waves-effect waves-light" type="submit" name="action">Apply
           <i class="material-icons right">send</i>
         </button>
       </li>
