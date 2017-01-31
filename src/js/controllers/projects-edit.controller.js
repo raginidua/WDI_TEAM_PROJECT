@@ -16,14 +16,14 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
     });
   }
 
-  vm.update = function projectsUpdate(){
+  vm.update = function projectsUpdate(memberid){
     //the push and pull from the arrays needs to happen here
-
-    return $http
-    .put(`http://localhost:3000/api/projects/${vm.project._id}`, vm.project)
-    .then(() => {
-      $state.go('usersIndex');
-    });
+    console.log(memberid);
+    // return $http
+    // .put(`http://localhost:3000/api/projects/${vm.project._id}`, vm.project)
+    // .then(() => {
+    //   $state.go('usersIndex');
+    // });
   };
 
 }

@@ -1,3 +1,4 @@
+<h1>Project edit page!!!</h1>
 <div class="row">
   <h1>{{ projects.project.name }}</h1>
   <h6>{{ projects.project.description }}</h6>
@@ -17,11 +18,12 @@
         </ul>
         <ul class="collection with-header">
           <li class="collection-header">Filled Positions</li>
-          <li class="collection-item" ng-repeat="member in projects.project.activeTeamMembers">{{ member.email}}</li>
+          <li class="collection-item" ng-repeat="member in projects.project.activeTeamMembers">{{ member.firstName }} {{ member.lastName }}</li>
         </ul>
         <ul class="collection with-header">
           <li class="collection-header">Open Positions</li>
-          <li class="collection-item" ng-repeat="member in projects.project.pendingTeamMembers">{{ member.email}}</li>
+          <li class="collection-item" ng-repeat="member in projects.project.pendingTeamMembers">{{ member.firstName }} {{ member.lastName }}
+            <button ng-submit="projects.projectsUpdate(member._id)"> Accept</button> </li>
         </ul>
       </div>
     </div>
