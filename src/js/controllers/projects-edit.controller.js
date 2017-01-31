@@ -22,10 +22,8 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
     console.log('ROLE', role);
     console.log('MEMBERID', memberid);
 
-
-    console.log();
-
     const applicantsArray = vm.project.waitingTeamMembers[role];
+    console.log(applicantsArray)
     applicantsArray.indexOf(memberid);
 
     //the push and pull from the arrays needs to happen here
