@@ -94,8 +94,8 @@ function projectsUpdate(req, res) {
       message: 'no project found'
     });
     res.status(200).json({
-      message: 'project updated',
-      project: project
+      message: 'project updated'
+      // project: project
     });
   });
 }
