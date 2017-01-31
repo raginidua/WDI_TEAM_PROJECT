@@ -9,6 +9,7 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
   projectsShow();
 
   function projectsShow(){
+    console.log($stateParams.id);
     return $http
     .get(`http://localhost:3000/api/projects/${$stateParams.id}`)
     .then(response => {

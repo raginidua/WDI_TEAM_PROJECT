@@ -49,6 +49,7 @@ function projectsCreate(req, res) {
 //and return the mathinc porject which is send back in
 //body of response in JSON format
 function projectsShow(req, res){
+  console.log('**********BACKEND*******', req.params.id);
   const projectId = req.params.id;
   Project
   .findById(projectId)
