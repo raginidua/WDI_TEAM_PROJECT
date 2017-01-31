@@ -14,14 +14,14 @@ function FreelancersNewCtrl($http, $state, Freelancer) {
     });
   };
 
-  vm.freelancersCreate = function freelancersCreate() {
-    return $http
-      .post('http://localhost:3000/api/freelancers/register', vm.freelancer)
-      .then(() => {
-        $state.go('freelancersShow', {id: '588fb4dcd7f62707a19d4772'});
-      });
-
-  };
+  // vm.freelancersCreate = function freelancersCreate() {
+  //   return $http
+  //     .post('http://localhost:3000/api/freelancers/register', vm.freelancer)
+  //     .then(() => {
+  //       $state.go('freelancersShow', {id: '588fb4dcd7f62707a19d4772'});
+  //     });
+  //
+  // };
 
   // vm.freelancersCreate = function freelancersCreate() {
   //   return $http
