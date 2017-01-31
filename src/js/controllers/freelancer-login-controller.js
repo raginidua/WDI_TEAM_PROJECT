@@ -10,8 +10,9 @@ function FreelancersLoginCtrl($http, $state) {
     console.log(vm.freelancer.freelancer);
     return $http
       .post('http://localhost:3000/api/freelancers/login', vm.freelancer.freelancer)
-      .then(() => {
-        $state.go('freelancersShow', {id: '588fb4dcd7f62707a19d4772'});
+      .then((data) => {
+        console.log(data);
+        $state.go('freelancersShow', {id: '5890815eb8e04e5622833cba'});
       });
   };
 
