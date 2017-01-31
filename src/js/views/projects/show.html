@@ -25,5 +25,13 @@
         </ul>
       </div>
     </div>
+    <div class="card">
+      <div class="card-content">
+        <ul class="collection with-header">
+          <li class="collection-header">Open Positions</li>
+          <li class="collection-item" ng-repeat="member in projects.project.pendingTeamMembers">{{ member.email}}</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
