@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="teamBuilder">
 <head>
   <meta charset="utf-8">
-  <title>Angular Stack Setup</title>
+  <title>Team Builder</title>
+  <base href="/">
   <!-- inject:js -->
   <script src="js/app.js"></script>
   <!-- endinject -->
@@ -11,37 +12,27 @@
   <!-- endinject -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="./index.html" class="brand-logo">Team Builder</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./projects.html">Projects</a></li><li><a href="./profile.html">Profile</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./projects.html">Projects</a></li><li><a href="./profile.html">Profile</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="row">
-    <div class="col s12">
-      <div class="card large blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Team Builder</span>
-          <p>Simple web app to help build your team.</p>
-        </div>
-        <div class="card-action">
-          <a href="./login.html">Login</a>
-          <a href="./register.html">Register</a>
-          <a href="./projects.html">Projects</a>
-        </div>
+<body ng-controller="MainCtrl as main">
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a ui-sref="home" class="brand-logo">Team Builder</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a ui-sref="freelancersLogin">Login</a></li>
+          <li><a ui-sref="freelancersRegister">Register</a></li>
+          <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow({id: '5890815eb8e04e5622833cba'})">Profile</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a ui-sref="freelancersLogin">Login</a></li>
+          <li><a ui-sref="freelancersRegister">Register</a></li>
+          <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow({id: '5890815eb8e04e5622833cba'})">Profile</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
+
+  <main class="container" ui-view></main>
+
 </body>
 </html>

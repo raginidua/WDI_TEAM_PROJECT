@@ -4,11 +4,11 @@ const bcrypt   = require('bcrypt');
 const freelancerSchema = new mongoose.Schema({
   firstName: { type: String, trim: true, required: true},
   lastName: { type: String, trim: true, required: true},
+  github: { type: String, trim: true },
+  linkedIn: { type: String, trim: true },
+  personalWebsite: { type: String, trim: true },
   email: { type: String, trim: true, required: true},
   passwordHash: { type: String, required: true},
-  githubAccount: { type: String, trim: true },
-  personalWebsite: { type: String, trim: true },
-  linkedIn: { type: String, trim: true },
   projects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }],
   myProjects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }],
   pendingProjects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }]

@@ -1,11 +1,18 @@
 const Project = require('../models/project');
+const Freelancer = require('../models/freelancer');
 
 //when proectsIndex function used mongoose is used to
 //search projects collection and return all documents
 //some error handling built into controller
 //messages sent with all responses to be more verbose
 function projectsIndex(req, res) {
-  Project.find({}, (err, projects) => {
+  const query = {};
+  if (req.query.leadFreelancer) query.leadFreelancer = req.query.leadFreelancer;
+  Project
+  .find(query)
+  .populate('activeTeamMembers', 'email')
+  .populate('pendingTeamMembers', 'email')
+  .exec((err, projects) => {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err
@@ -18,6 +25,7 @@ function projectsIndex(req, res) {
       projects: projects
     });
   });
+
 }
 
 //when projects create function used mongoose is used
@@ -29,6 +37,15 @@ function projectsCreate(req, res) {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err
+    });
+    //get leadFreelancer id and update thier profile. will break if more than 1!
+    const freelancerId = req.body.project.leadFreelancer;
+    console.log(freelancerId);
+    Freelancer.findByIdAndUpdate(freelancerId, {
+      myProjects: [freelancerId]
+    }, (err, freelancer) => {
+      if(err) console.log(err);
+      if(freelancer) console.log(freelancer);
     });
     return res.status(200).json({
       message: 'project created!',
@@ -42,8 +59,12 @@ function projectsCreate(req, res) {
 //and return the mathinc porject which is send back in
 //body of response in JSON format
 function projectsShow(req, res){
-  const projectId = req.params.projectId;
-  Project.findById(projectId, (err, project) => {
+  const projectId = req.params.id;
+  Project
+  .findById(projectId)
+  .populate('activeTeamMembers', 'email')
+  .populate('pendingTeamMembers', 'email')
+  .exec((err, project) => {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err
@@ -63,7 +84,7 @@ function projectsShow(req, res){
 //mongoose used to find by id and update relevant document
 //pre update document send back in response
 function projectsUpdate(req, res) {
-  Project.findByIdAndUpdate(req.params.projectId, req.body.project, (err, project) => {
+  Project.findByIdAndUpdate(req.params.id, req.body, (err, project) => {
     if (err) res.status(500).json({
       message: 'something went wrong',
       error: err

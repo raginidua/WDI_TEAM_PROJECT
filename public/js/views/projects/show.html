@@ -1,0 +1,43 @@
+<div class="row">
+  <h1>{{ projects.project.name }}</h1>
+  <h6>{{ projects.project.description }}</h6>
+
+  <div class="col s12 ">
+    <div class="card">
+      <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
+      <!-- </a> -->
+      <div class="card-content">
+        <ul class="collection with-header">
+          <li class="collection-header">Budget</li>
+          <li class="collection-item">{{ projects.project.budget }}</li>
+        </ul>
+        <ul class="collection with-header">
+          <li class="collection-header">TimeFrame</li>
+          <li class="collection-item">{{ projects.project.timeframe }}</li>
+        </ul>
+        <!-- <ul class="collection with-header">
+        <li class="collection-header">Required Positions</li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.requiredTeamMembers">{{ }}</li>
+      </ul> -->
+      <ul class="collection with-header">
+        <li class="collection-header">Required Positions</li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.requiredTeamMembers" ng-if="value !== 0">{{ value }} {{ key }} Positions</li>
+      </ul>
+      <ul class="collection with-header">
+        <li class="collection-header">Filled Positions</li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers" ng-if="value.length !== 0"><span ng-repeat="id in value">{{ key }}: {{ id }} </span></li>
+      </ul>
+    <ul class="collection with-header">
+      <li class="collection-header">Open Positions</li>
+      <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
+        {{ value }} {{ key }} Positions
+        <button ng-click="projects.freelancerApply(key, projects.project._id)" class="btn waves-effect waves-light" type="submit" name="action">Apply
+          <i class="material-icons right">send</i>
+        </button>
+      </li>
+    </ul>
+    <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
+  </div>
+</div>
+</div>
+</div>

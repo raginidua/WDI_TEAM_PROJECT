@@ -1,4 +1,11 @@
-// Import all of your scss files here
-body {
-  background-color: red;
+// Materialize overrides
+
+.icon-block {
+  padding: 0 15px;
 }
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+
+// Import all of your scss files here
