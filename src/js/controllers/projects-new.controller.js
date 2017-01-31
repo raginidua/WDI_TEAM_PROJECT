@@ -10,7 +10,7 @@ function ProjectsNewCtrl($http, $state) {
   vm.part1 = true;
 
   vm.createProject = function() {
-    //logic to create arras with required length
+    //logic to create array with required length
     const object = {};
     for (var role in vm.newProject.teamMembers) {
       console.log(role);
@@ -30,7 +30,7 @@ function ProjectsNewCtrl($http, $state) {
     console.log(vm.newProject);
 
     //hard coded in freelancer ID pre authetication work
-    vm.newProject.leadFreelancer = '5890815eb8e04e5622833cba';
+    vm.newProject.leadFreelancer = '5890b4837b5fd141d1bd042b';
 
     console.log(vm.newProject);
     return $http

@@ -1,4 +1,5 @@
 const Project = require('../models/project');
+const Freelancer = require('../models/freelancer');
 
 //when proectsIndex function used mongoose is used to
 //search projects collection and return all documents
@@ -36,6 +37,15 @@ function projectsCreate(req, res) {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err
+    });
+    //get leadFreelancer id and update thier profile. will break if more than 1!
+    const freelancerId = req.body.project.leadFreelancer;
+    console.log(freelancerId);
+    Freelancer.findByIdAndUpdate(freelancerId, {
+      myProjects: [freelancerId]
+    }, (err, freelancer) => {
+      if(err) console.log(err);
+      if(freelancer) console.log(freelancer);
     });
     return res.status(200).json({
       message: 'project created!',

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Project = new mongoose.Schema({
+const projectSchema = new mongoose.Schema({
   name: {type: String, required: true},
   description: {type: String, required: true},
   budget: {type: Number, required: true},
@@ -12,4 +12,4 @@ const Project = new mongoose.Schema({
   liveTeamMembers: mongoose.Schema.Types.Mixed
 });
 
-module.exports = mongoose.model('Project', Project);
+module.exports = mongoose.model('Project', projectSchema);
