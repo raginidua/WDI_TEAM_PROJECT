@@ -135,28 +135,28 @@ const p1 = new Project({
   description: 'amazing',
   leadFreelancer: f1._id,
   requiredTeamMembers: {
-    UI: [undefined, undefined, undefined, undefined],
-    UX: [undefined, undefined, undefined, undefined],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
+    UI: 4,
+    UX: 4,
+    frontEndDev: 0,
+    backEndDev: 0,
+    dataScientist: 0,
+    marketing: 0,
+    projectManager: 0,
+    IOSDev: 0,
+    AndroidDev: 0
   },
   openTeamMembers: {
-    UI: [undefined, undefined],
-    UX: [undefined, undefined],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
+    UI: 2,
+    UX: 2,
+    frontEndDev: 0,
+    backEndDev: 0,
+    dataScientist: 0,
+    marketing: 0,
+    projectManager: 0,
+    IOSDev: 0,
+    AndroidDev: 0
   },
-  pendingTeamMembers: {
+  waitingTeamMembers: {
     UI: [f6._id, f7._id],
     UX: [f8._id, f9._id, f10._id],
     frontEndDev: [],
@@ -167,7 +167,7 @@ const p1 = new Project({
     IOSDev: [],
     AndroidDev: []
   },
-  activeTeamMembers: {
+  liveTeamMembers: {
     UI: [f2._id, f3._id],
     UX: [f4._id, f5._id],
     frontEndDev: [],
@@ -192,26 +192,26 @@ const p2 = new Project({
   description: 'amazing2',
   leadFreelancer: f2._id,
   requiredTeamMembers: {
-    UI: [undefined, undefined, undefined, undefined],
-    UX: [undefined, undefined, undefined, undefined],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
+    UI: 4,
+    UX: 4,
+    frontEndDev: 0,
+    backEndDev: 0,
+    dataScientist: 0,
+    marketing: 0,
+    projectManager: 0,
+    IOSDev: 0,
+    AndroidDev: 0
   },
   openTeamMembers: {
-    UI: [undefined, undefined],
-    UX: [undefined, undefined],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
+    UI: 2,
+    UX: 2,
+    frontEndDev: 0,
+    backEndDev: 0,
+    dataScientist: 0,
+    marketing: 0,
+    projectManager: 0,
+    IOSDev: 0,
+    AndroidDev: 0
   },
   pendingTeamMembers: {
     UI: [f8._id, f9._id, f10._id],
