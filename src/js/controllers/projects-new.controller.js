@@ -22,8 +22,8 @@ function ProjectsNewCtrl($http, $state) {
       }
       object[role] = array;
     }
-    vm.newProject.requiredTeamMembers = object;
-    vm.newProject.openTeamMembers = object;
+    vm.newProject.requiredTeamMembers = vm.newProject.teamMembers;
+    vm.newProject.openTeamMembers = vm.newProject.teamMembers;
     vm.newProject.waitingTeamMembers = object;
     vm.newProject.liveTeamMembers = object;
 
