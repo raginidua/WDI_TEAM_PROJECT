@@ -2,8 +2,8 @@ angular
   .module('teamBuilder')
   .controller('FreelancersLoginCtrl', FreelancersLoginCtrl);
 
-FreelancersLoginCtrl.$inject = ['$http','$state','Freelancer'];
-function FreelancersLoginCtrl($http, $state, Freelancer) {
+FreelancersLoginCtrl.$inject = ['$http','$state','Freelancer', 'TokenService'];
+function FreelancersLoginCtrl($http, $state, Freelancer, TokenService ){
   const vm = this;
 
   vm.freelancersLogin = function freelancersLogin() {
@@ -18,6 +18,7 @@ function FreelancersLoginCtrl($http, $state, Freelancer) {
       .login(vm.freelancer.freelancer)
       .$promise
       .then(data =>{
+        TokenService.setToken(data.token);
         console.log(data);
       });
 

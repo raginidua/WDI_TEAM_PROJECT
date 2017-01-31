@@ -2,14 +2,15 @@ angular
   .module('teamBuilder')
   .controller('FreelancersNewCtrl', FreelancersNewCtrl);
 
-FreelancersNewCtrl.$inject = ['$http','$state', 'Freelancer'];
-function FreelancersNewCtrl($http, $state, Freelancer) {
+FreelancersNewCtrl.$inject = ['$http','$state', 'Freelancer', 'TokenService'];
+function FreelancersNewCtrl($http, $state, Freelancer, TokenService) {
   const vm = this;
 
 
   vm.freelancersCreate = function() {
     Freelancer
     .register(vm.freelancer, (data) => {
+      TokenService.setToken(data.token);
       console.log(data);
     });
   };
