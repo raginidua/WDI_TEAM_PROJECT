@@ -69,23 +69,115 @@ f5.save((err, user) => {
   console.log(`${user.firstName} was saved`);
 });
 
+const f6 = new Freelancer({
+  firstName: 'Davinder6',
+  lastName: 'Kaur',
+  email: 'dkaur6@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f6.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
+
+const f7 = new Freelancer({
+  firstName: 'Davinder7',
+  lastName: 'Kaur',
+  email: 'dkaur7@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f7.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
+
+const f8 = new Freelancer({
+  firstName: 'Davinder8',
+  lastName: 'Kaur',
+  email: 'dkaur8@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f8.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
+
+const f9 = new Freelancer({
+  firstName: 'Davinder9',
+  lastName: 'Kaur',
+  email: 'dkaur9@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f9.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
+
+const f10 = new Freelancer({
+  firstName: 'Davinder10',
+  lastName: 'Kaur',
+  email: 'dkaur10@hotmail.com',
+  password: 'password',
+  passwordConfirmation: 'password'
+});
+f10.save((err, user) => {
+  if (err) return console.log(err);
+  console.log(`${user.firstName} was saved`);
+});
+
+
 const p1 = new Project({
   name: 'Davinder\'s project',
   description: 'amazing',
   leadFreelancer: f1._id,
   requiredTeamMembers: {
-    UI: 1,
-    UX: 2,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
+    UI: [undefined, undefined, undefined, undefined],
+    UX: [undefined, undefined, undefined, undefined],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
   },
-  pendingTeamMembers: [f2._id, f4._id],
-  activeTeamMembers: [f3._id, f5._id],
+  openTeamMembers: {
+    UI: [undefined, undefined],
+    UX: [undefined, undefined],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
+  },
+  pendingTeamMembers: {
+    UI: [f6._id, f7._id],
+    UX: [f8._id, f9._id, f10._id],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
+  },
+  activeTeamMembers: {
+    UI: [f2._id, f3._id],
+    UX: [f4._id, f5._id],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
+  },
 
   budget: 5000,
   timeframe: '10 Days'
@@ -98,20 +190,51 @@ p1.save((err, project) => {
 const p2 = new Project({
   name: 'Davinder\'s project2',
   description: 'amazing2',
-  leadFreelancer: f2._id ,
+  leadFreelancer: f2._id,
   requiredTeamMembers: {
-    UI: 1,
-    UX: 2,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
+    UI: [undefined, undefined, undefined, undefined],
+    UX: [undefined, undefined, undefined, undefined],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
   },
-  pendingTeamMembers: [f1._id, f5._id ],
-  activeTeamMembers: [f3._id, f4._id],
+  openTeamMembers: {
+    UI: [undefined, undefined],
+    UX: [undefined, undefined],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
+  },
+  pendingTeamMembers: {
+    UI: [f8._id, f9._id, f10._id],
+    UX: [f6._id, f7._id],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
+  },
+  activeTeamMembers: {
+    UI: [f1._id, f3._id],
+    UX: [f4._id, f5._id],
+    frontEndDev: [],
+    backEndDev: [],
+    dataScientist: [],
+    marketing: [],
+    projectManager: [],
+    IOSDev: [],
+    AndroidDev: []
+  },
 
   budget: 15000,
   timeframe: '13 Days'
