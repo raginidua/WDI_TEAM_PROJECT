@@ -12,7 +12,7 @@ function FreelancersNewCtrl($http, $state, Freelancer, CurrentFreelancerService)
     .register(vm.freelancer)
     .$promise
     .then(() => {
-      CurrentFreelancerService.getUser();
+      CurrentFreelancerService.getFreelancer();
     }, err => {
       console.log(err);
     });

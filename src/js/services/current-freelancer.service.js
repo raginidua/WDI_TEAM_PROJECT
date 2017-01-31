@@ -6,7 +6,7 @@ CurrentFreelancerService.$inject = ['TokenService', 'Freelancer', '$rootScope'];
 function CurrentFreelancerService(TokenService, Freelancer, $rootScope){
   const self = this;
 
-  self.getUser = () => {
+  self.getFreelancer = () => {
     const decodedToken = TokenService.decodeToken();
     console.log('CurrentFreelancerService decodedToken:', decodedToken);
 
@@ -20,5 +20,12 @@ function CurrentFreelancerService(TokenService, Freelancer, $rootScope){
           $rootScope.$broadcast('loggedIn');
         });
     }
+  };
+  self.getFreelancer();
+
+  self.removeFreelancer = () => {
+    self.currentFreelancer = null;
+    TokenService.removeToken();
+    $rootScope.$broadcast('loggedOut');
   };
 }

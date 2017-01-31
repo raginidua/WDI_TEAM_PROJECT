@@ -17,7 +17,7 @@ function FreelancersLoginCtrl($http, $state, Freelancer, TokenService, CurrentFr
       .login(vm.freelancer.freelancer)
       .$promise
       .then(() =>{
-        CurrentFreelancerService.getUser();
+        CurrentFreelancerService.getFreelancer();
       }, err => {
         console.log(err);
       });

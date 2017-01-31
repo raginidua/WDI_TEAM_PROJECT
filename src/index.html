@@ -18,13 +18,19 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a ui-sref="freelancersLogin">Login</a></li>
+          <li><a ng-click="main.logout()">Logout</a></li>
           <li><a ui-sref="freelancersRegister">Register</a></li>
-          <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow({id: '5890815eb8e04e5622833cba'})">Profile</a></li>
+          <li><a ui-sref="projectsIndex">Projects</a></li>
+          <li><a ui-sref="freelancersShow({id: '5890815eb8e04e5622833cba'})">Profile</a></li>
+          <li><a ui-sref="freelancersIndex">Freelancers</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a ui-sref="freelancersLogin">Login</a></li>
+          <li><a ng-click="main.logout()">Logout</a></li>
           <li><a ui-sref="freelancersRegister">Register</a></li>
-          <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow({id: '5890815eb8e04e5622833cba'})">Profile</a></li>
+          <li><a ui-sref="projectsIndex">Projects</a></li>
+          <li><a ui-sref="freelancersShow({id: '5890815eb8e04e5622833cba'})">Profile</a></li>
+          <li><a ui-sref="freelancersIndex">Freelancers</a></li>
         </ul>
       </div>
     </nav>
