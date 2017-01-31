@@ -47,8 +47,12 @@ function projectsCreate(req, res) {
 //and return the mathinc porject which is send back in
 //body of response in JSON format
 function projectsShow(req, res){
-  const projectId = req.params.projectId;
-  Project.findById(projectId, (err, project) => {
+  const projectId = req.params.id;
+  Project
+  .findById(projectId)
+  .populate('activeTeamMembers', 'email')
+  .populate('pendingTeamMembers', 'email')
+  .exec((err, project) => {
     if (err) return res.status(500).json({
       message: 'something went wrong',
       error: err

@@ -30,11 +30,12 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       controllerAs: 'projectsInvites'
     })
     .state('projectsShow', {
-      url: '/projects/:projectId/show',
-      templateUrl: '/js/views/projects/show.html'
+      url: '/projects/:id/show',
+      templateUrl: '/js/views/projects/show.html',
+      controller: 'ProjectsShowCtrl as projects'
     })
     .state('projectsEdit', {
-      url: '/projects/:projectId/edit',
+      url: '/projects/:id/edit',
       templateUrl: '/js/views/projects/edit.html'
     });
 

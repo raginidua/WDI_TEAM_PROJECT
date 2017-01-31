@@ -8,6 +8,10 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
   $locationProvider.html5Mode(true);
 
   $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: '/js/views/home.html'
+    })
     .state('freelancersRegister', {
       url: '/freelancers/register',
       templateUrl: '/js/views/freelancers/register.html',
@@ -18,11 +22,12 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
       templateUrl: '/js/views/freelancers/login.html'
     })
     .state('freelancersShow', {
-      url: '/freelancers/:freelancerId',
-      templateUrl: '/js/views/freelancers/show.html'
+      url: '/freelancers/:id',
+      templateUrl: '/js/views/freelancers/show.html',
+      controller: 'FreelancersShowCtrl as freelancers'
     })
     .state('freelancersEdit', {
-      url: '/freelancers/:freelancerId/edit',
+      url: '/freelancers/:id/edit',
       templateUrl: '/js/views/freelancers/edit.html',
       controller: 'FreelancersEditCtrl as freelancers'
     });

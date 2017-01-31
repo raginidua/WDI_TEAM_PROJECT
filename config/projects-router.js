@@ -13,7 +13,7 @@ router.route('/')
 //use projects show controller
 //if put use projects update controller
 //if delete use projects delete controller
-router.route('/:projectId')
+router.route('/:id')
   .get(projects.show)
   .put(projects.update)
   .delete(projects.delete);
