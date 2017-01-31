@@ -16,7 +16,11 @@ function freelancersIndex(req, res) {
 //and return the mathinc freelancer which is send back in
 //body of response in JSON format
 function freelancersShow(req,res) {
-  Freelancer.findById(req.params.id, (err, freelancer) => {
+  console.log('*******************GOT TO THE BACKEND', req.params.id, '*****************');
+  Freelancer
+  .findById(req.params.id)
+  .populate('Project')
+  .exec((err, freelancer) => {
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if (!freelancer) return res.status(404).json({ message: 'Freelancer not found' });
     return res.status(200).json({ freelancer });

@@ -30,7 +30,7 @@ function ProjectsNewCtrl($http, $state) {
     console.log(vm.newProject);
 
     //hard coded in freelancer ID pre authetication work
-    vm.newProject.leadFreelancer = '5890b4837b5fd141d1bd042b';
+    vm.newProject.leadFreelancer = '5890ebb4ab8f9a337d3e1c24';
 
     console.log(vm.newProject);
     return $http
