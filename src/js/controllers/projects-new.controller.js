@@ -11,9 +11,13 @@ function ProjectsNewCtrl($http, $state) {
 
   vm.createProject = function() {
     //hard coded in freelancer ID pre authetication work
-    vm.newProject.project.leadFreelancer = '588e507a4d0d1f74979be1ee';
+    vm.project.leadFreelancer = '5890815eb8e04e5622833cba';
+    vm.project.activeTeamMembers = {};
+    vm.project.openTeamMembers = {};
+    vm.project.pendingTeamMembers = {};
+    console.log(vm.project);
     return $http
-      .post('http://localhost:3000/api/projects', vm.newProject)
+      .post('http://localhost:3000/api/projects', {project: vm.project})
       .then(response => {
         console.log(response);
         //redirect to project show page of newly created project

@@ -2,26 +2,26 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
-        <input id="name" type="text" class="validate" ng-model="projectsNew.newProject.project.name">
+        <input id="name" type="text" class="validate" ng-model="projectsNew.project.name">
         <label for="name">Name</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="description" type="text" class="validate" ng-model="projectsNew.newProject.project.description">
+        <input id="description" type="text" class="validate" ng-model="projectsNew.project.description">
         <label for="description">Description</label>
       </div>
     </div>
     <div class="row">
       <p class="range-field col s12">
-        <label for="budget">Budget: £{{projectsNew.newProject.project.budget}}</label>
-        <input type="range" id="budget" min="0" max="20000" ng-model="projectsNew.newProject.project.budget"/>
+        <label for="budget">Budget: £{{projectsNew.project.budget}}</label>
+        <input type="range" id="budget" min="0" max="20000" ng-model="projectsNew.project.budget"/>
       </p>
     </div>
     <div class="row">
       <p class="range-field col s12">
-        <label for="timeframe">Timeframe: w{{projectsNew.newProject.project.timeframe}}</label>
-        <input type="range" id="timeframe" min="0" max="52" ng-model="projectsNew.newProject.project.timeframe"/>
+        <label for="timeframe">Timeframe: w{{projectsNew.project.timeframe}}</label>
+        <input type="range" id="timeframe" min="0" max="52" ng-model="projectsNew.project.timeframe"/>
       </p>
     </div>
     <a class="waves-effect waves-light btn" ng-click="projectsNew.part1 = !projectsNew.part1">Team Builder</a>
@@ -33,7 +33,7 @@
       <div class="col s12">
         <p class="range-field">
           UX Designers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.uxDesigners"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.uxDesigners"/>
         </p>
       </div>
     </div>
@@ -41,7 +41,7 @@
       <div class="col s12">
         <p class="range-field">
           UI Designers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.uiDesigners"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.uiDesigners"/>
         </p>
       </div>
     </div>
@@ -49,7 +49,7 @@
       <div class="col s12">
         <p class="range-field">
           Front-End Devs
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.frontendDevs"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.frontendDevs"/>
         </p>
       </div>
     </div>
@@ -57,7 +57,7 @@
       <div class="col s12">
         <p class="range-field">
           Back-End Devs
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.backendDevs"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.backendDevs"/>
         </p>
       </div>
     </div>
@@ -65,7 +65,7 @@
       <div class="col s12">
         <p class="range-field">
           Data Scientists
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.dataScientists"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.dataScientists"/>
         </p>
       </div>
     </div>
@@ -73,7 +73,7 @@
       <div class="col s12">
         <p class="range-field">
           Marketers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.marketers" />
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.marketers" />
         </p>
       </div>
     </div>
@@ -81,7 +81,7 @@
       <div class="col s12">
         <p class="range-field">
           Project Managers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.projectManagers" />
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.projectManagers" />
         </p>
       </div>
     </div>
@@ -89,7 +89,7 @@
       <div class="col s12">
         <p class="range-field">
           IOS Devs
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.iosDevs"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.iosDevs"/>
         </p>
       </div>
     </div>
@@ -97,7 +97,7 @@
       <div class="col s12">
         <p class="range-field">
           Android Devs
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.requiredTeamMembers.androidDevs"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.project.requiredTeamMembers.androidDevs"/>
         </p>
       </div>
     </div>

@@ -5,8 +5,10 @@ const Project = require('../models/project');
 //some error handling built into controller
 //messages sent with all responses to be more verbose
 function projectsIndex(req, res) {
+  const query = {};
+  if (req.query.leadFreelancer) query.leadFreelancer = req.query.leadFreelancer;
   Project
-  .find({})
+  .find(query)
   .populate('activeTeamMembers', 'email')
   .populate('pendingTeamMembers', 'email')
   .exec((err, projects) => {
