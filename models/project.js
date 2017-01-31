@@ -6,10 +6,10 @@ const Project = new mongoose.Schema({
   budget: {type: Number, required: true},
   timeframe: {type: String, required: true},
   leadFreelancer: {type: mongoose.Schema.ObjectId, ref: 'Freelancer', required: true},
-  requiredTeamMembers: { type: Object, required: true },
-  openTeamMembers: { type: Object, required: true },
-  pendingTeamMembers: { type: Object, required: true },
-  activeTeamMembers: { type: Object, required: true }
+  requiredTeamMembers: mongoose.Schema.Types.Mixed,
+  openTeamMembers: mongoose.Schema.Types.Mixed,
+  waitingTeamMembers: mongoose.Schema.Types.Mixed,
+  liveTeamMembers: mongoose.Schema.Types.Mixed
 });
 
 module.exports = mongoose.model('Project', Project);
