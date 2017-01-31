@@ -4,7 +4,8 @@ console.log('JS loaded');
 angular
   .module('teamBuilder', [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'angular-jwt'
   ]);
 
 

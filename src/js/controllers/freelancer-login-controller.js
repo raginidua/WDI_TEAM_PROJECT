@@ -2,12 +2,11 @@ angular
   .module('teamBuilder')
   .controller('FreelancersLoginCtrl', FreelancersLoginCtrl);
 
-FreelancersLoginCtrl.$inject = ['$http','$state','Freelancer', 'TokenService'];
-function FreelancersLoginCtrl($http, $state, Freelancer, TokenService ){
+FreelancersLoginCtrl.$inject = ['$http','$state','Freelancer', 'TokenService', 'CurrentFreelancerService'];
+function FreelancersLoginCtrl($http, $state, Freelancer, TokenService, CurrentFreelancerService ){
   const vm = this;
 
   vm.freelancersLogin = function freelancersLogin() {
-    console.log(vm.freelancer.freelancer);
     // return $http
     //   .post('http://localhost:3000/api/freelancers/login', vm.freelancer.freelancer)
     //   .then((data) => {
@@ -17,9 +16,10 @@ function FreelancersLoginCtrl($http, $state, Freelancer, TokenService ){
     Freelancer
       .login(vm.freelancer.freelancer)
       .$promise
-      .then(data =>{
-        TokenService.setToken(data.token);
-        console.log(data);
+      .then(() =>{
+        CurrentFreelancerService.getUser();
+      }, err => {
+        console.log(err);
       });
 
 

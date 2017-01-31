@@ -2,15 +2,22 @@ angular
   .module('teamBuilder')
   .factory('AuthInterceptor', AuthInterceptor);
 
-AuthInterceptor.$inject = [];
-function AuthInterceptor() {
+AuthInterceptor.$inject = ['API', 'TokenService'];
+function AuthInterceptor(API, TokenService) {
   return {
     request: function(config){
-      console.log('Interceptor config:', config);
+      const token = TokenService.getToken();
+      if(config.url.indexOf(API) === 0 && token){
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+      console.log('config', config);
       return (config);
     },
     response: function(res) {
-      console.log('Interceptor response', res);
+      if(res.config.url.indexOf(API) === 0 && res.data.token){
+        console.log('token', res.data.token);
+        TokenService.setToken(res.data.token);
+      }
       return res;
     }
   };

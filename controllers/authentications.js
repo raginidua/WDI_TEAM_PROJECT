@@ -16,7 +16,7 @@ function authenticationsRegister(req, res) {
       err
     });
 
-    const token = jwt.sign(freelancer._id, config.secret, {expiresIn: 60*60*24 });
+    const token = jwt.sign({id: freelancer._id}, config.secret, {expiresIn: 60*60*24 });
 
 
     return res.status(201).json({
@@ -36,7 +36,7 @@ function authenticationsLogin(req, res) {
       return res.status(401).json({ message: 'Incorrect login details' });
     }
 
-    const token = jwt.sign(freelancer._id, config.secret, { expiresIn: 60*60*24});
+    const token = jwt.sign({id: freelancer._id}, config.secret, { expiresIn: 60*60*24});
 
     return res.status(200).json({
       message: 'Welcome back',
