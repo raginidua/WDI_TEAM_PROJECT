@@ -12,41 +12,27 @@
   <!-- endinject -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-  <nav>
-    <div class="nav-wrapper">
-      <a ui-sref="/" class="brand-logo">Team Builder</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a ui-sref="freelancersLogin">Login</a></li>
-        <li><a ui-sref="freelancersRegister">Register</a></li>
-        <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a ui-sref="freelancersLogin">Login</a></li>
-        <li><a ui-sref="freelancersRegister">Register</a></li>
-        <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="container" ui-view>
-    <div class="row">
-      <div class="col s12">
-        <div class="card large blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">Team Builder</span>
-            <p>Simple web app to help build your team.</p>
-          </div>
-          <div class="card-action">
-            <a ui-sref="freelancersLogin">Login</a>
-            <a ui-sref="freelancersRegister">Register</a>
-            <a ui-sref="projectsIndex">Projects</a>
-          </div>
-        </div>
+<body ng-controller="MainCtrl as main">
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a ui-sref="home" class="brand-logo">Team Builder</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a ui-sref="freelancersLogin">Login</a></li>
+          <li><a ui-sref="freelancersRegister">Register</a></li>
+          <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a ui-sref="freelancersLogin">Login</a></li>
+          <li><a ui-sref="freelancersRegister">Register</a></li>
+          <li><a ui-sref="projectsIndex">Projects</a></li><li><a ui-sref="freelancersShow">Profile</a></li>
+        </ul>
       </div>
-    </div>
-  </main>
+    </nav>
+  </header>
+
+  <main class="container" ui-view></main>
 
 </body>
 </html>
