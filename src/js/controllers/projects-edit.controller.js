@@ -30,7 +30,16 @@ function ProjectsEditCtrl($http, $state, $stateParams) {
     var availablePositions = vm.project.openTeamMembers[role];
     availablePositions--;
     vm.project.openTeamMembers[role] = availablePositions;
-    
+
+    //update the applicant active array
+    $http
+    .get(`http://localhost:3000/api/users/${memberid}`)
+    .then(response => {
+      vm.freelancer = response.data.freelancer;
+      vm.freelancer.pendingProjects.push(vm.project._id);
+    });
+
+    //redirect back to project show page
     return $http
     .put(`http://localhost:3000/api/projects/${vm.project._id}`, vm.project)
     .then(() => {
