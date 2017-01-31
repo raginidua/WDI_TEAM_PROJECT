@@ -1,0 +1,167 @@
+<ul class="collection with-header" ng-repeat="number in projectsNew3.currentProject.requiredTeamMembers track by $index">
+  <li class="collection-header"><h4>{{projectsNew3.roles[$index]}}</h4></li>
+  <li class="collection-item">
+    <div class="input-field col s12">
+      <input id="email" type="email" class="validate">
+      <label for="email">Email</label>
+    </div>
+  </li>
+  <li class="collection-item">
+    <div class="input-field col s12">
+      <input id="email" type="email" class="validate">
+      <label for="email">Email</label>
+    </div>
+  </li>
+  <li class="collection-item">
+    <div class="input-field col s12">
+      <input id="email" type="email" class="validate">
+      <label for="email">Email</label>
+    </div>
+  </li>
+</ul>
+
+
+
+<!--
+<form class="col s12">
+<div class="row">
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">4</span><i class="material-icons">assignment_ind</i>UX Designer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">2</span><i class="material-icons">assignment_ind</i>UI Designer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">1</span><i class="material-icons">assignment_ind</i> Front-End Devs</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">2</span><i class="material-icons">assignment_ind</i> Data Scientists</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">0</span><i class="material-icons">assignment_ind</i> Back-End Development</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">2</span><i class="material-icons">assignment_ind</i> Marketeer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">3</span><i class="material-icons">assignment_ind</i> IOS Developer</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header"><span class="new badge" data-badge-caption=" Team members">1</span><i class="material-icons">assignment_ind</i>Andriod Developers</div>
+<div class="collapsible-body"><p> email of person here</p><p> email of person here</p></div>
+</li>
+</ul>
+</div>
+<a href="./member-invites.html" class="waves-effect waves-light btn">Team Member Invites</a>
+</div>
+</div>
+</form>
+
+
+<div class="row">
+<form class="col s12">
+<div class="row">
+<div class="input-field col s12">
+<input id="email" type="email" class="validate">
+<label for="email">UX Email</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<input id="email2" type="email" class="validate">
+<label for="email2">UI Email</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<input id="email3" type="email" class="validate">
+<label for="email3">UI Email</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<input id="email4" type="email" class="validate">
+<label for="email4">Back-End Email</label>
+</div>
+</div>
+</form>
+<form action="#" class="col s12">
+<p class="col s12">
+<input type="checkbox" id="test5" />
+<label for="test5">UX</label>
+</p>
+<p class="col s12">
+<input type="checkbox" id="test6" checked="checked" />
+<label for="test6">UI</label>
+</p>
+<p class="col s12">
+<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+<label for="filled-in-box">UI</label>
+</p>
+<p class="col s12">
+<input type="checkbox" id="indeterminate-checkbox" />
+<label for="indeterminate-checkbox">Back-End Email</label>
+</p>
+</form>
+</div>
+<div class="row">
+<div class="col s12">
+<div class="row">
+<div class="col 12">
+<a ui-sref="projectsIndex" class="waves-effect waves-light btn">Send</a>
+</div>
+</div>
+</div>
+</div> -->
