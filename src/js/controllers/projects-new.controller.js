@@ -21,21 +21,22 @@ function ProjectsNewCtrl($http, $state) {
       }
       object[role] = array;
     }
-    vm.newProject.requiredTeamMembers = object;
-    // vm.newProject.requiredTeamMembers = object;
-    // vm.newProject.requiredTeamMembers = object;
-    // vm.newProject.requiredTeamMembers = object;
-    console.log(vm.newProject);
+    vm.newProject.project.requiredTeamMembers = object;
+    vm.newProject.project.openTeamMembers = object;
+    vm.newProject.project.waitingTeamMembers = object;
+    vm.newProject.project.liveTeamMembers = object;
 
-    // //hard coded in freelancer ID pre authetication work
-    // vm.newProject.project.leadFreelancer = '588e507a4d0d1f74979be1ee';
-    // return $http
-    //   .post('http://localhost:3000/api/projects', vm.newProject)
-    //   .then(response => {
-    //     console.log(response);
-    //     //redirect to project show page of newly created project
-    //     $state.go('projectsShow', {id: response.data.project._id});
-    //   });
+    console.log(vm.newProject.project);
+
+    //hard coded in freelancer ID pre authetication work
+    vm.newProject.project.leadFreelancer = '588e507a4d0d1f74979be1ee';
+    return $http
+      .post('http://localhost:3000/api/projects', vm.newProject)
+      .then(response => {
+        console.log(response);
+        //redirect to project show page of newly created project
+        $state.go('projectsShow', {id: response.data.project._id});
+      });
   };
 
 }
