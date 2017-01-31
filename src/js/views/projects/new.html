@@ -2,26 +2,26 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
-        <input id="name" type="text" class="validate" ng-model="projectsNew.project.name">
+        <input id="name" type="text" class="validate" ng-model="projectsNew.newProject.name">
         <label for="name">Name</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="description" type="text" class="validate" ng-model="projectsNew.project.description">
+        <input id="description" type="text" class="validate" ng-model="projectsNew.newProject.description">
         <label for="description">Description</label>
       </div>
     </div>
     <div class="row">
       <p class="range-field col s12">
-        <label for="budget">Budget: £{{projectsNew.project.budget}}</label>
-        <input type="range" id="budget" min="0" max="20000" ng-model="projectsNew.project.budget"/>
+        <label for="budget">Budget: £{{projectsNew.newProject.budget}}</label>
+        <input type="range" id="budget" min="0" max="20000" ng-model="projectsNew.newProject.budget"/>
       </p>
     </div>
     <div class="row">
       <p class="range-field col s12">
-        <label for="timeframe">Timeframe: w{{projectsNew.project.timeframe}}</label>
-        <input type="range" id="timeframe" min="0" max="52" ng-model="projectsNew.project.timeframe"/>
+        <label for="timeframe">Timeframe: w{{projectsNew.newProject.timeframe}}</label>
+        <input type="range" id="timeframe" min="0" max="52" ng-model="projectsNew.newProject.timeframe"/>
       </p>
     </div>
     <a class="waves-effect waves-light btn" ng-click="projectsNew.part1 = !projectsNew.part1">Team Builder</a>
@@ -33,7 +33,7 @@
       <div class="col s12">
         <p class="range-field">
           UX Designers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['UX Designers']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['UX Designers']"/>
         </p>
       </div>
     </div>
@@ -41,7 +41,7 @@
       <div class="col s12">
         <p class="range-field">
           UI Designers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['UI Designers']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['UI Designers']"/>
 
         </p>
       </div>
@@ -50,7 +50,7 @@
       <div class="col s12">
         <p class="range-field">
           Frontend Developers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['Frontend Developers']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['Frontend Developers']"/>
         </p>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <div class="col s12">
         <p class="range-field">
           Backend Developers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['Backend Developers']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['Backend Developers']"/>
         </p>
       </div>
     </div>
@@ -66,7 +66,7 @@
       <div class="col s12">
         <p class="range-field">
           Data Scientists
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['Data Scientists']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['Data Scientists']"/>
         </p>
       </div>
     </div>
@@ -74,7 +74,7 @@
       <div class="col s12">
         <p class="range-field">
           Marketers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['Marketers']" />
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['Marketers']" />
         </p>
       </div>
     </div>
@@ -82,7 +82,7 @@
       <div class="col s12">
         <p class="range-field">
           Project Managers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['Project Managers']" />
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['Project Managers']" />
         </p>
       </div>
     </div>
@@ -90,7 +90,7 @@
       <div class="col s12">
         <p class="range-field">
           iOS Developers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['iOS Developers']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['iOS Developers']"/>
         </p>
       </div>
     </div>
@@ -98,7 +98,7 @@
       <div class="col s12">
         <p class="range-field">
           Android Developers
-          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.project.teamMembers['Android Developers']"/>
+          <input type="range" min="0" max="6" ng-model="projectsNew.newProject.teamMembers['Android Developers']"/>
         </p>
       </div>
     </div>
