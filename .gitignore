@@ -1,8 +1,4 @@
-/public
-/node_modules
-/bower_components
-<<<<<<< HEAD
-/sendgrid.env
-=======
+public
+node_modules
+bower_components
 sendgrid.env
->>>>>>> cc6f28a8e5999ef53c96c512734b9d6957826061
