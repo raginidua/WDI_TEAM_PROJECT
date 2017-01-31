@@ -1,47 +1,27 @@
+<div class="row">
+  <h1>{{ projects.project.name }}</h1>
+  <h6>{{ projects.project.description }}</h6>
 
-<div class="row" ng-controller="ProjectsShowCtrl as show">
-  <h1>{{show.project.name}}</h1>
-  <div class="col s12 m7">
+  <div class="col s12 m3">
     <div class="card">
-      <div class="card-image">
-        <img src="http://www.fillmurray.com/300/300">
-        <span class="card-title">Project X</span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="projectsApply"><i class="large material-icons">mode_edit</i></a>
-      </div>
+        <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
+        <!-- </a> -->
       <div class="card-content">
         <ul class="collection with-header">
-          <li class="collection-header"><h4>Filled Positions</h4></li>
-          <li class="collection-item">UX: Him</li>
-          <li class="collection-item">UI: Her</li>
+          <li class="collection-header">Budget</li>
+          <li class="collection-item">{{ projects.project.budget }}</li>
         </ul>
         <ul class="collection with-header">
-          <li class="collection-header"><h4>Open Positions</h4></li>
-          <li class="collection-item">
-            <div class="">
-              UX
-            </div>
-            <div class="switch">
-              <label>
-                Withdraw Application
-                <input type="checkbox">
-                <span class="lever"></span>
-                Submit Application
-              </label>
-            </div>
-          </li>
-          <li class="collection-item">
-            <div class="">
-              UI
-            </div>
-            <div class="switch">
-              <label>
-                Withdraw Application
-                <input type="checkbox">
-                <span class="lever"></span>
-                Submit Application
-              </label>
-            </div>
-          </li>
+          <li class="collection-header">TimeFrame</li>
+          <li class="collection-item">{{ projects.project.timeframe }}</li>
+        </ul>
+        <ul class="collection with-header">
+          <li class="collection-header">Filled Positions</li>
+          <li class="collection-item" ng-repeat="member in projects.project.activeTeamMembers">{{ member.email}}</li>
+        </ul>
+        <ul class="collection with-header">
+          <li class="collection-header">Open Positions</li>
+          <li class="collection-item" ng-repeat="member in projects.project.pendingTeamMembers">{{ member.email}}</li>
         </ul>
       </div>
     </div>

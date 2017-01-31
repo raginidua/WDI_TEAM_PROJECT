@@ -18,11 +18,12 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
       templateUrl: '/js/views/freelancers/login.html'
     })
     .state('freelancersShow', {
-      url: '/freelancers/:freelancerId',
-      templateUrl: '/js/views/freelancers/show.html'
+      url: '/freelancers/:id',
+      templateUrl: '/js/views/freelancers/show.html',
+      controller: 'FreelancersShowCtrl as freelancers'
     })
     .state('freelancersEdit', {
-      url: '/freelancers/:freelancerId/edit',
+      url: '/freelancers/:id/edit',
       templateUrl: '/js/views/freelancers/edit.html',
       controller: 'FreelancersEditCtrl as freelancers'
     });
