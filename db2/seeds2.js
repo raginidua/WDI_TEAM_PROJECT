@@ -42,6 +42,7 @@ const f3 = new Freelancer({
   email: 'oioimolloy@gmail.com',
   password: 'password',
   passwordConfirmation: 'password'
+
 });
 f3.save((err, user) => {
   if (err) return console.log(err);
@@ -208,14 +209,14 @@ f15.save((err, user) => {
 });
 
 const p1 = new Project({
-  name: 'Davinder\'s project',
-  description: 'Project is to design a blog.',
+  name: 'Brand new Game App for GA',
+  description: 'Design and build a new game that will take over the gaming market',
   leadFreelancer: f1._id,
   requiredTeamMembers: {
-    UI: 4,
-    UX: 4,
-    frontEndDev: 0,
-    backEndDev: 0,
+    UI: 1,
+    UX: 1,
+    frontEndDev: 1,
+    backEndDev: 1,
     dataScientist: 0,
     marketing: 0,
     projectManager: 0,
@@ -223,8 +224,8 @@ const p1 = new Project({
     AndroidDev: 0
   },
   openTeamMembers: {
-    UI: 2,
-    UX: 2,
+    UI: 0,
+    UX: 0,
     frontEndDev: 0,
     backEndDev: 0,
     dataScientist: 0,
@@ -234,8 +235,8 @@ const p1 = new Project({
     AndroidDev: 0
   },
   waitingTeamMembers: {
-    UI: [f6._id, f7._id],
-    UX: [f8._id, f9._id, f10._id],
+    UI: [],
+    UX: [],
     frontEndDev: [],
     backEndDev: [],
     dataScientist: [],
@@ -245,10 +246,10 @@ const p1 = new Project({
     AndroidDev: []
   },
   liveTeamMembers: {
-    UI: [f2._id, f3._id],
-    UX: [f4._id, f5._id],
-    frontEndDev: [],
-    backEndDev: [],
+    UI: [f2._id],
+    UX: [f3._id],
+    frontEndDev: [f4._id],
+    backEndDev: [f5._id],
     dataScientist: [],
     marketing: [],
     projectManager: [],
@@ -256,181 +257,186 @@ const p1 = new Project({
     AndroidDev: []
   },
 
-  budget: 5000,
-  timeframe: '10 Days'
+  budget: 10000,
+  timeframe: '5'
 });
 p1.save((err, project) => {
   if (err) return console.log(err);
   console.log(`${project.name} was saved`);
 });
 
-const p2 = new Project({
-  name: 'Ragini\'s project',
-  description: 'project is to help build a website for a law firm.',
-  leadFreelancer: f1._id,
-  requiredTeamMembers: {
-    UI: 4,
-    UX: 4,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
-  },
-  openTeamMembers: {
-    UI: 2,
-    UX: 2,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
-  },
-  waitingTeamMembers: {
-    UI: [f6._id, f7._id],
-    UX: [f8._id, f9._id, f10._id],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
-  },
-  liveTeamMembers: {
-    UI: [f2._id, f3._id],
-    UX: [f4._id, f5._id],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
-  },
-
-  budget: 12000,
-  timeframe: '30 Days'
-});
-p2.save((err, project) => {
-  if (err) return console.log(err);
-  console.log(`${project.name} was saved`);
-});
-
-const p3 = new Project({
-  name: 'Ali\'s project',
-  description: 'Project is to build a graphic design website.',
-  leadFreelancer: f1._id,
-  requiredTeamMembers: {
-    UI: 4,
-    UX: 4,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
-  },
-  openTeamMembers: {
-    UI: 2,
-    UX: 2,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
-  },
-  waitingTeamMembers: {
-    UI: [f6._id, f7._id],
-    UX: [f8._id, f9._id, f10._id],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
-  },
-  liveTeamMembers: {
-    UI: [f2._id, f3._id],
-    UX: [f4._id, f5._id],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
-  },
-
-  budget: 9000,
-  timeframe: '18 Days'
-});
-p3.save((err, project) => {
-  if (err) return console.log(err);
-  console.log(`${project.name} was saved`);
-});
-
-const p4 = new Project({
-  name: 'Jacks\'s project',
-  description: 'project is to build government backed website for AI.',
-  leadFreelancer: f1._id,
-  requiredTeamMembers: {
-    UI: 4,
-    UX: 4,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
-  },
-  openTeamMembers: {
-    UI: 2,
-    UX: 2,
-    frontEndDev: 0,
-    backEndDev: 0,
-    dataScientist: 0,
-    marketing: 0,
-    projectManager: 0,
-    IOSDev: 0,
-    AndroidDev: 0
-  },
-  waitingTeamMembers: {
-    UI: [f6._id, f7._id],
-    UX: [f8._id, f9._id, f10._id],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
-  },
-  liveTeamMembers: {
-    UI: [f2._id, f3._id],
-    UX: [f4._id, f5._id],
-    frontEndDev: [],
-    backEndDev: [],
-    dataScientist: [],
-    marketing: [],
-    projectManager: [],
-    IOSDev: [],
-    AndroidDev: []
-  },
-
-  budget: 80000,
-  timeframe: '120 Days'
-});
-p4.save((err, project) => {
-  if (err) return console.log(err);
-  console.log(`${project.name} was saved`);
-});
+f1.myProjects.push(p1._id);
+f2.projects.push(p1._id);
+f3.projects.push(p1._id);
+f4.projects.push(p1._id);
+f5.projects.push(p1._id);
+// const p2 = new Project({
+//   name: 'A really useful mobile app',
+//   description: 'An app that will make the user\'s life so easy',
+//   leadFreelancer: f2._id,
+//   requiredTeamMembers: {
+//     UI: 1,
+//     UX: 0,
+//     frontEndDev: 1,
+//     backEndDev: 2,
+//     dataScientist: 0,
+//     marketing: 0,
+//     projectManager: 0,
+//     IOSDev: 1,
+//     AndroidDev: 1
+//   },
+//   openTeamMembers: {
+//     UI: 1,
+//     UX: 0,
+//     frontEndDev: 1,
+//     backEndDev: 2,
+//     dataScientist: 0,
+//     marketing: 0,
+//     projectManager: 0,
+//     IOSDev: 1,
+//     AndroidDev: 1
+//   },
+//   waitingTeamMembers: {
+//     UI: [f15._id, f14._id],
+//     UX: [],
+//     frontEndDev: [f13._id, f12._id],
+//     backEndDev: [f11._id, f10._id, f9._id],
+//     dataScientist: [],
+//     marketing: [],
+//     projectManager: [],
+//     IOSDev: [f8._id, f7._id],
+//     AndroidDev: [f6._id, f5._id]
+//   },
+//   liveTeamMembers: {
+//     UI: [],
+//     UX: [],
+//     frontEndDev: [],
+//     backEndDev: [],
+//     dataScientist: [],
+//     marketing: [],
+//     projectManager: [],
+//     IOSDev: [],
+//     AndroidDev: []
+//   },
+//
+//   budget: 12000,
+//   timeframe: '30 Days'
+// });
+// p2.save((err, project) => {
+//   if (err) return console.log(err);
+//   console.log(`${project.name} was saved`);
+// });
+//
+// // const p3 = new Project({
+// //   name: 'Ali\'s project',
+// //   description: 'Project is to build a graphic design website.',
+// //   leadFreelancer: f1._id,
+// //   requiredTeamMembers: {
+// //     UI: 4,
+// //     UX: 4,
+// //     frontEndDev: 0,
+// //     backEndDev: 0,
+// //     dataScientist: 0,
+// //     marketing: 0,
+// //     projectManager: 0,
+// //     IOSDev: 0,
+// //     AndroidDev: 0
+// //   },
+// //   openTeamMembers: {
+// //     UI: 2,
+// //     UX: 2,
+// //     frontEndDev: 0,
+// //     backEndDev: 0,
+// //     dataScientist: 0,
+// //     marketing: 0,
+// //     projectManager: 0,
+// //     IOSDev: 0,
+// //     AndroidDev: 0
+// //   },
+// //   waitingTeamMembers: {
+// //     UI: [f6._id, f7._id],
+// //     UX: [f8._id, f9._id, f10._id],
+// //     frontEndDev: [],
+// //     backEndDev: [],
+// //     dataScientist: [],
+// //     marketing: [],
+// //     projectManager: [],
+// //     IOSDev: [],
+// //     AndroidDev: []
+// //   },
+// //   liveTeamMembers: {
+// //     UI: [f2._id, f3._id],
+// //     UX: [f4._id, f5._id],
+// //     frontEndDev: [],
+// //     backEndDev: [],
+// //     dataScientist: [],
+// //     marketing: [],
+// //     projectManager: [],
+// //     IOSDev: [],
+// //     AndroidDev: []
+// //   },
+// //
+// //   budget: 9000,
+// //   timeframe: '18 Days'
+// // });
+// // p3.save((err, project) => {
+// //   if (err) return console.log(err);
+// //   console.log(`${project.name} was saved`);
+// // });
+// //
+// // const p4 = new Project({
+// //   name: 'Jacks\'s project',
+// //   description: 'project is to build government backed website for AI.',
+// //   leadFreelancer: f1._id,
+// //   requiredTeamMembers: {
+// //     UI: 4,
+// //     UX: 4,
+// //     frontEndDev: 0,
+// //     backEndDev: 0,
+// //     dataScientist: 0,
+// //     marketing: 0,
+// //     projectManager: 0,
+// //     IOSDev: 0,
+// //     AndroidDev: 0
+// //   },
+// //   openTeamMembers: {
+// //     UI: 2,
+// //     UX: 2,
+// //     frontEndDev: 0,
+// //     backEndDev: 0,
+// //     dataScientist: 0,
+// //     marketing: 0,
+// //     projectManager: 0,
+// //     IOSDev: 0,
+// //     AndroidDev: 0
+// //   },
+// //   waitingTeamMembers: {
+// //     UI: [f6._id, f7._id],
+// //     UX: [f8._id, f9._id, f10._id],
+// //     frontEndDev: [],
+// //     backEndDev: [],
+// //     dataScientist: [],
+// //     marketing: [],
+// //     projectManager: [],
+// //     IOSDev: [],
+// //     AndroidDev: []
+// //   },
+// //   liveTeamMembers: {
+// //     UI: [f2._id, f3._id],
+// //     UX: [f4._id, f5._id],
+// //     frontEndDev: [],
+// //     backEndDev: [],
+// //     dataScientist: [],
+// //     marketing: [],
+// //     projectManager: [],
+// //     IOSDev: [],
+// //     AndroidDev: []
+// //   },
+// //
+// //   budget: 80000,
+// //   timeframe: '120 Days'
+// // });
+// // p4.save((err, project) => {
+// //   if (err) return console.log(err);
+// //   console.log(`${project.name} was saved`);
+// // });
