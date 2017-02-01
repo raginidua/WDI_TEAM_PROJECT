@@ -29,6 +29,7 @@
       </ul>
       <ul class="collection with-header">
         <li class="collection-header">Open Positions</li>
+        <li class="collection-item" ng-if="projects.openPositionCount(projects.project.openTeamMembers) === 0"> No available roles </li>
         <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
           {{ value }} {{ key }} Positions
           <button ng-click="projects.freelancerApply(key, projects.project._id)" class="btn waves-effect waves-light" type="submit" name="action">Apply
