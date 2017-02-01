@@ -13,15 +13,15 @@
         </div>
         <ul class="collection with-header">
           <li class="collection-header" ng-click="freelancers.fetchProjects()"><h4>Projects I Own </h4></li>
-          <a class="collection-item" ng-repeat="project in freelancers.freelancer.myProjects"> {{ project.name }} </a>
+          <a class="collection-item" ng-repeat="project in freelancers.freelancer.myProjects" ui-sref="projectsEdit({id: project._id})"> {{ project.name }} </a>
         </ul>
         <ul class="collection with-header">
           <li class="collection-header"><h4>Projects I'm In</h4></li>
-          <a class="collection-item" ng-repeat="project in freelancers.freelancer.projects"> {{ project.name }} </a>
+          <a class="collection-item" ng-repeat="project in freelancers.freelancer.projects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
         </ul>
         <ul class="collection with-header">
           <li class="collection-header"><h4>Pending Project Applications</h4></li>
-          <a class="collection-item" ng-repeat="project in freelancers.freelancer.pendingProjects"> {{ project.name }} </a>
+          <a class="collection-item" ng-repeat="project in freelancers.freelancer.pendingProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
         </ul>
       </div>
     </div>
