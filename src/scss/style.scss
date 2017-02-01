@@ -5,21 +5,14 @@
 
 //************VARIABLES*********//
 
-$primary-color: #009688;
-$background-color: #FAFAFA;
-$main-font: ;
 
 //*************GENERAL*************//
 
 body {
-  background-color: $background-color;
   font-family: 'Raleway', sans-serif;
 }
 
 //****************NAV***********//
-nav {
-    background-color: $primary-color;
-}
 
 //*********HOME**************//
 .parallax {
@@ -31,7 +24,3 @@ nav {
 
 
 //**********FOOTER*************//
-footer.page-footer {
-    padding-top: 20px;
-    background-color: $primary-color;
-}
