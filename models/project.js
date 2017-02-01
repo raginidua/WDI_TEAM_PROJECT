@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const projectSchema = new mongoose.Schema({
   name: {type: String, required: true},
   description: {type: String, required: true},
+  picture: {type: String, required: true},
   budget: {type: Number, required: true},
   timeframe: {type: String, required: true},
   leadFreelancer: {type: mongoose.Schema.ObjectId, ref: 'Freelancer', required: true},
