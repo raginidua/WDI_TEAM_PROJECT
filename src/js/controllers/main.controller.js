@@ -7,7 +7,7 @@ function MainCtrl($rootScope, CurrentFreelancerService, $state){
   const vm = this;
   $rootScope.$on('loggedIn', () => {
     vm.freelancer = CurrentFreelancerService.currentFreelancer.freelancer;
-    $state.go('home');
+    $state.go('freelancersShow', {id: vm.freelancer._id});
   });
   vm.logout = () => {
     CurrentFreelancerService.removeFreelancer();

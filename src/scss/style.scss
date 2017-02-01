@@ -11,16 +11,39 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=30);
+    background-image: url("https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?dpr=1.3333333730697632&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop=");
+}
 
 //****************NAV***********//
-
-//*********HOME**************//
-.parallax {
-  background-size: cover;
+nav {
+background-color:  #009688;
 }
+//*********HOME**************//
 .parallax-container {
       height: 100vh;
+      background-size: cover;
     }
 
 
 //**********FOOTER*************//
+
+
+
+//**********NEW TEAM*************//
+
+select {
+    display: inline-block;
+    margin: 20px 0 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+a.add-member {
+  display: inline-block;
+  margin: 20px 0 20px;
+  width: 100%;
+  border-radius: 5px;
+}

@@ -2,24 +2,26 @@ angular
   .module('teamBuilder')
   .controller('FreelancersEditCtrl', FreelancersEditCtrl);
 
-FreelancersEditCtrl.$inject = ['$stateParams', '$state', '$http'];
-function FreelancersEditCtrl($stateParams, $state, $http) {
+FreelancersEditCtrl.$inject = ['$stateParams', '$state', '$http', 'Freelancer'];
+function FreelancersEditCtrl($stateParams, $state, $http, Freelancer) {
+  console.log('IN THE FREELANCER EDIT CONTORLLER');
   const vm = this;
-  freelancersShow();
 
-  function freelancersShow(){
-    return $http
-      .get(`http://localhost:3000/api/freelancers/${$stateParams.id}`)
-      .then(response => {
-        vm.freelancer = response.data;
-      });
-  }
+  Freelancer
+    .get({id: $stateParams.id})
+    .$promise
+    .then(response => {
+      vm.freelancer = response.freelancer;
+    });
+
+  Materialize.updateTextFields();
 
   vm.freelancersUpdate = function freelancersUpdate(){
-    return $http
-      .put(`http://localhost:3000/api/freelancers/${vm.freelancer._id}`, vm.newFreelancer)
-      .then(() => {
-        $state.go('freelancersShow');
+    Freelancer
+      .update({id: $stateParams.id}, vm.freelancer)
+      .$promise
+      .then(resp => {
+        $state.go('freelancersShow', {id: vm.freelancer._id});
       });
   };
 }

@@ -4,7 +4,7 @@
       <div class="card-image">
         <img src="http://www.fillmurray.com/400/400">
         <span class="card-title"> {{freelancers.freelancer.firstName}} {{freelancers.freelancer.lastName}} </span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="freelancersEdit"><i class="large material-icons">mode_edit</i></a>
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="freelancersEdit({id: freelancers.freelancer._id})"><i class="large material-icons">mode_edit</i></a>
       </div>
       <div class="card-content">
         {{freelancers.freelancer.email}}
@@ -12,18 +12,26 @@
           <a ui-sref="projectsNew">Create New Project</a>
         </div>
         <ul class="collection with-header">
-          <li class="collection-header" ng-click="freelancers.fetchProjects()"><h4>Projects I Own </h4></li>
-          <a class="collection-item" ng-repeat="project in freelancers.freelancer.myProjects"> {{ project.name }} </a>
-        </ul>
-        <ul class="collection with-header">
-          <li class="collection-header"><h4>Projects I'm In</h4></li>
-          <a class="collection-item" ng-repeat="project in freelancers.freelancer.projects"> {{ project.name }} </a>
-        </ul>
-        <ul class="collection with-header">
-          <li class="collection-header"><h4>Pending Project Applications</h4></li>
-          <a class="collection-item" ng-repeat="project in freelancers.freelancer.pendingProjects"> {{ project.name }} </a>
-        </ul>
+          <li class="collection-header"><h4>Projects I Own </h4></li>
+          <a class="collection-item" ng-if="freelancers.freelancer.myProjects.length === 0">
+            None </a>
+            <a class="collection-item" ng-if="freelancers.freelancer.myProjects.length !== 0" ng-repeat="project in freelancers.freelancer.myProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+          </ul>
+
+          <ul class="collection with-header">
+            <li class="collection-header"><h4>Projects I'm In</h4></li>
+            <a class="collection-item" ng-if="freelancers.freelancer.projects.length === 0">
+              None </a>
+              <a class="collection-item" ng-if="freelancers.freelancer.projects.length !== 0" ng-repeat="project in freelancers.freelancer.projects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+            </ul>
+
+            <ul class="collection with-header">
+              <li class="collection-header"><h4>Pending Project Applications</h4></li>
+              <a class="collection-item" ng-if="freelancers.freelancer.pendingProjects.length === 0">
+                None </a>
+              <a class="collection-item" ng-if="freelancers.freelancer.pendingProjects.length !== 0" ng-repeat="project in freelancers.freelancer.pendingProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
