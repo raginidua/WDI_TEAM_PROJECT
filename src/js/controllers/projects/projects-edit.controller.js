@@ -24,11 +24,11 @@ function ProjectsEditCtrl($http, $state, $stateParams, Project, Freelancer, $sco
       vm.applicant = response.data.freelancer;
 
       //remove applicant from projects waiting applicants list
-      const applicantsIndex = vm.project.waitingTeamMembers[role].indexOf(vm.applicant);
+      const applicantsIndex = vm.project.waitingTeamMembers[role].indexOf(vm.applicant._id);
       vm.project.waitingTeamMembers[role].splice(applicantsIndex, 1);
 
       //add applicant to projects live team
-      vm.project.liveTeamMembers[role].push(vm.applicant);
+      vm.project.liveTeamMembers[role].push(vm.applicant._id);
 
       //project's open positions needs to go down
       vm.project.openTeamMembers[role] -= 1;
