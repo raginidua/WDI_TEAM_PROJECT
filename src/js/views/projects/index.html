@@ -4,18 +4,26 @@
     <div class="card" ng-repeat="project in projects.projects">
       <div class="card-image">
         <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
-          <img src="http://www.fillmurray.com/100/100">
+        <img src="http://www.fillmurray.com/100/100">
         <!-- </a> -->
         <span class="card-title" ui-sref="projectsShow({ id: project._id })">{{ project.name }}</span>
       </div>
       <div class="card-content">
         <ul class="collection with-header">
-          <li class="collection-header">Filled Positions</li>
-          <li class="collection-item" ng-repeat="member in project.activeTeamMembers">{{ member.email}}</li>
+          <li class="collection-header"> Budget</li>
+          <li class="collection-item">{{ project.budget }}</li>
         </ul>
+      </div>
+      <div class="card-content">
         <ul class="collection with-header">
-          <li class="collection-header">Open Positions</li>
-          <li class="collection-item" ng-repeat="member in project.pendingTeamMembers">{{ member.email}}</li>
+          <li class="collection-header"> Time Frame</li>
+          <li class="collection-item">{{ project.timeframe }}</li>
+        </ul>
+      </div>
+      <div class="card-content">
+        <ul class="collection with-header">
+          <li class="collection-header"> Team Size </li>
+          <li class="collection-item" ng-init="temp_size = projects.getTeamSize(project.requiredTeamMembers)">{{ temp_size }}</li>
         </ul>
       </div>
     </div>
