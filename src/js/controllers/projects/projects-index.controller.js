@@ -12,12 +12,20 @@ function ProjectsIndexCtrl($http) {
     vm.projects = response.data.projects;
   });
 
-  vm.getTeamSize = function(requiredTeamMembersObject) {
+  vm.getTeamSizeNRoles = function(requiredTeamMembersObject) {
     var teamSize = 0;
+    var teamRoles = '';
     for(var role in requiredTeamMembersObject) {
-      teamSize+= requiredTeamMembersObject[role];
+      if(requiredTeamMembersObject[role] > 0) {
+        teamSize+= requiredTeamMembersObject[role];
+        if(teamRoles === ''){
+          teamRoles+= role;
+        } else {
+          teamRoles+=', '+ role;
+        }
+      }
     }
-    return teamSize;
+    return teamSize + '[' + teamRoles + ']';
   };
 
 }

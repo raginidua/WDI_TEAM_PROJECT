@@ -1,15 +1,16 @@
 angular
-  .module('teamBuilder', [
-    'ui.router',
-    'ngResource',
-    'angular-jwt'
-  ]);
+.module('teamBuilder', [
+  'ui.router',
+  'ngResource',
+  'angular-jwt'
+]);
 
 
 (function($){
   $(function(){
 
     $('.button-collapse').sideNav();
+    //$('select').material_select();
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
