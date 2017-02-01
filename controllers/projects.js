@@ -60,10 +60,79 @@ function projectsShow(req, res){
   const projectId = req.params.id;
   Project
   .findById(projectId)
-  // .populate('liveTeamMembers')
-  // .populate('openTeamMembers')
-  // .populate('requiredTeamMembers')
-  // .populate('waitingTeamMembers')
+  .populate('leadFreelancer')
+  .populate({
+    path: 'liveTeamMembers.UXDesigners',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.UIDesigners',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.FrontendDevelopers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.BackendDevelopers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.DataScientists',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.Marketers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.ProjectManagers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.iOSDevelopers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'liveTeamMembers.Android Developers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.UXDesigners',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.UIDesigners',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.FrontendDevelopers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.BackendDevelopers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.DataScientists',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.Marketers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.ProjectManagers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.iOSDevelopers',
+    model: 'Freelancer'
+  })
+  .populate({
+    path: 'waitingTeamMembers.Android Developers',
+    model: 'Freelancer'
+  })
   .exec((err, project) => {
     if (err) return res.status(500).json({
       message: 'something went wrong',

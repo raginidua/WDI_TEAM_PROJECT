@@ -2,8 +2,8 @@ angular
 .module('teamBuilder')
 .controller('ProjectsEditCtrl', ProjectsEditCtrl);
 
-ProjectsEditCtrl.$inject = ['$http', '$state', '$stateParams', 'Project', 'Freelancer'];
-function ProjectsEditCtrl($http, $state, $stateParams, Project, Freelancer) {
+ProjectsEditCtrl.$inject = ['$http', '$state', '$stateParams', 'Project', 'Freelancer', '$scope'];
+function ProjectsEditCtrl($http, $state, $stateParams, Project, Freelancer, $scope) {
   const vm = this;
   const currentFreelancer = $scope.$parent.main.freelancer;
 
