@@ -1,5 +1,5 @@
 <div class="row">
-  <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
+  <a class="btn-floating btn-large waves-effect waves-light red"  ng-if="projects.currentFreelancer._id === projects.project.leadFreelancer" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
 </div>
 <div class="row">
 

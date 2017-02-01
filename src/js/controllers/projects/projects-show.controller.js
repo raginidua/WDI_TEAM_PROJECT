@@ -5,8 +5,9 @@ angular
 ProjectsShowCtrl.$inject = ['$stateParams', '$http', '$state', 'Project', 'Freelancer', '$scope'];
 function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $scope) {
   const vm = this;
+
   //get currentFreelancer stored in mainCtrl by authentication stuff
-  const currentFreelancer = $scope.$parent.main.freelancer;
+  vm.currentFreelancer = $scope.$parent.main.freelancer;
 
   //get project info for page
   Project
@@ -21,13 +22,12 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     for(var role in openTeamMembersObject) {
       count += openTeamMembersObject[role];
     }
-    console.log(count);
     return count;
   };
 
   vm.freelancerApply = function(role, projectId) {
     //add freelancer id to project waitingTeamMembers
-    vm.project.waitingTeamMembers[role].push(currentFreelancer._id);
+    vm.project.waitingTeamMembers[role].push(vm.currentFreelancer._id);
     Project
     .update({id: $stateParams.id}, vm.project)
     .$promise
@@ -36,7 +36,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     });
 
     //add project id to freelancers pendingProjects
-    currentFreelancer.pendingProjects.push($stateParams.id);
+    vm.currentFreelancer.pendingProjects.push($stateParams.id);
     Freelancer
     .update(currentFreelancer)
     .$promise
