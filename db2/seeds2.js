@@ -246,10 +246,10 @@ const p1 = new Project({
     'AndroidDevelopers': []
   },
   liveTeamMembers: {
-    'UIDesigners': [f2],
-    'UXDesigners': [f3],
-    'FrontendDevelopers': [f4],
-    'BackendDevelopers': [f5],
+    'UIDesigners': [f2._id],
+    'UXDesigners': [f3._id],
+    'FrontendDevelopers': [f4._id],
+    'BackendDevelopers': [f5._id],
     'DataScientists': [],
     'Marketers': [],
     'ProjectManagers': [],
@@ -265,347 +265,347 @@ p1.save((err, project) => {
   console.log(`${project.name} was saved`);
 });
 
-// const p2 = new Project({
-//   name: 'A really useful mobile app',
-//   description: 'An app that will make the user\'s life so easy',
-//   leadFreelancer: f2._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [f15._id, f14._id],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f13._id, f12._id],
-//     'BackendDevelopers': [f11._id, f10._id, f9._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [f8._id, f7._id],
-//     'AndroidDevelopers': [f6._id, f5._id]
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 15000,
-//   timeframe: '6'
-// });
-// p2.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p3 = new Project({
-//   name: 'Map my life',
-//   description: 'Build and design a map based application that will track every aspect of a user\'s life',
-//   leadFreelancer: f3._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 1,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f12._id, f14._id],
-//     'BackendDevelopers': [f13._id, f15._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f8._id],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f6._id],
-//     'BackendDevelopers': [f7._id],
-//     'DataScientists': [],
-//     'Marketers': [f4._id],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 15000,
-//   timeframe: '6'
-// });
-// p3.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p4 = new Project({
-//   name: 'Highly secretive project',
-//   description: 'Lucrative money making project for educational organisation',
-//   leadFreelancer: f4._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 3,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 1,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f3._id, f1._id, f6._id, f13._id],
-//     'BackendDevelopers': [f2._id, f9._id, f12._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f11._id],
-//     'BackendDevelopers': [f8._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [f7._id],
-//     'iOSDevelopers': [f5._id],
-//     'AndroidDevelopers': [f10._id]
-//   },
-//
-//   budget: 25000,
-//   timeframe: '8'
-// });
-// p4.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p5 = new Project({
-//   name: 'The clueless wardrobe',
-//   description: 'App to dress me every morning!',
-//   leadFreelancer: f2._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 1
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f9._id, f11._id, f7._id, f8._id],
-//     'BackendDevelopers': [f3._id, f5._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': [f4]
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f13._id],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [f10._id],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 15000,
-//   timeframe: '5'
-// });
-// p5.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p6 = new Project({
-//   name: 'My great new game app',
-//   description: 'A whack-a-mole style game with bright colours and sound',
-//   leadFreelancer: f2._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 1,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 0,
-//     'BackendDevelopers': 0,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f12._id],
-//     'UXDesigners': [f13._id],
-//     'FrontendDevelopers': [f14._id],
-//     'BackendDevelopers': [f15._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 10000,
-//   timeframe: '3'
-// });
-// p6.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p7 = new Project({
-//   name: 'Memory game',
-//   description: 'Memory game similar to Peak. But better.',
-//   leadFreelancer: f3._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 1,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 0,
-//     'BackendDevelopers': 0,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f12._id],
-//     'UXDesigners': [f3._id],
-//     'FrontendDevelopers': [f7._id, f10._id ],
-//     'BackendDevelopers': [f14._id, f8._id ],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 10000,
-//   timeframe: '3'
-// });
-// p7.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
+const p2 = new Project({
+  name: 'A really useful mobile app',
+  description: 'An app that will make the user\'s life so easy',
+  leadFreelancer: f2._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  openTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [f15._id, f14._id],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f13._id, f12._id],
+    'BackendDevelopers': [f11._id, f10._id, f9._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [f8._id, f7._id],
+    'AndroidDevelopers': [f6._id, f5._id]
+  },
+  liveTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 15000,
+  timeframe: '6'
+});
+p2.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p3 = new Project({
+  name: 'Map my life',
+  description: 'Build and design a map based application that will track every aspect of a user\'s life',
+  leadFreelancer: f3._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 1,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f12._id, f14._id],
+    'BackendDevelopers': [f13._id, f15._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f8._id],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f6._id],
+    'BackendDevelopers': [f7._id],
+    'DataScientists': [],
+    'Marketers': [f4._id],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 15000,
+  timeframe: '6'
+});
+p3.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p4 = new Project({
+  name: 'Highly secretive project',
+  description: 'Lucrative money making project for educational organisation',
+  leadFreelancer: f4._id,
+  requiredTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 3,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 1,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f3._id, f1._id, f6._id, f13._id],
+    'BackendDevelopers': [f2._id, f9._id, f12._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f11._id],
+    'BackendDevelopers': [f8._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [f7._id],
+    'iOSDevelopers': [f5._id],
+    'AndroidDevelopers': [f10._id]
+  },
+
+  budget: 25000,
+  timeframe: '8'
+});
+p4.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p5 = new Project({
+  name: 'The clueless wardrobe',
+  description: 'App to dress me every morning!',
+  leadFreelancer: f2._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 1
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f9._id, f11._id, f7._id, f8._id],
+    'BackendDevelopers': [f3._id, f5._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': [f4]
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f13._id],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [f10._id],
+    'AndroidDevelopers': []
+  },
+
+  budget: 15000,
+  timeframe: '5'
+});
+p5.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p6 = new Project({
+  name: 'My great new game app',
+  description: 'A whack-a-mole style game with bright colours and sound',
+  leadFreelancer: f2._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 1,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 0,
+    'BackendDevelopers': 0,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f12._id],
+    'UXDesigners': [f13._id],
+    'FrontendDevelopers': [f14._id],
+    'BackendDevelopers': [f15._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 10000,
+  timeframe: '3'
+});
+p6.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p7 = new Project({
+  name: 'Memory game',
+  description: 'Memory game similar to Peak. But better.',
+  leadFreelancer: f3._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 1,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 0,
+    'BackendDevelopers': 0,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f12._id],
+    'UXDesigners': [f3._id],
+    'FrontendDevelopers': [f7._id, f10._id ],
+    'BackendDevelopers': [f14._id, f8._id ],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 10000,
+  timeframe: '3'
+});
+p7.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
 
 
 
@@ -618,11 +618,11 @@ p1.save((err, project) => {
 
 
 //F1 fully filled project
-f1.myProjects.push(p1);
-f2.projects.push(p1);
-f3.projects.push(p1);
-f4.projects.push(p1);
-f5.projects.push(p1);
+f1.myProjects.push(p1._id);
+f2.projects.push(p1._id);
+f3.projects.push(p1._id);
+f4.projects.push(p1._id);
+f5.projects.push(p1._id);
 
 //F2 fully open with waiting project
 f2.myProjects.push(p2._id);
