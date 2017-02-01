@@ -21,11 +21,11 @@
       </ul> -->
       <ul class="collection with-header">
         <li class="collection-header">Required Positions</li>
-        <li class="collection-item" ng-repeat="(key, value) in projects.project.requiredTeamMembers" ng-if="value !== 0">{{ value }} {{ key }} Positions</li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.requiredTeamMembers track by $index" ng-if="value !== 0">{{ value }} {{ key }}</li>
       </ul>
       <ul class="collection with-header">
         <li class="collection-header">Filled Positions</li>
-        <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers" ng-if="value.length !== 0"><span ng-repeat="id in value">{{ key }}: {{ id }} </span></li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: {{ id }} </span></li>
       </ul>
     <ul class="collection with-header">
       <li class="collection-header">Open Positions</li>

@@ -1,9 +1,8 @@
-// app.js is the main JS file which you should define your Angular module
-console.log('JS loaded');
-
 angular
   .module('teamBuilder', [
-    'ui.router'
+    'ui.router',
+    'ngResource',
+    'angular-jwt'
   ]);
 
 

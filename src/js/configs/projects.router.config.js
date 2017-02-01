@@ -9,7 +9,7 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('projectsIndex', {
-      url: '/projects/index',
+      url: '/projects',
       templateUrl: '/js/views/projects/index.html',
       controller: 'ProjectsIndexCtrl as projects'
     })
@@ -38,6 +38,11 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/projects/:id/edit',
       templateUrl: '/js/views/projects/edit.html',
       controller: 'ProjectsEditCtrl as projects'
+    })
+    .state('freelancersIndex', {
+      url: '/freelancers',
+      templateUrl: '/js/views/freelancers/index.html',
+      controller: 'FreelancersIndexCtrl as freelancersIndex'
     });
 
   $urlRouterProvider.otherwise('/');
