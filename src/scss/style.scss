@@ -1,11 +1,26 @@
-// Materialize overrides
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Arvo', serif;
+// font-family: 'Montserrat', sans-serif;
 
-.icon-block {
-  padding: 0 15px;
+//************VARIABLES*********//
+
+
+//*************GENERAL*************//
+
+body {
+  font-family: 'Raleway', sans-serif;
 }
-.icon-block .material-icons {
-	font-size: inherit;
+
+//****************NAV***********//
+
+//*********HOME**************//
+.parallax {
+  background-size: cover;
 }
+.parallax-container {
+      height: 100vh;
+    }
 
 
-// Import all of your scss files here
+//**********FOOTER*************//
