@@ -1,4 +1,8 @@
 <div class="row">
+  <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
+</div>
+<div class="row">
+
   <h1>{{ projects.project.name }}</h1>
   <h6>{{ projects.project.description }}</h6>
 
@@ -24,20 +28,19 @@
         <li class="collection-item" ng-repeat="(key, value) in projects.project.requiredTeamMembers track by $index" ng-if="value !== 0">{{ value }} {{ key }}</li>
       </ul>
       <ul class="collection with-header">
-        <li class="collection-header">Filled Positions</li>
-        <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: {{ id }} </span></li>
+        <li class="collection-header">Open Positions</li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
+          {{ value }} {{ key }} Positions
+          <button ng-click="projects.freelancerApply(key, projects.project._id)" class="btn waves-effect waves-light" type="submit" name="action">Apply
+            <i class="material-icons right">send</i>
+          </button>
+        </li>
       </ul>
-    <ul class="collection with-header">
-      <li class="collection-header">Open Positions</li>
-      <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
-        {{ value }} {{ key }} Positions
-        <button ng-click="projects.freelancerApply(key, projects.project._id)" class="btn waves-effect waves-light" type="submit" name="action">Apply
-          <i class="material-icons right">send</i>
-        </button>
-      </li>
-    </ul>
-    <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
+      <ul class="collection with-header">
+        <li class="collection-header">Filled Positions</li>
+        <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: {{ id.firstName }} {{ id.lastName }} </span></li>
+      </ul>
+    </div>
   </div>
-</div>
 </div>
 </div>
