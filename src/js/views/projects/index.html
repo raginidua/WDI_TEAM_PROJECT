@@ -1,6 +1,6 @@
 <div class="row">
   <h1>{{ project.name }}</h1>
-  <div class="col s12 m3">
+  <div class="col s12">
     <div class="card" ng-repeat="project in projects.projects">
       <div class="card-image">
         <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
@@ -23,7 +23,7 @@
       <div class="card-content">
         <ul class="collection with-header">
           <li class="collection-header"> Team Size </li>
-          <li class="collection-item" ng-init="temp_size = projects.getTeamSize(project.requiredTeamMembers)">{{ temp_size }}</li>
+          <li class="collection-item" ng-init="temp_sizeNroles = projects.getTeamSizeNRoles(project.requiredTeamMembers)">{{ temp_sizeNroles }} </li>
         </ul>
       </div>
     </div>
