@@ -7,6 +7,7 @@ function ProjectsNewCtrl($state, $scope, Project, Freelancer, rolesArray) {
   const vm = this;
   const currentFreelancer = $scope.$parent.main.freelancer;
   let first = true;
+  vm.canSubmit = false;
 
   vm.rolesArray = rolesArray;
 
@@ -28,6 +29,7 @@ function ProjectsNewCtrl($state, $scope, Project, Freelancer, rolesArray) {
         vm.newProject.teamMembers[element] = 0;
       });
       first = false;
+      vm.canSubmit = true;
     }
     vm.newProject.teamMembers[vm.newProject.memberToAdd] += 1;
   };
