@@ -38,6 +38,20 @@ nav {
   height: 500px;
 }
 
+//***********PROJECTS_SHOW**********//
+
+.card-image.project {
+  height: 200px;
+  background-size: cover;
+}
+
+.card-image.project img {
+  height: 200px;
+}
+
+
+
+
 //**********FOOTER*************//
 footer.page-footer {
   background-color: $primary-color;

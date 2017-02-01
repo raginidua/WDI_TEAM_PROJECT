@@ -2,8 +2,8 @@ angular
 .module('teamBuilder')
 .controller('ProjectsShowCtrl', ProjectsShowCtrl);
 
-ProjectsShowCtrl.$inject = ['$stateParams', '$http', '$state', 'Project', 'Freelancer', '$scope', 'CurrentFreelancerService'];
-function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $scope, CurrentFreelancerService) {
+ProjectsShowCtrl.$inject = ['$stateParams', '$http', '$state', 'Project', 'Freelancer', '$scope', 'CurrentFreelancerService', 'TeamSizeService'];
+function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $scope, CurrentFreelancerService, TeamSizeService) {
   const vm = this;
 
   //get currentFreelancer stored in mainCtrl by authentication stuff
@@ -15,6 +15,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
   .$promise
   .then(response => {
     vm.project = response.project;
+    vm.project.teamSize = TeamSizeService.getTeamSize(vm.project.requiredTeamMembers);
   });
 
   vm.openPositionCount = function(openTeamMembersObject) {
