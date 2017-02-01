@@ -18,7 +18,7 @@ function FreelancersShowCtrl($stateParams, $http) {
       params: {leadFreelancer: $stateParams.id}
     })
     .then(response => {
-      // console.log(response);
+      console.log(response);
       vm.freelancer.myProjects = response.data.projects;
       console.log(vm.freelancer.myProjects);
     });
