@@ -8,6 +8,9 @@
       </div>
       <div class="card-content">
         {{freelancers.freelancer.email}}
+        <div class="card-action">
+          <a ui-sref="projectsNew">Create New Project</a>
+        </div>
         <ul class="collection with-header">
           <li class="collection-header" ng-click="freelancers.fetchProjects()"><h4>Projects I Own </h4></li>
           <a class="collection-item" ng-repeat="project in freelancers.freelancer.myProjects"> {{ project.name }} </a>
@@ -20,9 +23,6 @@
           <li class="collection-header"><h4>Pending Project Applications</h4></li>
           <a class="collection-item" ng-repeat="project in freelancers.freelancer.pendingProjects"> {{ project.name }} </a>
         </ul>
-      </div>
-      <div class="card-action">
-        <a ui-sref="projectsNew">Create New Project</a>
       </div>
     </div>
   </div>
