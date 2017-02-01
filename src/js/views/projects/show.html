@@ -1,5 +1,5 @@
 <div class="row">
-  <a class="btn-floating btn-large waves-effect waves-light red"  ng-if="projects.currentFreelancer._id === projects.project.leadFreelancer" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
+  <a class="btn-floating btn-large waves-effect waves-light red"  ng-if="projects.currentFreelancer._id === projects.project.leadFreelancer._id" ui-sref="projectsEdit({id: projects.project._id})"><i class="large material-icons">mode_edit</i></a>
 </div>
 <div class="row">
 
@@ -11,6 +11,10 @@
       <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
       <!-- </a> -->
       <div class="card-content">
+        <ul class="collection with-header" ng-if="projects.currentFreelancer._id !== projects.project.leadFreelancer._id">
+          <li class="collection-header">Lead Freelancer</li>
+          <li class="collection-item">{{ projects.project.leadFreelancer.firstName }} {{ projects.project.leadFreelancer.lastName }}</li>
+        </ul>
         <ul class="collection with-header">
           <li class="collection-header">Budget</li>
           <li class="collection-item">{{ projects.project.budget }}</li>

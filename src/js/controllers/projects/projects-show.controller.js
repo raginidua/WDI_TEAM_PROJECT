@@ -15,6 +15,8 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
   .$promise
   .then(response => {
     vm.project = response.project;
+    console.log('PROJECTS LEAD FREELANCER', vm.project.leadFreelancer._id);
+    console.log('LOGGED IN USER', vm.currentFreelancer._id);
   });
 
   vm.openPositionCount = function(openTeamMembersObject) {

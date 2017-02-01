@@ -60,6 +60,7 @@ function projectsShow(req, res){
   const projectId = req.params.id;
   Project
   .findById(projectId)
+  .populate('leadFreelancer')
   .populate({
     path: 'liveTeamMembers.UXDesigners',
     model: 'Freelancer'
