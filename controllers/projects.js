@@ -9,7 +9,6 @@ function projectsIndex(req, res) {
   const query = {};
   if (req.query.leadFreelancer) query.leadFreelancer = req.query.leadFreelancer;
   Project
-  .find({ })
   .find(query)
   .populate('activeTeamMembers', 'email')
   .populate('pendingTeamMembers', 'email')
