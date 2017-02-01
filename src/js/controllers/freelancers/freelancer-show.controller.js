@@ -5,7 +5,7 @@ angular
 FreelancersShowCtrl.$inject = ['$stateParams', '$http', 'Freelancer'];
 function FreelancersShowCtrl($stateParams, $http, Freelancer) {
   const vm = this;
-  
+
   $('.collapsible').collapsible();
 
   Freelancer

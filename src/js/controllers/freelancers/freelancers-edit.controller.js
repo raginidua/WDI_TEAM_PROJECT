@@ -4,7 +4,6 @@ angular
 
 FreelancersEditCtrl.$inject = ['$stateParams', '$state', '$http', 'Freelancer'];
 function FreelancersEditCtrl($stateParams, $state, $http, Freelancer) {
-  console.log('IN THE FREELANCER EDIT CONTORLLER');
   const vm = this;
 
   Freelancer
