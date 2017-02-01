@@ -2,10 +2,40 @@ angular
   .module('teamBuilder')
   .controller('ProjectsNewCtrl', ProjectsNewCtrl);
 
-ProjectsNewCtrl.$inject = ['$state', '$scope', 'Project', 'Freelancer'];
-function ProjectsNewCtrl($state, $scope, Project, Freelancer) {
+ProjectsNewCtrl.$inject = ['$state', '$scope', 'Project', 'Freelancer', 'rolesArray'];
+function ProjectsNewCtrl($state, $scope, Project, Freelancer, rolesArray) {
   const vm = this;
   const currentFreelancer = $scope.$parent.main.freelancer;
+  let first = true;
+  vm.canSubmit = false;
+
+  vm.rolesArray = rolesArray;
+
+
+  setTimeout(function() {
+    console.log(vm.newProject);
+  }, 1000);
+
+  // vm.newProject['teamMembers'] = {};
+  //
+  // rolesArray.forEach((element, index, array) => {
+  //   vm.newProject.teamMembers[element] = 1;
+  // });
+
+  vm.addMember = function() {
+    if (first) {
+      vm.newProject['teamMembers'] = {};
+      rolesArray.forEach((element, index, array) => {
+        vm.newProject.teamMembers[element] = 0;
+      });
+      first = false;
+      vm.canSubmit = true;
+    }
+    vm.newProject.teamMembers[vm.newProject.memberToAdd] += 1;
+  };
+
+
+
 
   vm.part1 = true;
 
