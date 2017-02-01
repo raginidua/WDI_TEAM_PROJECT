@@ -4,7 +4,7 @@
       <div class="card-image">
         <img src="http://www.fillmurray.com/400/400">
         <span class="card-title"> {{freelancers.freelancer.firstName}} {{freelancers.freelancer.lastName}} </span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="freelancersEdit"><i class="large material-icons">mode_edit</i></a>
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="freelancersEdit({id: freelancers.freelancer._id})"><i class="large material-icons">mode_edit</i></a>
       </div>
       <div class="card-content">
         {{freelancers.freelancer.email}}
