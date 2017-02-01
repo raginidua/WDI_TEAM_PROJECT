@@ -15,7 +15,8 @@ const f1 = new Freelancer({
   github: 'MissDavinderKaur',
   email: 'dkaur1@hotmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f1.save((err, user) => {
   if (err) return console.log(err);
@@ -28,7 +29,8 @@ const f2 = new Freelancer({
   github: 'raginidua',
   email: 'raginidua1@gmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f2.save((err, user) => {
   if (err) return console.log(err);
@@ -41,7 +43,8 @@ const f3 = new Freelancer({
   github: 'alibongo',
   email: 'oioimolloy@gmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 
 });
 f3.save((err, user) => {
@@ -55,7 +58,8 @@ const f4 = new Freelancer({
   github: 'jackhkmathews',
   email: 'jackhkmatthews@gmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f4.save((err, user) => {
   if (err) return console.log(err);
@@ -68,7 +72,8 @@ const f5 = new Freelancer({
   github: 'RICHARDAAH',
   email: 'richardhayim@hotmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f5.save((err, user) => {
   if (err) return console.log(err);
@@ -81,7 +86,8 @@ const f6 = new Freelancer({
   github: 'hillaryClinton',
   email: 'hillary@beenhacked.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f6.save((err, user) => {
   if (err) return console.log(err);
@@ -94,7 +100,8 @@ const f7 = new Freelancer({
   github: 'billMurray',
   email: 'bill@Ghostb.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f7.save((err, user) => {
   if (err) return console.log(err);
@@ -107,7 +114,8 @@ const f8 = new Freelancer({
   github: 'elonMusk',
   email: 'elon@tesla.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f8.save((err, user) => {
   if (err) return console.log(err);
@@ -120,7 +128,8 @@ const f9 = new Freelancer({
   github: 'colNeedham',
   email: 'col@imdb.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f9.save((err, user) => {
   if (err) return console.log(err);
@@ -133,7 +142,8 @@ const f10 = new Freelancer({
   github: 'noelGallagher',
   email: 'noel@hateliam.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f10.save((err, user) => {
   if (err) return console.log(err);
@@ -146,7 +156,8 @@ const f11 = new Freelancer({
   github: 'liamGallagher',
   email: 'liam@hatenoel.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f11.save((err, user) => {
   if (err) return console.log(err);
@@ -160,7 +171,8 @@ const f12 = new Freelancer({
   github: 'edSaverin',
   email: 'eduardo@hatemark.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f12.save((err, user) => {
   if (err) return console.log(err);
@@ -174,7 +186,8 @@ const f13 = new Freelancer({
   github: 'markyZ',
   email: 'mark@forgiveforgetEd.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f13.save((err, user) => {
   if (err) return console.log(err);
@@ -188,7 +201,8 @@ const f14 = new Freelancer({
   github: 'amberHeard',
   email: 'amber@amber.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f14.save((err, user) => {
   if (err) return console.log(err);
@@ -201,12 +215,14 @@ const f15 = new Freelancer({
   github: 'jDepp',
   email: 'johnny@johnny.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f15.save((err, user) => {
   if (err) return console.log(err);
   console.log(`${user.firstName} was saved`);
 });
+
 
 const p1 = new Project({
   name: 'Brand new Game App for GA',
@@ -258,7 +274,8 @@ const p1 = new Project({
   },
 
   budget: 10000,
-  timeframe: '3'
+  timeframe: '3',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p1.save((err, project) => {
   if (err) return console.log(err);
@@ -315,7 +332,8 @@ const p2 = new Project({
   },
 
   budget: 15000,
-  timeframe: '6'
+  timeframe: '6',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p2.save((err, project) => {
   if (err) return console.log(err);
@@ -372,7 +390,8 @@ const p3 = new Project({
   },
 
   budget: 15000,
-  timeframe: '6'
+  timeframe: '6',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p3.save((err, project) => {
   if (err) return console.log(err);
@@ -429,7 +448,8 @@ const p4 = new Project({
   },
 
   budget: 25000,
-  timeframe: '8'
+  timeframe: '8',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p4.save((err, project) => {
   if (err) return console.log(err);
@@ -486,7 +506,8 @@ const p5 = new Project({
   },
 
   budget: 15000,
-  timeframe: '5'
+  timeframe: '5',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p5.save((err, project) => {
   if (err) return console.log(err);
@@ -543,7 +564,8 @@ const p6 = new Project({
   },
 
   budget: 10000,
-  timeframe: '3'
+  timeframe: '3',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p6.save((err, project) => {
   if (err) return console.log(err);
@@ -600,7 +622,8 @@ const p7 = new Project({
   },
 
   budget: 10000,
-  timeframe: '3'
+  timeframe: '3',
+  picture: 'http://disabilityandabuse.org/project-management.jpg'
 });
 p7.save((err, project) => {
   if (err) return console.log(err);
