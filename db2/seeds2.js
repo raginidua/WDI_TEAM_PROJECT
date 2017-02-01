@@ -75,10 +75,10 @@ f5.save((err, user) => {
 });
 
 const f6 = new Freelancer({
-  firstName: '',
-  lastName: '',
-  github: '',
-  email: '',
+  firstName: 'Hillary',
+  lastName: 'Clinton',
+  github: 'hillaryClinton',
+  email: 'hillary@beenhacked.com',
   password: 'password',
   passwordConfirmation: 'password'
 });
