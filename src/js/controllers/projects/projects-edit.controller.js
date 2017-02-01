@@ -17,7 +17,6 @@ function ProjectsEditCtrl($http, $state, $stateParams, Project, Freelancer, $sco
   vm.acceptApplication =  acceptApplication;
 
   function acceptApplication(role, applicantID ) {
-    console.log('APPLICANT ID', applicantID);
 
     $http
     .get(`http://localhost:3000/api/freelancers/${applicantID}`)
