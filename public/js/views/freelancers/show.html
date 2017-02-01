@@ -7,6 +7,7 @@
             <img src="http://www.fillmurray.com/g/200/300">
           </div>
         </div>
+<<<<<<< HEAD
       </div>
       <div class="col s8">
         <div class="card profile">
@@ -17,6 +18,27 @@
               <li>LinkedIn: {{freelancers.freelancer.linkedin}}</li>
               <li>Personal: {{freelancers.freelancer.personalWebsite}} </li>
               <li>email: {{freelancers.freelancer.email}}</li>
+=======
+        <ul class="collection with-header">
+          <li class="collection-header"><h4>Projects I Own </h4></li>
+          <a class="collection-item" ng-if="freelancers.freelancer.myProjects.length === 0">
+            None </a>
+            <a class="collection-item" ng-if="freelancers.freelancer.myProjects.length !== 0" ng-repeat="project in freelancers.freelancer.myProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+          </ul>
+
+          <ul class="collection with-header">
+            <li class="collection-header"><h4>Projects I'm In</h4></li>
+            <a class="collection-item" ng-if="freelancers.freelancer.projects.length === 0">
+              None </a>
+              <a class="collection-item" ng-if="freelancers.freelancer.projects.length !== 0" ng-repeat="project in freelancers.freelancer.projects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+            </ul>
+
+            <ul class="collection with-header">
+              <li class="collection-header"><h4>Pending Project Applications</h4></li>
+              <a class="collection-item" ng-if="freelancers.freelancer.pendingProjects.length === 0">
+                None </a>
+              <a class="collection-item" ng-if="freelancers.freelancer.pendingProjects.length !== 0" ng-repeat="project in freelancers.freelancer.pendingProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+>>>>>>> c2d9b9c936e7ff075e4c1150237df4427d4ef46d
             </ul>
             <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="freelancersEdit({id: freelancers.freelancer._id})"><i class="large material-icons">mode_edit</i></a>
           </div>
