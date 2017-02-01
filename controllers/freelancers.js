@@ -20,6 +20,7 @@ function freelancersShow(req,res) {
   .findById(req.params.id)
   .populate('myProjects')
   .populate('pendingProjects')
+  .populate('projects')
   .exec((err, freelancer) => {
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if (!freelancer) return res.status(404).json({ message: 'Freelancer not found' });
