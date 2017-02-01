@@ -12,6 +12,10 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.row.top {
+    padding-top: 50px;
+}
+
 .parallax img {
     @media only screen and (max-width: 599px) { max-width: 200%; }
     @media only screen and (min-width: 600px) { max-width: 200%; }
@@ -19,7 +23,7 @@ body {
 }
 
 
-img {
+.parallax-container img {
   opacity: 0.5;
   filter: alpha(opacity=30);
 }

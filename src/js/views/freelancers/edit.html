@@ -1,31 +1,35 @@
-<form class="col s12" ng-submit="freelancers.freelancersUpdate()">
-  <div class="row">
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="first_name" type="text" class="validate active" placeholder="{{ freelancers.freelancer.firstName }}" ng-model="freelancers.freelancer.firstName">
-        <label for="first_name">First Name</label>
+<div class="row top">
+  <div class="col s10 offset-s1 m6 offset-m3">
+    <form class="col s12" ng-submit="freelancers.freelancersUpdate()">
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="first_name" type="text" class="validate active" placeholder="{{ freelancers.freelancer.firstName }}" ng-model="freelancers.freelancer.firstName">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="last_name" type="text" class="validate active" placeholder="{{ freelancers.freelancer.lastName }}" ng-model="freelancers.freelancer.lastName">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="github" type="text" class="validate active" placeholder="{{ freelancers.freelancer.github }}" ng-model="freelancers.freelancer.github">
+            <label for="github">Github</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="linkedIn" type="text" class="validate active" placeholder="{{ freelancers.freelancer.linkedIn }}" ng-model="freelancers.freelancer.linkedIn">
+            <label for="linkedIn">LinkedIn</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="portfolio" type="text" class="validate active" placeholder="{{ freelancers.freelancer.personalWebsite }}" ng-model="freelancers.freelancer.personalWebsite">
+            <label for="portfolio">Personal Site</label>
+          </div>
+        </div>
+        <input type="submit" class="waves-effect waves-light btn" value="Submit">
       </div>
-      <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate active" placeholder="{{ freelancers.freelancer.lastName }}" ng-model="freelancers.freelancer.lastName">
-        <label for="last_name">Last Name</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="github" type="text" class="validate active" placeholder="{{ freelancers.freelancer.github }}" ng-model="freelancers.freelancer.github">
-        <label for="github">Github</label>
-      </div>
-      <div class="input-field col s6">
-        <input id="linkedIn" type="text" class="validate active" placeholder="{{ freelancers.freelancer.linkedIn }}" ng-model="freelancers.freelancer.linkedIn">
-        <label for="linkedIn">LinkedIn</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="portfolio" type="text" class="validate active" placeholder="{{ freelancers.freelancer.personalWebsite }}" ng-model="freelancers.freelancer.personalWebsite">
-        <label for="portfolio">Personal Site</label>
-      </div>
-    </div>
-    <input type="submit" class="waves-effect waves-light btn" value="Submit">
+    </form>
   </div>
-</form>
+</div>
