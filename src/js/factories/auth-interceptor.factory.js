@@ -10,12 +10,10 @@ function AuthInterceptor(API, TokenService) {
       if(config.url.indexOf(API) === 0 && token){
         config.headers.Authorization = `Bearer ${token}`;
       }
-      console.log('config', config);
-      return (config);
+      return config;
     },
     response: function(res) {
       if(res.config.url.indexOf(API) === 0 && res.data.token){
-        console.log('token', res.data.token);
         TokenService.setToken(res.data.token);
       }
       return res;

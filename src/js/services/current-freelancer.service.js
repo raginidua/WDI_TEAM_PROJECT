@@ -8,14 +8,12 @@ function CurrentFreelancerService(TokenService, Freelancer, $rootScope){
 
   self.getFreelancer = () => {
     const decodedToken = TokenService.decodeToken();
-    console.log('CurrentFreelancerService decodedToken:', decodedToken);
 
     if (decodedToken) {
       Freelancer
         .get({ id: decodedToken.id})
         .$promise
         .then(data => {
-          console.log(data);
           self.currentFreelancer = data;
           $rootScope.$broadcast('loggedIn');
         });
