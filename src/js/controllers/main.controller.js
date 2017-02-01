@@ -16,4 +16,5 @@ function MainCtrl($rootScope, CurrentFreelancerService, $state){
     vm.freelancer = null;
     $state.go('home');
   });
+
 }

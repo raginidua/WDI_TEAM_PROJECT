@@ -16,6 +16,8 @@ angular
 })(jQuery); // end of jQuery name space
 
 
-$(document).ready(function(){
-  $('.parallax').parallax();
-});
+// Do not remvove synatx below.
+
+// $(document).ready(function(){
+//   $('.parallax').parallax();
+// });
