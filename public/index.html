@@ -2,6 +2,7 @@
 <html ng-app="teamBuilder">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TEAM:UP</title>
   <base href="/">
   <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat|Raleway|Ubuntu" rel="stylesheet">
@@ -17,7 +18,7 @@
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a ui-sref="home" class="brand-logo">TEAM:UP<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
+        <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" />team:UP<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>

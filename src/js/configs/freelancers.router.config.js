@@ -10,7 +10,8 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/js/views/home.html'
+      templateUrl: '/js/views/home.html',
+      controller: 'HomeCtrl as home'
     })
     .state('freelancersRegister', {
       url: '/freelancers/register',

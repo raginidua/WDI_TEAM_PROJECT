@@ -15,8 +15,6 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
   .$promise
   .then(response => {
     vm.project = response.project;
-    console.log('PROJECTS LEAD FREELANCER', vm.project.leadFreelancer._id);
-    console.log('LOGGED IN USER', vm.currentFreelancer._id);
   });
 
   vm.openPositionCount = function(openTeamMembersObject) {
@@ -29,7 +27,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
 
   vm.freelancerApply = function(role, projectId) {
     //add freelancer id to project waitingTeamMembers
-    vm.project.waitingTeamMembers[role].push(vm.currentFreelancer._id);
+    vm.project.waitingTeamMembers[role].push(vm.currentFreelancer);
     Project
     .update({id: $stateParams.id}, vm.project)
     .$promise
@@ -38,9 +36,9 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     });
 
     //add project id to freelancers pendingProjects
-    vm.currentFreelancer.pendingProjects.push($stateParams.id);
+    vm.currentFreelancer.pendingProjects.push(vm.project);
     Freelancer
-    .update(currentFreelancer)
+    .update(vm.currentFreelancer)
     .$promise
     .then(response => {
       console.log('freelancer update response:', response);
