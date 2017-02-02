@@ -26,10 +26,6 @@
           <li class="collection-item" ng-if="projectsEdit.openPositionCount(projectsEdit.project.openTeamMembers) === 0"> No available roles </li>
           <li class="collection-item" ng-repeat="(key, value) in projectsEdit.project.openTeamMembers track by $index" ng-if="value !== 0">
             {{ value }} {{ key }} Positions
-            <!-- replaced button with the above span -->
-            <!-- <button ng-click="projectsEdit.freelancerApply(key)" class="btn waves-effect waves-light" type="submit" name="action">Apply
-            <i class="material-icons right">send</i> -->
-            <!-- </button> -->
           </li>
         </ul>
       </div>
@@ -45,13 +41,11 @@
           </li>
           <div ng-repeat="(key, value) in projectsEdit.project.waitingTeamMembers track by $index" ng-if="value.length !== 0">
             <li class="collection-item" ng-repeat="id in value track by $index">
-              <!-- thowing error, see console log on page log -->
-              <!-- waitingTeamMembers isnt being populated -->
-              <span class="new badge" data-badge-caption="" ng-click="projectsEdit.acceptApplication(key, id._id)">
-                Accept
-              </span>
               <span class="new badge" data-badge-caption="" ng-click="projectsEdit.rejectApplication(key, id._id)">
                 Reject
+              </span>
+              <span class="new badge" data-badge-caption="" ng-click="projectsEdit.acceptApplication(key, id._id)">
+                Accept
               </span>
               {{ key }} : <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a>
             </li>
