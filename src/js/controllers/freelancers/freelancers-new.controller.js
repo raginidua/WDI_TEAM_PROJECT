@@ -2,11 +2,14 @@ angular
   .module('teamBuilder')
   .controller('FreelancersNewCtrl', FreelancersNewCtrl);
 
-FreelancersNewCtrl.$inject = ['$http','$state', 'Freelancer', 'CurrentFreelancerService'];
-function FreelancersNewCtrl($http, $state, Freelancer, CurrentFreelancerService) {
+FreelancersNewCtrl.$inject = ['Freelancer', 'CurrentFreelancerService'];
+function FreelancersNewCtrl(Freelancer, CurrentFreelancerService) {
   const vm = this;
 
-
+  //uses Freelancer factory to post freelancer object to database
+  //and register.  Then triggers CurrentFreelancerService
+  //to uses returned token to make request to get all freelancer's
+  //info from database
   vm.freelancersCreate = function() {
     Freelancer
     .register(vm.freelancer)
@@ -17,22 +20,5 @@ function FreelancersNewCtrl($http, $state, Freelancer, CurrentFreelancerService)
       console.log(err);
     });
   };
-
-  // vm.freelancersCreate = function freelancersCreate() {
-  //   return $http
-  //     .post('http://localhost:3000/api/freelancers/register', vm.freelancer)
-  //     .then(() => {
-  //       $state.go('freelancersShow', {id: '588fb4dcd7f62707a19d4772'});
-  //     });
-  //
-  // };
-
-  // vm.freelancersCreate = function freelancersCreate() {
-  //   return $http
-  //     .post('http://localhost:3000/api/freelancers/register', vm.freelancer)
-  //     .then(() => {
-  //       $state.go('freelancersShow');
-  //     });
-  // };
 
 }

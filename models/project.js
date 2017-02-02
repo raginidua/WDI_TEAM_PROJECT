@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//data structure for our project object
 const projectSchema = new mongoose.Schema({
   name: {type: String, required: true},
   description: {type: String, required: true},

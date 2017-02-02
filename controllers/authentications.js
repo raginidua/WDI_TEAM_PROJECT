@@ -1,8 +1,3 @@
-module.exports = {
-  register: authenticationsRegister,
-  login: authenticationsLogin
-};
-
 const Freelancer = require('../models/freelancer.js');
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
@@ -44,3 +39,8 @@ function authenticationsLogin(req, res) {
     });
   });
 }
+
+module.exports = {
+  register: authenticationsRegister,
+  login: authenticationsLogin
+};

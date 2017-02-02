@@ -7,6 +7,8 @@ freelancerRouter.$inject = ['$locationProvider', '$stateProvider', '$urlRouterPr
 function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
 
+  //ui.router used state names to direct app to associated
+  //html view file and used associated controller
   $stateProvider
     .state('home', {
       url: '/',
@@ -16,24 +18,24 @@ function freelancerRouter($locationProvider, $stateProvider, $urlRouterProvider)
     .state('freelancersRegister', {
       url: '/freelancers/register',
       templateUrl: '/js/views/freelancers/register.html',
-      controller: 'FreelancersNewCtrl as freelancers'
+      controller: 'FreelancersNewCtrl as freelancersNew'
     })
     .state('freelancersLogin', {
       url: '/freelancers/login',
       templateUrl: '/js/views/freelancers/login.html',
-      controller: 'FreelancersLoginCtrl',
-      controllerAs: 'freelancers'
+      controller: 'FreelancersLoginCtrl as freelancersLogin'
     })
     .state('freelancersShow', {
       url: '/freelancers/:id',
       templateUrl: '/js/views/freelancers/show.html',
-      controller: 'FreelancersShowCtrl as freelancers'
+      controller: 'FreelancersShowCtrl as freelancersShow'
     })
     .state('freelancersEdit', {
       url: '/freelancers/:id/edit',
       templateUrl: '/js/views/freelancers/edit.html',
-      controller: 'FreelancersEditCtrl as freelancers'
+      controller: 'FreelancersEditCtrl as freelancersEdit'
     });
 
+  //if none of the above names found then redirect to '/'
   $urlRouterProvider.otherwise('/');
 }

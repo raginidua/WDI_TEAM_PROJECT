@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt   = require('bcrypt');
 
+//data structure of our freelancers
 const freelancerSchema = new mongoose.Schema({
   firstName: { type: String, trim: true, required: true},
   lastName: { type: String, trim: true, required: true},

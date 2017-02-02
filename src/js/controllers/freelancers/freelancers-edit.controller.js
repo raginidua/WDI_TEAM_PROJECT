@@ -2,19 +2,18 @@ angular
   .module('teamBuilder')
   .controller('FreelancersEditCtrl', FreelancersEditCtrl);
 
-FreelancersEditCtrl.$inject = ['$stateParams', '$state', '$http', 'Freelancer'];
-function FreelancersEditCtrl($stateParams, $state, $http, Freelancer) {
+FreelancersEditCtrl.$inject = ['$stateParams', '$state', '$http', 'Freelancer', 'CurrentFreelancerService'];
+function FreelancersEditCtrl($stateParams, $state, $http, Freelancer, CurrentFreelancerService) {
   const vm = this;
 
-  Freelancer
-    .get({id: $stateParams.id})
-    .$promise
-    .then(response => {
-      vm.freelancer = response.freelancer;
-    });
+  //uses CurrentFreelancerService to get freelancer info
+  vm.freelancer = CurrentFreelancerService.currentFreelancer.freelancer;
 
+  //makes materialize input fields work properly (labels vs values)
   Materialize.updateTextFields();
 
+  //uses Freelancer factory (ajax shorthand) to update
+  //freelancer on database
   vm.freelancersUpdate = function freelancersUpdate(){
     Freelancer
       .update({id: $stateParams.id}, vm.freelancer)
