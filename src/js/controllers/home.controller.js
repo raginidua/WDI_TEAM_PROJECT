@@ -12,7 +12,7 @@ function HomeCtrl($location, $anchorScroll, $rootScope, $document){
   };
 
   vm.goToTop = function(){
-    var offset = 10;
+    var offset = 150;
     var top = angular.element(document.getElementById('top'));
     $document.scrollToElement(top, offset, 1000);
   };
