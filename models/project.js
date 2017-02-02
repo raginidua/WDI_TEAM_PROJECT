@@ -14,4 +14,13 @@ const projectSchema = new mongoose.Schema({
   liveTeamMembers: mongoose.Schema.Types.Mixed
 });
 
+
+projectSchema.set('toJSON', {
+  transform: function(doc, ret) {
+    delete ret.__v;
+    delete ret.createdAt;
+    delete ret.updatedAt;
+    return ret;
+  }
+});
 module.exports = mongoose.model('Project', projectSchema);
