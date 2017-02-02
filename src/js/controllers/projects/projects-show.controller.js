@@ -55,7 +55,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     .$promise
     .then(response => {
       vm.currentFreelancer = $scope.$parent.main.freelancer;
-      $state.go('freelancersShow', {id: vm.currentFreelancer._id})
+      $state.go('freelancersShow', {id: vm.currentFreelancer._id});
     });
   };
 }

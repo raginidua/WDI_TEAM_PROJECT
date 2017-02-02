@@ -2,9 +2,10 @@ angular
 .module('teamBuilder')
 .controller('FreelancersShowCtrl', FreelancersShowCtrl);
 
-FreelancersShowCtrl.$inject = ['$stateParams', '$http', 'Freelancer'];
-function FreelancersShowCtrl($stateParams, $http, Freelancer) {
+FreelancersShowCtrl.$inject = ['$stateParams', '$http', 'Freelancer', '$scope'];
+function FreelancersShowCtrl($stateParams, $http, Freelancer, $scope) {
   const vm = this;
+  vm.currentFreelancer = $scope.$parent.main.freelancer;
 
   $('.collapsible').collapsible();
 
