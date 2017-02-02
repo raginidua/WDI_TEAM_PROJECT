@@ -20,6 +20,7 @@ function freelancersShow(req,res) {
   .findById(req.params.id)
   .populate('myProjects')
   .populate('pendingProjects')
+  .populate('projects')
   .exec((err, freelancer) => {
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if (!freelancer) return res.status(404).json({ message: 'Freelancer not found' });
@@ -41,7 +42,7 @@ function freelancersShow(req,res) {
 //mongoose used to find by id and update relevant document
 //pre update document send back in response
 function freelancersUpdate(req,res){
-  Freelancer.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, freelancer) => {
+  Freelancer.findByIdAndUpdate(req.params.id, req.body, (err, freelancer) => {
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if (!freelancer) return res.status(404).json({ message: 'Freelancer not found' });
     return res.status(200).json({ freelancer });

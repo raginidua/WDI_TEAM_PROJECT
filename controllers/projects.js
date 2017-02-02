@@ -62,7 +62,7 @@ function projectsShow(req, res){
   .findById(projectId)
   .populate('leadFreelancer')
   .populate({
-    path: 'liveTeamMembers.UXDesigners',
+    path: 'liveTeamMembers.UX Designers',
     model: 'Freelancer'
   })
   .populate({

@@ -1,13 +1,13 @@
 angular
   .module('teamBuilder')
   .constant('rolesArray', [
-    'UX Designers',
-    'UI Designers',
-    'Frontend Developers',
-    'Backend Developers',
-    'Data Scientists',
+    'UXDesigners',
+    'UIDesigners',
+    'FrontendDevelopers',
+    'BackendDevelopers',
+    'DataScientists',
     'Marketers',
-    'Project Managers',
-    'iOS Developers', 
-    'Android Developers'
+    'ProjectManagers',
+    'iOSDevelopers',
+    'AndroidDevelopers'
   ]);

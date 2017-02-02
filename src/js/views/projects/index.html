@@ -1,11 +1,12 @@
 <div class="row top">
-  <div class="col s12">
-    <div class="card col s6 m3" ng-repeat="project in projects.projects">
+  <div class="col s6 m3" ng-repeat="project in projects.projects">
+    <div class="card" ui-sref="projectsShow({ id: project._id })">
       <div class="card-image">
         <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
-        <img src="http://www.fillmurray.com/100/100">
+        <img ng-if="!project.picture" src="http://www.fillmurray.com/200/200">
+        <img ng-if="project.picture" src="{{project.picture}}">
         <!-- </a> -->
-        <span class="card-title" ui-sref="projectsShow({ id: project._id })">{{ project.name }}</span>
+        <span class="card-title">{{ project.name }}</span>
       </div>
       <div class="card-content">
         <ul class="collection">
