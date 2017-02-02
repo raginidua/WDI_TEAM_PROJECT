@@ -11,7 +11,10 @@
 </div>
 
 <div class="row top">
-  <div class="col s12 m4 l3" ng-repeat="project in roles.projects">
+  <div class="col s12 m4 l3" ng-if="roles.projects.length === 0">
+    No projects to show
+  </div>
+  <div class="col s12 m4 l3" ng-if="roles.projects.length !== 0" ng-repeat="project in roles.projects">
     <div class="card" ui-sref="projectsShow({ id: project._id })">
       <div class="card-image">
         <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
