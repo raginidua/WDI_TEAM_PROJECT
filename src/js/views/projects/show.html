@@ -4,14 +4,14 @@
       <div class="col s12">
         <div class="card">
           <div class="card-image project" style="
-                background-image: url({{ projects.project.picture }});
+                background-image: url({{ projectsShow.project.picture }});
             ">
             <img src="">
-            <span class="card-title">{{ projects.project.name }}</span>
-            <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ng-if="projects.currentFreelancer._id === projects.project.leadFreelancer._id" ui-sref="projectsEdit({id: projects.project._id})"><i class="material-icons">mode_edit</i></a>
+            <span class="card-title">{{ projectsShow.project.name }}</span>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ng-if="projectsShow.currentFreelancer._id === projectsShow.project.leadFreelancer._id" ui-sref="projectsEdit({id: projectsShow.project._id})"><i class="material-icons">mode_edit</i></a>
           </div>
           <div class="card-content">
-            <p>{{ projects.project.description }}</p>
+            <p>{{ projectsShow.project.description }}</p>
           </div>
         </div>
       </div>
@@ -22,25 +22,25 @@
           <ul class="collection">
             <li class="collection-item">
               <span class="badge" data-badge-caption="">
-                {{ projects.project.leadFreelancer.firstName }} {{ projects.project.leadFreelancer.lastName }}
+                {{ projectsShow.project.leadFreelancer.firstName }} {{ projectsShow.project.leadFreelancer.lastName }}
               </span>
               Lead Freelancer
             </li>
             <li class="collection-item">
               <span class="badge" data-badge-caption="">
-                £{{ projects.project.budget }}
+                £{{ projectsShow.project.budget }}
               </span>
               Budget
             </li>
             <li class="collection-item">
               <span class="badge" data-badge-caption="">
-                {{ projects.project.timeframe }}w
+                {{ projectsShow.project.timeframe }}w
               </span>
               Time Frame
             </li>
             <li class="collection-item">
               <span class="badge" data-badge-caption="">
-                {{projects.project.teamSize }}
+                {{projectsShow.project.teamSize }}
               </span>
               Team Size
             </li>
@@ -55,11 +55,11 @@
             <li class="collection-header">
               <h5>Open Positions</h5>
             </li>
-            <li class="collection-item" ng-if="projects.openPositionCount(projects.project.openTeamMembers) === 0"> No available roles </li>
-            <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
+            <li class="collection-item" ng-if="projectsShow.openPositionCount(projectsShow.project.openTeamMembers) === 0"> No available roles </li>
+            <li class="collection-item" ng-repeat="(key, value) in projectsShow.project.openTeamMembers track by $index" ng-if="value !== 0">
               <!-- showing and hiding depending if user logged in -->
               <!-- giving option to login or register -->
-              <span class="new badge" data-badge-caption="" ng-if="main.freelancer.firstName" ng-click="projects.freelancerApply($event, key)">
+              <span class="new badge" data-badge-caption="" ng-if="main.freelancer.firstName" ng-click="projectsShow.freelancerApply($event, key)">
                 Apply
               </span>
               <span class="new badge" data-badge-caption="" ng-if="!main.freelancer.firstName">
@@ -78,7 +78,7 @@
               </span>
               {{ value }} {{ key }} Positions
               <!-- replaced button with the above span -->
-              <!-- <button ng-click="projects.freelancerApply(key)" class="btn waves-effect waves-light" type="submit" name="action">Apply
+              <!-- <button ng-click="projectsShow.freelancerApply(key)" class="btn waves-effect waves-light" type="submit" name="action">Apply
               <i class="material-icons right">send</i> -->
               <!-- </button> -->
             </li>
@@ -93,8 +93,8 @@
             <li class="collection-header">
               <h5>Filled Positions</h5>
             </li>
-            <li class="collection-item" ng-if="projects.filledPositionCount(projects.project.liveTeamMembers) === 0"> No filled roles yet </li>
-            <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a> </span></li>
+            <li class="collection-item" ng-if="projectsShow.filledPositionCount(projectsShow.project.liveTeamMembers) === 0"> No filled roles yet </li>
+            <li class="collection-item" ng-repeat="(key, value) in projectsShow.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a> </span></li>
           </ul>
         </div>
       </div>

@@ -1,30 +1,30 @@
 <div class="row top">
   <div class="col s10 offset-s1 m6 offset-m3">
-    <form class="col s12" ng-submit="freelancers.freelancersUpdate()">
+    <form class="col s12" ng-submit="freelancersEdit.freelancersUpdate()">
       <div class="row">
         <div class="row">
           <div class="input-field col s12 m6">
-            <input id="first_name" type="text" class="validate active" placeholder="{{ freelancers.freelancer.firstName }}" ng-model="freelancers.freelancer.firstName">
+            <input id="first_name" type="text" class="validate active" placeholder="{{ freelancersEdit.freelancer.firstName }}" ng-model="freelancersEdit.freelancer.firstName">
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col s12 m6">
-            <input id="last_name" type="text" class="validate active" placeholder="{{ freelancers.freelancer.lastName }}" ng-model="freelancers.freelancer.lastName">
+            <input id="last_name" type="text" class="validate active" placeholder="{{ freelancersEdit.freelancer.lastName }}" ng-model="freelancersEdit.freelancer.lastName">
             <label for="last_name">Last Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12 m6">
-            <input id="github" type="text" class="validate active" placeholder="{{ freelancers.freelancer.github }}" ng-model="freelancers.freelancer.github">
+            <input id="github" type="text" class="validate active" placeholder="{{ freelancersEdit.freelancer.github }}" ng-model="freelancersEdit.freelancer.github">
             <label for="github">Github</label>
           </div>
           <div class="input-field col s12 m6">
-            <input id="linkedIn" type="text" class="validate active" placeholder="{{ freelancers.freelancer.linkedIn }}" ng-model="freelancers.freelancer.linkedIn">
+            <input id="linkedIn" type="text" class="validate active" placeholder="{{ freelancersEdit.freelancer.linkedIn }}" ng-model="freelancersEdit.freelancer.linkedIn">
             <label for="linkedIn">LinkedIn</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="portfolio" type="text" class="validate active" placeholder="{{ freelancers.freelancer.personalWebsite }}" ng-model="freelancers.freelancer.personalWebsite">
+            <input id="portfolio" type="text" class="validate active" placeholder="{{ freelancersEdit.freelancer.personalWebsite }}" ng-model="freelancersEdit.freelancer.personalWebsite">
             <label for="portfolio">Personal Site</label>
           </div>
         </div>
