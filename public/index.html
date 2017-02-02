@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TEAM:UP</title>
   <base href="/">
-  <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat|Raleway|Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat|Noto+Sans|Raleway|Ubuntu" rel="stylesheet">
   <!-- inject:js -->
   <script src="js/app.js"></script>
   <!-- endinject -->
@@ -13,12 +13,13 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <script src="/bower_components/angular-animate/angular-animate.js"></script> -->
 </head>
 <body ng-controller="MainCtrl as main">
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" />team:UP<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
+        <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" />team:up<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>
