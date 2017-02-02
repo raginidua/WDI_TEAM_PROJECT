@@ -1,0 +1,50 @@
+<h1>ROLES SEARCH</h1>
+<div class="row">
+  <div class="col s8">
+    <select ng-model="roles.searchCriteria">
+      <option ng-repeat="role in roles.rolesArray" value="{{role}}">{{role}}</option>
+    </select>
+  </div>
+  <div class="col s4">
+    <a class="waves-effect waves-light btn add-member" ng-click="roles.searchForRole()">Search</a>
+  </div>
+</div>
+
+<div class="row top">
+  <div class="col s12 m4 l3" ng-if="roles.projects.length === 0">
+    No projects to show
+  </div>
+  <div class="col s12 m4 l3" ng-if="roles.projects.length !== 0" ng-repeat="project in roles.projects">
+    <div class="card" ui-sref="projectsShow({ id: project._id })">
+      <div class="card-image">
+        <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
+        <img ng-if="!project.picture" src="http://www.fillmurray.com/200/200">
+        <img ng-if="project.picture" src="{{project.picture}}">
+        <!-- </a> -->
+        <span class="card-title">{{ project.name }}</span>
+      </div>
+      <div class="card-content">
+        <ul class="collection">
+          <li class="collection-item">
+            <span class="new badge" data-badge-caption="">
+              £{{ project.budget }}
+            </span>
+            Budget
+          </li>
+          <li class="collection-item">
+            <span class="new badge" data-badge-caption="">
+              {{ project.timeframe }}w
+            </span>
+            Time Frame
+          </li>
+          <li class="collection-item">
+            <span class="new badge" data-badge-caption="">
+              {{ roles.getTeamSize(project.requiredTeamMembers) }}
+            </span>
+            Team Size
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
