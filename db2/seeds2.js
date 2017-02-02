@@ -275,7 +275,7 @@ const p1 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p1.save((err, project) => {
   if (err) return console.log(err);
@@ -333,7 +333,7 @@ const p2 = new Project({
 
   budget: 15000,
   timeframe: '6',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p2.save((err, project) => {
   if (err) return console.log(err);
@@ -391,7 +391,7 @@ const p3 = new Project({
 
   budget: 15000,
   timeframe: '6',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p3.save((err, project) => {
   if (err) return console.log(err);
@@ -449,7 +449,7 @@ const p4 = new Project({
 
   budget: 25000,
   timeframe: '8',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p4.save((err, project) => {
   if (err) return console.log(err);
@@ -507,7 +507,7 @@ const p5 = new Project({
 
   budget: 15000,
   timeframe: '5',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p5.save((err, project) => {
   if (err) return console.log(err);
@@ -565,7 +565,7 @@ const p6 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p6.save((err, project) => {
   if (err) return console.log(err);
@@ -623,7 +623,7 @@ const p7 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'http://disabilityandabuse.org/project-management.jpg'
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p7.save((err, project) => {
   if (err) return console.log(err);
