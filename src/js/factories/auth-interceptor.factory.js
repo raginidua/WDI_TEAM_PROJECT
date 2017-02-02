@@ -2,6 +2,11 @@ angular
   .module('teamBuilder')
   .factory('AuthInterceptor', AuthInterceptor);
 
+
+//interceptor used to intercept requests and responses
+//on the way out attached token to head of requests
+//on the way in takes token from resopnse and sets to
+//local storage (part of the users browser memory)
 AuthInterceptor.$inject = ['API', 'TokenService'];
 function AuthInterceptor(API, TokenService) {
   return {
