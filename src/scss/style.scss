@@ -64,6 +64,11 @@ nav {
 
 
 //**********FOOTER*************//
+
+.sticky-footer-wrapper {
+    min-height: calc(100vh - 228px);
+}
+
 footer.page-footer {
   background-color: $primary-color;
 }

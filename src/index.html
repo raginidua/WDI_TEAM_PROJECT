@@ -13,33 +13,33 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body ng-controller="MainCtrl as main">
-  <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" /> team:up<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a ui-sref="projectsNew" ng-show="main.freelancer.firstName">New Project</a></li>
-          <li><a ui-sref="projectsIndex">Projects</a></li>
-          <li><a ui-sref="freelancersRegister" ng-hide="main.freelancer.firstName">Register</a></li>
-          <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>
-          <li><a ui-sref="freelancersShow({id: main.freelancer._id})" ng-show="main.freelancer.firstName">Profile</a></li>
-          <li><a ng-click="main.logout()" ng-show="main.freelancer.firstName">Logout</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a ui-sref="projectsNew" ng-show="main.freelancer.firstName">New Project</a></li>
-          <li><a ui-sref="projectsIndex">Projects</a></li>
-          <li><a ui-sref="freelancersRegister" ng-hide="main.freelancer.firstName">Register</a></li>
-          <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>
-          <li><a ui-sref="freelancersShow({id: main.freelancer._id})" ng-show="main.freelancer.firstName">Profile</a></li>
-          <li><a ng-click="main.logout()" ng-show="main.freelancer.firstName">Logout</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main ui-view></main>
-
+  <div class="sticky-footer-wrapper">
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" /> team:up<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a ui-sref="projectsNew" ng-show="main.freelancer.firstName">New Project</a></li>
+            <li><a ui-sref="projectsIndex">Projects</a></li>
+            <li><a ui-sref="freelancersRegister" ng-hide="main.freelancer.firstName">Register</a></li>
+            <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>
+            <li><a ui-sref="freelancersShow({id: main.freelancer._id})" ng-show="main.freelancer.firstName">Profile</a></li>
+            <li><a ng-click="main.logout()" ng-show="main.freelancer.firstName">Logout</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a ui-sref="projectsNew" ng-show="main.freelancer.firstName">New Project</a></li>
+            <li><a ui-sref="projectsIndex">Projects</a></li>
+            <li><a ui-sref="freelancersRegister" ng-hide="main.freelancer.firstName">Register</a></li>
+            <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>
+            <li><a ui-sref="freelancersShow({id: main.freelancer._id})" ng-show="main.freelancer.firstName">Profile</a></li>
+            <li><a ng-click="main.logout()" ng-show="main.freelancer.firstName">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main ui-view></main>
+  </div>
   <footer class="page-footer">
     <div class="container">
       <div class="row">
