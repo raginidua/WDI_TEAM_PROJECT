@@ -39,13 +39,15 @@
           <li class="collection-header">
             <h5>Pending Applications</h5>
           </li>
+          <li class="collection-item" ng-if="projectsEdit.pendingApplicantCount(projectsEdit.project.waitingTeamMembers) === 0"> No pending applications roles </li>
+
           <div ng-repeat="(key, value) in projectsEdit.project.waitingTeamMembers track by $index" ng-if="value.length !== 0">
             <li class="collection-item" ng-repeat="id in value track by $index">
-              <span class="new badge" data-badge-caption="" ng-click="projectsEdit.rejectApplication(key, id._id)">
-                Reject
-              </span>
               <span class="new badge" data-badge-caption="" ng-click="projectsEdit.acceptApplication(key, id._id)">
                 Accept
+              </span>
+              <span class="new badge" data-badge-caption="" ng-click="projectsEdit.rejectApplication(key, id._id)">
+                Reject
               </span>
               {{ key }} : <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a>
             </li>
