@@ -2,40 +2,20 @@ angular
 .module('teamBuilder')
 .controller('ProjectsIndexCtrl', ProjectsIndexCtrl);
 
-ProjectsIndexCtrl.$inject = ['$http'];
-function ProjectsIndexCtrl($http) {
+ProjectsIndexCtrl.$inject = ['$http', 'Project', 'TeamSizeService'];
+function ProjectsIndexCtrl($http, Project, TeamSizeService) {
   const vm = this;
 
-  $http
-  .get('http://localhost:3000/api/projects')
-  .then(response => {
-    vm.projects = response.data.projects;
-  });
+  //uses custom non array query property on Project factory
+  Project
+    .query()
+    .$promise
+    .then(response => {
+      vm.projects = response.projects;
+    });
 
-  vm.getTeamSizeNRoles = function(requiredTeamMembersObject) {
-    var teamSize = 0;
-    var teamRoles = '';
-    for(var role in requiredTeamMembersObject) {
-      if(requiredTeamMembersObject[role] > 0) {
-        teamSize+= requiredTeamMembersObject[role];
-        if(teamRoles === ''){
-          teamRoles+= role;
-        } else {
-          teamRoles+=', '+ role;
-        }
-      }
-    }
-    return teamSize + '[' + teamRoles + ']';
-  };
-
-  vm.getTeamSize = function(requiredTeamMembersObject) {
-    var teamSize = 0;
-    for(var role in requiredTeamMembersObject) {
-      if(requiredTeamMembersObject[role] > 0) {
-        teamSize+= requiredTeamMembersObject[role];
-      }
-    }
-    return teamSize;
-  };
+  //uses custom TeamSizeService to get size of team from
+  //requiredTeamMembersObject on project object
+  vm.getTeamSize = TeamSizeService.getTeamSize;
 
 }
