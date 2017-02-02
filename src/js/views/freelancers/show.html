@@ -18,7 +18,11 @@
               <li>Personal: {{freelancers.freelancer.personalWebsite}} </li>
               <li>email: {{freelancers.freelancer.email}}</li>
             </ul>
-            <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ui-sref="freelancersEdit({id: freelancers.freelancer._id})"><i class="large material-icons">mode_edit</i></a>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"
+
+            ng-if="freelancers.currentFreelancer._id === freelancers.freelancer._id"
+
+             ui-sref="freelancersEdit({id: freelancers.freelancer._id})"><i class="large material-icons">mode_edit</i></a>
           </div>
         </div>
       </div>
@@ -31,7 +35,7 @@
         <ul class="collapsible" data-collapsible="accordion">
           <li>
             <div class="collapsible-header">
-              <span class="new badge" data-badge-caption="Positions">
+              <span class="new badge" data-badge-caption="Projects">
                 {{freelancers.freelancer.myProjects.length}}
               </span>
               Projects I Own
@@ -46,7 +50,7 @@
           </li>
           <li>
             <div class="collapsible-header">
-              <span class="new badge" data-badge-caption="Positions">
+              <span class="new badge" data-badge-caption="Projects">
                 {{freelancers.freelancer.projects.length}}
               </span>
               Projects I'm In
@@ -61,7 +65,7 @@
           </li>
           <li>
             <div class="collapsible-header">
-              <span class="new badge" data-badge-caption="Positions">
+              <span class="new badge" data-badge-caption="Projects">
                 {{freelancers.freelancer.myProjects.length}}
               </span>
               Pending Project Applications

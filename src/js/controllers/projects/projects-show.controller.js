@@ -34,7 +34,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     return filledCount;
   };
 
-  vm.freelancerApply = function(role) {
+  vm.freelancerApply = function($event, role) {
     //add freelancer id to project waitingTeamMembers
     vm.project.waitingTeamMembers[role].push(vm.currentFreelancer._id);
 
@@ -42,6 +42,10 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     .update({id: $stateParams.id}, vm.project)
     .$promise
     .then(vm.updateFreelancer);
+
+    //disables button and sets text to Applied
+    $event.toElement.disabled = true;
+    $event.toElement.innerText = 'Applied';
   };
 
   vm.updateFreelancer = function() {
@@ -55,7 +59,6 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     .$promise
     .then(response => {
       vm.currentFreelancer = $scope.$parent.main.freelancer;
-      $state.go('freelancersShow', {id: vm.currentFreelancer._id})
     });
   };
 }

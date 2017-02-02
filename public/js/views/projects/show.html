@@ -21,42 +21,28 @@
         <div class="card">
           <ul class="collection">
             <li class="collection-item">
-              <span class="new badge" data-badge-caption="">
+              <span class="badge" data-badge-caption="">
                 {{ projects.project.leadFreelancer.firstName }} {{ projects.project.leadFreelancer.lastName }}
               </span>
               Lead Freelancer
             </li>
             <li class="collection-item">
-              <span class="new badge" data-badge-caption="">
+              <span class="badge" data-badge-caption="">
                 £{{ projects.project.budget }}
               </span>
               Budget
             </li>
             <li class="collection-item">
-              <span class="new badge" data-badge-caption="">
+              <span class="badge" data-badge-caption="">
                 {{ projects.project.timeframe }}w
               </span>
               Time Frame
             </li>
             <li class="collection-item">
-              <span class="new badge" data-badge-caption="">
+              <span class="badge" data-badge-caption="">
                 {{projects.project.teamSize }}
               </span>
               Team Size
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12 ">
-        <div class="card">
-          <ul class="collection with-header">
-            <li class="collection-header">
-              <h5>Required Positions</h5>
-            </li>
-            <li class="collection-item" ng-repeat="(key, value) in projects.project.requiredTeamMembers track by $index" ng-if="value !== 0">
-              {{ value }} {{ key }}
             </li>
           </ul>
         </div>
@@ -71,8 +57,24 @@
             </li>
             <li class="collection-item" ng-if="projects.openPositionCount(projects.project.openTeamMembers) === 0"> No available roles </li>
             <li class="collection-item" ng-repeat="(key, value) in projects.project.openTeamMembers track by $index" ng-if="value !== 0">
-              <span class="new badge" data-badge-caption="" ng-click="projects.freelancerApply(key)">
+              <!-- showing and hiding depending if user logged in -->
+              <!-- giving option to login or register -->
+              <span class="new badge" data-badge-caption="" ng-if="main.freelancer.firstName" ng-click="projects.freelancerApply($event, key)">
                 Apply
+              </span>
+              <span class="new badge" data-badge-caption="" ng-if="!main.freelancer.firstName">
+                <a href="#">
+                  <span ui-sref="freelancersLogin" class="white-text">
+                    Login
+                  </span>
+                </a>
+                or
+                <a href="#">
+                  <span ui-sref="freelancersRegister" class="white-text">
+                    Register
+                  </span>
+                </a>
+                to Apply
               </span>
               {{ value }} {{ key }} Positions
               <!-- replaced button with the above span -->
@@ -92,7 +94,7 @@
               <h5>Filled Positions</h5>
             </li>
             <li class="collection-item" ng-if="projects.filledPositionCount(projects.project.liveTeamMembers) === 0"> No filled roles yet </li>
-            <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: {{ id.firstName }} {{ id.lastName }} </span></li>
+            <li class="collection-item" ng-repeat="(key, value) in projects.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a> </span></li>
           </ul>
         </div>
       </div>
