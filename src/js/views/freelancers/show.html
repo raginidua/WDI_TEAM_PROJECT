@@ -44,7 +44,7 @@
               <ul class="collection">
                 <a class="collection-item" ng-if="freelancersShow.freelancer.myProjects.length === 0">
                   None </a>
-                <a class="collection-item" ng-if="freelancersShow.freelancer.myProjects.length !== 0" ng-repeat="project in freelancersShow.freelancer.myProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+                <a class="collection-item" ng-if="freelancersShow.freelancer.myProjects.length !== 0" ng-repeat="project in freelancersShow.freelancer.myProjects track by $index" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
               </ul>
             </div>
           </li>
@@ -59,7 +59,7 @@
               <ul class="collection">
                 <a class="collection-item" ng-if="freelancersShow.freelancer.projects.length === 0">
                   None </a>
-                <a class="collection-item" ng-if="freelancersShow.freelancer.projects.length !== 0" ng-repeat="project in freelancersShow.freelancer.projects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+                <a class="collection-item" ng-if="freelancersShow.freelancer.projects.length !== 0" ng-repeat="project in freelancersShow.freelancer.projects track by $index" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
               </ul>
             </div>
           </li>
@@ -74,7 +74,7 @@
               <ul class="collection">
                 <a class="collection-item" ng-if="freelancersShow.freelancer.pendingProjects.length === 0">
                   None </a>
-                <a class="collection-item" ng-if="freelancersShow.freelancer.pendingProjects.length !== 0" ng-repeat="project in freelancersShow.freelancer.pendingProjects" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+                <a class="collection-item" ng-if="freelancersShow.freelancer.pendingProjects.length !== 0" ng-repeat="project in freelancersShow.freelancer.pendingProjects track by $index" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
               </ul>
             </div>
           </li>

@@ -2,12 +2,12 @@ angular
 .module('teamBuilder')
 .controller('ProjectsShowCtrl', ProjectsShowCtrl);
 
-ProjectsShowCtrl.$inject = ['$stateParams', '$http', '$state', 'Project', 'Freelancer', '$scope', 'CurrentFreelancerService', 'TeamSizeService'];
-function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $scope, CurrentFreelancerService, TeamSizeService) {
+ProjectsShowCtrl.$inject = ['$stateParams', 'Project', 'Freelancer', 'CurrentFreelancerService', 'TeamSizeService'];
+function ProjectsShowCtrl($stateParams, Project, Freelancer, CurrentFreelancerService, TeamSizeService) {
   const vm = this;
 
   //get currentFreelancer stored in mainCtrl by authentication stuff
-  vm.currentFreelancer = $scope.$parent.main.freelancer;
+  vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
 
   //get project info for page
   Project
@@ -18,6 +18,8 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     vm.project.teamSize = TeamSizeService.getTeamSize(vm.project.requiredTeamMembers);
   });
 
+  //calculates number of open postitions to inform ng-if
+  //logic in view
   vm.openPositionCount = function(openTeamMembersObject) {
     var openCount = 0;
     for(var role in openTeamMembersObject) {
@@ -26,6 +28,8 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     return openCount;
   };
 
+  //calculates number of filled postitions to inform ng-if
+  //logic in view
   vm.filledPositionCount = function(liveTeamMembersObject) {
     var filledCount = 0;
     for(var role in liveTeamMembersObject) {
@@ -38,6 +42,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     //add freelancer id to project waitingTeamMembers
     vm.project.waitingTeamMembers[role].push(vm.currentFreelancer._id);
 
+    //update project
     Project
     .update({id: $stateParams.id}, vm.project)
     .$promise
@@ -48,6 +53,8 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     $event.toElement.innerText = 'Applied';
   };
 
+  //freelancer has just applies, push project id into their
+  //pending applicatinos array
   vm.updateFreelancer = function() {
     //add project id to freelancers pendingProjects
     const idToUpdate = vm.currentFreelancer._id;
@@ -58,45 +65,7 @@ function ProjectsShowCtrl($stateParams, $http, $state, Project, Freelancer, $sco
     .update({id: idToUpdate }, vm.currentFreelancer)
     .$promise
     .then(response => {
-      vm.currentFreelancer = $scope.$parent.main.freelancer;
+      vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
     });
   };
 }
-
-
-
-  //
-  //
-  //
-  //
-  // //find the freelancer who has applied
-  // //update their pending project array with the proejct id
-  //
-  // const currentUserId = currentFreelancer._id;
-  // $http
-  // .get(`http://localhost:3000/api/freelancers/${currentUserId}`)
-  // .then(response => {
-  //   console.log('GET THE FREELANCER: ', response.data.freelancer);
-  //   vm.freelancer = response.data.freelancer;
-  //   vm.freelancer.pendingProjects.push(projectId);
-  //   console.log('UPDATED FREELANCER:', vm.freelancer);
-  //   $http.put(`http://localhost:3000/api/freelancers/${currentUserId}`, vm.freelancer);
-  // });
-  //
-  // //in the projects waitingTeam array, find true and remove
-  // //then push the freelancer ID into the relevant array
-  // console.log('PROJECT BEFORE THE SAVE', vm.project);
-  // if(vm.project.waitingTeamMembers[role].indexOf(true) === -1){
-  //   vm.project.waitingTeamMembers[role].push(currentUserId);
-  //   console.log('UPDATED THE PROJECT:', vm.freelancer);
-  // } else {
-  //   const indexOfTrue = vm.project.waitingTeamMembers[role].indexOf(true);
-  //   vm.project.waitingTeamMembers[role].splice(indexOfTrue, 1);
-  //   vm.project.waitingTeamMembers[role].push(currentUserId);
-  //   console.log('UPDATE THE PROJECT:', vm.freelancer);
-  // }
-  // $http
-  // .put(`http://localhost:3000/api/projects/${projectId}`, vm.project)
-  // .then(() => {
-  //   $state.go('projectsIndex');
-  // });
