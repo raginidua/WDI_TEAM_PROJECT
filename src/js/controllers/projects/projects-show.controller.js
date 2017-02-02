@@ -6,8 +6,11 @@ ProjectsShowCtrl.$inject = ['$stateParams', 'Project', 'Freelancer', 'CurrentFre
 function ProjectsShowCtrl($stateParams, Project, Freelancer, CurrentFreelancerService, TeamSizeService) {
   const vm = this;
 
+  //if currentFreelancer logged in then
   //get currentFreelancer stored in mainCtrl by authentication stuff
-  vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
+  if (CurrentFreelancerService.currentFreelancer) {
+    vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
+  }
 
   //get project info for page
   Project
@@ -53,7 +56,7 @@ function ProjectsShowCtrl($stateParams, Project, Freelancer, CurrentFreelancerSe
     $event.toElement.innerText = 'Applied';
   };
 
-  //freelancer has just applies, push project id into their
+  //freelancer has just applied, push project id into their
   //pending applicatinos array
   vm.updateFreelancer = function() {
     //add project id to freelancers pendingProjects
