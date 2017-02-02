@@ -15,10 +15,7 @@ function FreelancersShowCtrl($stateParams, Freelancer, $scope, CurrentFreelancer
   .then(response => {
     vm.freelancer = response.freelancer;
   });
-
-  //sets profile id so can be compared to currentFreelancer ID
-  // vm.profileId = $stateParams.id;
-
+  
   //intialises (runs) materialize collapsible collection/accordion
   $('.collapsible').collapsible();
 
