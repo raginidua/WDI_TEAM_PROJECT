@@ -9,32 +9,26 @@ function RolesIndexCtrl($http, rolesArray) {
   vm.rolesArray = rolesArray;
   vm.searchCriteria;
 
-
   $http
   .get('http://localhost:3000/api/projects')
   .then(response => {
     vm.projects = response.data.projects;
   });
 
-  vm.searchForRole = function(){
-    console.log('SEARCHING FOR', vm.searchCriteria);
-  };
+  vm.filteredProjects = [];
 
-  vm.getTeamSizeNRoles = function(requiredTeamMembersObject) {
-    var teamSize = 0;
-    var teamRoles = '';
-    for(var role in requiredTeamMembersObject) {
-      if(requiredTeamMembersObject[role] > 0) {
-        teamSize+= requiredTeamMembersObject[role];
-        if(teamRoles === ''){
-          teamRoles+= role;
-        } else {
-          teamRoles+=', '+ role;
+  vm.searchForRole = function(){
+    console.log('BUTTON HAS BEEN CLICKED TO SEARCH FOR', vm.searchCriteria);
+
+    for(var i = 0; i < vm.projects.length; i++){
+      for(var role in vm.projects[i].openTeamMembers) {
+        console.log('CHECKING', vm.projects[i].name, '__TEAMROLES__:', vm.projects[i].openTeamMembers);
+
+        if (role === vm.searchCriteria && vm.projects[i].openTeamMembers[role] > 0) {
+          console.log('MATCH and available');
+          vm.filteredProjects.push(vm.projects[i]);
         }
       }
     }
-    return teamSize + '[' + teamRoles + ']';
   };
-
-
 }
