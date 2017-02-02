@@ -6,6 +6,8 @@ FreelancersShowCtrl.$inject = ['$stateParams', 'Freelancer', '$scope', 'CurrentF
 function FreelancersShowCtrl($stateParams, Freelancer, $scope, CurrentFreelancerService) {
   const vm = this;
 
+  vm.freelancer = CurrentFreelancerService.currentFreelancer.freelancer;
+
   //gets currentFreelancer using CurrentFreelancerService
   vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
 
@@ -18,4 +20,5 @@ function FreelancersShowCtrl($stateParams, Freelancer, $scope, CurrentFreelancer
 
   //intialises (runs) materialize collapsible collection/accordion
   $('.collapsible').collapsible();
+
 }
