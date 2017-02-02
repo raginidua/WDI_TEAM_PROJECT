@@ -14,6 +14,7 @@ projectFactory.$inject = ['API','$resource'];
 function projectFactory(API, $resource) {
   return $resource(`${API}/projects/:id`, { id: '@_id'}, {
     'update': { method: 'PUT'},
-    'query': {method: 'GET', isArray: false}
+    'query': {method: 'GET', isArray: false},
+    'search': { method: 'GET', url: `${API}/projects/search/:searchTerm` }
   });
 }
