@@ -18,4 +18,7 @@ router.route('/:id')
   .put(projects.update)
   .delete(projects.delete);
 
+router.route('/search/:searchTerm')
+  .get(projects.search);
+
 module.exports = router;

@@ -64,3 +64,13 @@ function validatePasswordHash(){
 function validatePassword(password){
   return bcrypt.compareSync(password, this.passwordHash);
 }
+
+freelancerSchema.set('toJSON', {
+  transform: function(doc, ret) {
+    delete ret.passwordHash;
+    delete ret.__v;
+    delete ret.createdAt;
+    delete ret.updatedAt;
+    return ret;
+  }
+});
