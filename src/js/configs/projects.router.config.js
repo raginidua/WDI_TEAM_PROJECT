@@ -43,6 +43,11 @@ function projectsRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/freelancers',
       templateUrl: '/js/views/freelancers/index.html',
       controller: 'FreelancersIndexCtrl as freelancersIndex'
+    })
+    .state('rolesIndex', {
+      url: '/roles',
+      templateUrl: '/js/views/roles/index.html',
+      controller: 'RolesIndexCtrl as roles'
     });
 
   $urlRouterProvider.otherwise('/');

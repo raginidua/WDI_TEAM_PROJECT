@@ -50,6 +50,9 @@
               <span class="new badge" data-badge-caption="" ng-click="projects.acceptApplication(key, id._id)">
                 Accept
               </span>
+              <span class="new badge" data-badge-caption="" ng-click="projects.rejectApplication(key, id._id)">
+                Reject
+              </span>
               {{ key }} : <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a>
             </li>
           </div>
