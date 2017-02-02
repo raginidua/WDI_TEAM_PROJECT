@@ -32,6 +32,8 @@ app.use('/api', expressJWT({ secret: config.secret })
     { url: '/api/freelancers/register', methods: ['POST'] },
     { url: '/api/freelancers/login', methods: ['POST'] },
     { url: '/api/projects', method: ['GET'] },
+    //regex equivalent of api/projects/*
+    //allows logged out users to see projects show page
     { url: /\/api\/projects/i, method: ['GET'] }
   ]
 }));
