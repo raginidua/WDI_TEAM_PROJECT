@@ -1,4 +1,38 @@
+
 <div class="row top">
+  <div class="col s12 m8 offset-m2">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">search</i>Filters
+        </div>
+        <div class="collapsible-body">
+          <div class="row">
+            <div class="col s8">
+              <select ng-model="projectsIndex.searchCriteria">
+                <option ng-repeat="role in projectsIndex.rolesArray" value="{{role}}">{{role}}</option>
+                <option value="All">All</option>
+              </select>
+            </div>
+            <div class="col s4">
+              <a class="waves-effect waves-light btn add-member" ng-click="projectsIndex.searchForRole()">Search</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row" ng-if="projectsIndex.projects.length === 0">
+  <div class="col s12 m8 offset-m2">
+    <div class="card-panel teal">
+      <span class="white-text">
+        No Projects to show.
+      </span>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="col s12 m4 l3" ng-repeat="project in projectsIndex.projects">
     <div class="card" ui-sref="projectsShow({ id: project._id })">
       <div class="card-image">
