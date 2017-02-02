@@ -40,4 +40,14 @@ function RolesIndexCtrl($http, rolesArray) {
       vm.filteredProjects = [];
     });
   };
+
+  vm.getTeamSize = function(requiredTeamMembersObject) {
+    var teamSize = 0;
+    for(var role in requiredTeamMembersObject) {
+      if(requiredTeamMembersObject[role] > 0) {
+        teamSize+= requiredTeamMembersObject[role];
+      }
+    }
+    return teamSize;
+  };
 }
