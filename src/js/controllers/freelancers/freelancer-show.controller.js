@@ -7,12 +7,15 @@ function FreelancersShowCtrl($stateParams, Freelancer, $scope, CurrentFreelancer
   const vm = this;
 
   //gets currentFreelancer using CurrentFreelancerService
-  vm.freelancer = CurrentFreelancerService.currentFreelancer.freelancer;
+  vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
 
-  //sets profile id so can be compared to currentFreelancer ID
-  vm.profileId = $stateParams.id;
+  Freelancer
+  .get({id: $stateParams.id})
+  .$promise
+  .then(response => {
+    vm.freelancer = response.freelancer;
+  });
 
   //intialises (runs) materialize collapsible collection/accordion
   $('.collapsible').collapsible();
-
 }

@@ -39,13 +39,15 @@
           <li class="collection-header">
             <h5>Pending Applications</h5>
           </li>
+          <li class="collection-item" ng-if="projectsEdit.pendingApplicantCount(projectsEdit.project.waitingTeamMembers) === 0"> No pending applications roles </li>
+
           <div ng-repeat="(key, value) in projectsEdit.project.waitingTeamMembers track by $index" ng-if="value.length !== 0">
             <li class="collection-item" ng-repeat="id in value track by $index">
-              <span class="new badge" data-badge-caption="" ng-click="projectsEdit.rejectApplication(key, id._id)">
-                Reject
-              </span>
               <span class="new badge" data-badge-caption="" ng-click="projectsEdit.acceptApplication(key, id._id)">
                 Accept
+              </span>
+              <span class="new badge" data-badge-caption="" ng-click="projectsEdit.rejectApplication(key, id._id)">
+                Reject
               </span>
               {{ key }} : <a ui-sref="freelancersShow({id: id._id})"> {{ id.firstName }} {{ id.lastName }} </a>
             </li>
@@ -62,8 +64,13 @@
           <li class="collection-header">
             <h5>Filled Positions</h5>
           </li>
+          <li class="collection-item" ng-if="projectsEdit.pendingApplicantCount(projectsEdit.project.waitingTeamMembers) === 0"> No pending applications roles </li>
+
           <li class="collection-item" ng-if="projectsEdit.filledPositionCount(projectsEdit.project.liveTeamMembers) === 0"> No filled roles yet </li>
-          <li class="collection-item" ng-repeat="(key, value) in projectsEdit.project.liveTeamMembers track by $index" ng-if="value.length !== 0"><span ng-repeat="id in value track by $index">{{ key }}: {{ id.firstName }} {{ id.lastName }} </span></li>
+
+          <div ng-repeat="(key, value) in projectsEdit.project.liveTeamMembers track by $index" ng-if="value.length !== 0">
+            <li class="collection-item" ng-repeat="id in value track by $index">{{ key }}: {{ id.firstName }} {{ id.lastName }} </li>
+          </div>
         </ul>
       </div>
     </div>

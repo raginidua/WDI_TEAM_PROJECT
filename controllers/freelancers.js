@@ -28,14 +28,6 @@ function freelancersShow(req,res) {
   });
 }
 
-// Project
-// .find({ })
-// .find(query)
-// .populate('activeTeamMembers', 'email')
-// .populate('pendingTeamMembers', 'email')
-// .exec((err, projects) => {
-
-
 
 //when freelancer update function used freelancer id taken from req parameters
 //and updated document taken from req body
