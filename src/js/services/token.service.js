@@ -2,6 +2,8 @@ angular
   .module('teamBuilder')
   .service('TokenService', TokenService);
 
+//short hand for getting, setting, decoding and
+//removing token from browsers localStorage
 TokenService.$inject = ['$window', 'jwtHelper'];
 function TokenService ($window, jwtHelper){
   const self = this;
