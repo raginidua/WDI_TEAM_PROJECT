@@ -25,6 +25,7 @@ function ProjectsIndexCtrl(Project, TeamSizeService, rolesArray) {
 
   //filtering logic
   vm.searchForRole = function(){
+    vm.searchTerm = '';
     Project
     .query()
     .$promise
@@ -53,11 +54,11 @@ function ProjectsIndexCtrl(Project, TeamSizeService, rolesArray) {
   };
 
   vm.searchByName = function() {
+    vm.searchCriteria = 'All';
     Project
     .search({searchTerm: vm.searchTerm})
     .$promise
     .then(response => {
-      console.log(response);
       vm.projects = response.projects;
     });
   };
