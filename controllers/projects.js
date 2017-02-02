@@ -184,10 +184,27 @@ function projectsDelete(req, res) {
   });
 }
 
+function projectsSearch(req, res){
+  var regex = new RegExp(req.params.searchTerm, 'i');
+  Project
+  .find({name: regex}, (err, projects) => {
+    if (err) return res.status(500).json({
+      message: 'something went wrong',
+      err: err
+    });
+    if (!projects) return res.status(404).json({message: 'no projects found'});
+    return res.status(200).json({
+      message: 'all the projects',
+      projects: projects
+    });
+  });
+}
+
 module.exports = {
   index: projectsIndex,
   create: projectsCreate,
   show: projectsShow,
   update: projectsUpdate,
-  delete: projectsDelete
+  delete: projectsDelete,
+  search: projectsSearch
 };

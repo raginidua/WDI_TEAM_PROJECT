@@ -2,8 +2,8 @@ angular
 .module('teamBuilder')
 .controller('ProjectsIndexCtrl', ProjectsIndexCtrl);
 
-ProjectsIndexCtrl.$inject = ['$http', 'Project', 'TeamSizeService', 'rolesArray'];
-function ProjectsIndexCtrl($http, Project, TeamSizeService, rolesArray) {
+ProjectsIndexCtrl.$inject = ['Project', 'TeamSizeService', 'rolesArray'];
+function ProjectsIndexCtrl(Project, TeamSizeService, rolesArray) {
   const vm      = this;
   vm.rolesArray = rolesArray;
   vm.filteredProjects = [];
@@ -51,5 +51,16 @@ function ProjectsIndexCtrl($http, Project, TeamSizeService, rolesArray) {
       }
     });
   };
+
+  vm.searchByName = function() {
+    Project
+    .search({searchTerm: vm.searchTerm})
+    .$promise
+    .then(response => {
+      console.log(response);
+      vm.projects = response.projects;
+    });
+  };
+
 
 }

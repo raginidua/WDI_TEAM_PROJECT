@@ -8,13 +8,26 @@
         </div>
         <div class="collapsible-body">
           <div class="row">
-            <div class="col s8">
+            <form class="col s12 m8">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="name" type="text" class="validate" ng-model="projectsIndex.searchTerm">
+                  <label for="email">Project Name</label>
+                </div>
+              </div>
+            </form>
+            <div class="col s12 m4">
+              <a class="waves-effect waves-light btn add-member" ng-click="projectsIndex.searchByName()">Search</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m8">
               <select ng-model="projectsIndex.searchCriteria">
                 <option ng-repeat="role in projectsIndex.rolesArray" value="{{role}}">{{role}}</option>
                 <option value="All">All</option>
               </select>
             </div>
-            <div class="col s4">
+            <div class="col s12 m4">
               <a class="waves-effect waves-light btn add-member" ng-click="projectsIndex.searchForRole()">Search</a>
             </div>
           </div>
