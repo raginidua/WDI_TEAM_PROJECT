@@ -17,7 +17,7 @@
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" />team:up<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
+        <a ui-sref="home" class="brand-logo"><img src="images/logo.jpg" /> team:up<span ng-if="main.freelancer.firstName"> Hi {{main.freelancer.firstName}}</span></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a ui-sref="freelancersLogin" ng-hide="main.freelancer.firstName">Login</a></li>
@@ -51,10 +51,62 @@
         <div class="col l4 offset-l2 s12">
           <!-- <h5 class="white-text">Links</h5> -->
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">The Team</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Contact us</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
+            <li><a class="grey-text text-lighten-3" href="#modal1">More About Us</a>
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>More About Us:</h4>
+                  <p>We are students at the London based General Assembly and its seeeek!</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><b>Close</b></a>
+                </div>
+              </div>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#modal2">The Team</a>
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h4>The Team:</h4>
+                  <h5><b>Ali Malloy</b></h5>
+                  <p>Co-lead web designer and back-end developer</p>
+                  <h5><b>Ragini Dua</b></h5>
+                  <p>Co-lead web designer and back-end develper</p>
+                  <h5><b>Davinder Kaur</b></h5>
+                  <p>Full stack developer</p>
+                  <h5><b>Jack Mathews</b></h5>
+                  <p>Full stack developer</p>
+                  <h5><b>Richard Hayim</b></h5>
+                  <p>Co-lead web designer, Project manager, CEO and CFO.- BOSS-</p>
+                 </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><b>Close</b></a>
+                </div>
+              </div>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#modal3">Contact Us</a>
+              <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <h4>Contact Us:</h4>
+                  <p>Telephone: +44 7871 201724</p>
+                  <p>Email: jackmathews@gmail.com</p>
+                  <p>Address: Soon to find out where</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><b>Close</b></a>
+                </div>
+              </div>
+            </li>
+            <!-- <li><a class="grey-text text-lighten-3" href="#!">Privacy Policy</a></li> -->
+            <li><a class="grey-text text-lighten-3" href="#modal4">Privacy Policy</a>
+              <div id="modal4" class="modal">
+                <div class="modal-content">
+                  <h4>Privacy Policy:</h4>
+                  <p>team:up's mission is to connect the world’s professionals to allow them to be more productive and successful. Our registered users (“Members”) share their professional identities, engage with their network, exchange knowledge and professional insights, post and view relevant content, and find business and career opportunities. Content on some of our services is also visible to unregistered viewers (“Visitors”). We believe that our services allow our Members to effectively compete and achieve their full career potential. The cornerstone of our business is to focus on our Members first.</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><b>Close</b></a>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
