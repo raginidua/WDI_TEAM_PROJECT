@@ -26,14 +26,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/', express.static('public'));
 app.use('/', express.static('bower_components'));
-// app.use('/api', expressJWT({ secret: config.secret })
-// .unless({
-//   path: [
-//     { url: '/api/freelancers/register', methods: ['POST'] },
-//     { url: '/api/freelancers/login', methods: ['POST'] },
-//     { url: '/api/projects', method: ['GET'] }
-//   ]
-// }));
+app.use('/api', expressJWT({ secret: config.secret })
+.unless({
+  path: [
+    { url: '/api/freelancers/register', methods: ['POST'] },
+    { url: '/api/freelancers/login', methods: ['POST'] },
+    { url: '/api/projects', method: ['GET'] },
+    { url: /\/api\/projects/i, method: ['GET'] }
+  ]
+}));
 
 app.use(jwtErrorHandler);
 
