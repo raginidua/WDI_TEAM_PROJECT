@@ -7,8 +7,8 @@ angular
 .module('teamBuilder', [
   'ui.router',
   'ngResource',
-  'angular-jwt'
-  // 'duScroll'
+  'angular-jwt',
+  'duScroll'
   // 'ngAnimate'
 ]);
 
