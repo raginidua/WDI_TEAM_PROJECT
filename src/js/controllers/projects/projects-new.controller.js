@@ -42,10 +42,7 @@ function ProjectsNewCtrl($state, Project, Freelancer, rolesArray, CurrentFreelan
     vm.newProject.teamMembers[vm.newProject.memberToAdd] += 1;
   };
 
-  //uses teamMembers object to set requiredTeamMembers and
-  //openTeamMembers to be saved to database.
-  vm.newProject.requiredTeamMembers = vm.newProject.teamMembers;
-  vm.newProject.openTeamMembers     = vm.newProject.teamMembers;
+
 
   vm.createProject = function() {
     //logic to create array with required length
@@ -56,6 +53,10 @@ function ProjectsNewCtrl($state, Project, Freelancer, rolesArray, CurrentFreelan
       const array = [];
       object[role] = array;
     }
+    //uses teamMembers object to set requiredTeamMembers and
+    //openTeamMembers to be saved to database.
+    vm.newProject.requiredTeamMembers = vm.newProject.teamMembers;
+    vm.newProject.openTeamMembers     = vm.newProject.teamMembers;
     //uses the above to popolate waitingTeamMembers and
     //liveTeamMembers to be saved to database
     vm.newProject.waitingTeamMembers  = object;
