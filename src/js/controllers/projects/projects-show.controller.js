@@ -42,6 +42,8 @@ function ProjectsShowCtrl($stateParams, Project, Freelancer, CurrentFreelancerSe
   };
 
   vm.freelancerApply = function($event, role) {
+    //if button disabled do nothing
+    if ($event.toElement.disabled) return;
     //add freelancer id to project waitingTeamMembers
     vm.project.waitingTeamMembers[role].push(vm.currentFreelancer._id);
 
