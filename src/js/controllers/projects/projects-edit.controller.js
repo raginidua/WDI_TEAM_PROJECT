@@ -12,6 +12,7 @@ function ProjectsEditCtrl($http, $state, $stateParams, Project, Freelancer, $sco
   .$promise
   .then(response => {
     vm.project = response.project;
+    console.log(vm.project);
   });
 
   vm.acceptApplication =  acceptApplication;
