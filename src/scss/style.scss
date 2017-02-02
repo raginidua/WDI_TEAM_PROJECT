@@ -74,7 +74,7 @@ footer.page-footer {
 }
 
 .Box {
-  height: 100vh;
+  height: calc(100vh - 144px);
   text-align: center;
   margin: 0 auto;
   padding: 0;
