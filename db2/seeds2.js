@@ -15,7 +15,8 @@ const f1 = new Freelancer({
   github: 'MissDavinderKaur',
   email: 'dkaur1@hotmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f1.save((err, user) => {
   if (err) return console.log(err);
@@ -28,7 +29,8 @@ const f2 = new Freelancer({
   github: 'raginidua',
   email: 'raginidua1@gmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f2.save((err, user) => {
   if (err) return console.log(err);
@@ -41,7 +43,8 @@ const f3 = new Freelancer({
   github: 'alibongo',
   email: 'oioimolloy@gmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 
 });
 f3.save((err, user) => {
@@ -55,7 +58,8 @@ const f4 = new Freelancer({
   github: 'jackhkmathews',
   email: 'jackhkmatthews@gmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f4.save((err, user) => {
   if (err) return console.log(err);
@@ -68,7 +72,8 @@ const f5 = new Freelancer({
   github: 'RICHARDAAH',
   email: 'richardhayim@hotmail.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f5.save((err, user) => {
   if (err) return console.log(err);
@@ -81,7 +86,8 @@ const f6 = new Freelancer({
   github: 'hillaryClinton',
   email: 'hillary@beenhacked.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f6.save((err, user) => {
   if (err) return console.log(err);
@@ -94,7 +100,8 @@ const f7 = new Freelancer({
   github: 'billMurray',
   email: 'bill@Ghostb.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f7.save((err, user) => {
   if (err) return console.log(err);
@@ -107,7 +114,8 @@ const f8 = new Freelancer({
   github: 'elonMusk',
   email: 'elon@tesla.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f8.save((err, user) => {
   if (err) return console.log(err);
@@ -120,7 +128,8 @@ const f9 = new Freelancer({
   github: 'colNeedham',
   email: 'col@imdb.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f9.save((err, user) => {
   if (err) return console.log(err);
@@ -133,7 +142,8 @@ const f10 = new Freelancer({
   github: 'noelGallagher',
   email: 'noel@hateliam.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f10.save((err, user) => {
   if (err) return console.log(err);
@@ -146,7 +156,8 @@ const f11 = new Freelancer({
   github: 'liamGallagher',
   email: 'liam@hatenoel.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f11.save((err, user) => {
   if (err) return console.log(err);
@@ -160,7 +171,8 @@ const f12 = new Freelancer({
   github: 'edSaverin',
   email: 'eduardo@hatemark.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f12.save((err, user) => {
   if (err) return console.log(err);
@@ -174,7 +186,8 @@ const f13 = new Freelancer({
   github: 'markyZ',
   email: 'mark@forgiveforgetEd.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f13.save((err, user) => {
   if (err) return console.log(err);
@@ -188,7 +201,8 @@ const f14 = new Freelancer({
   github: 'amberHeard',
   email: 'amber@amber.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'https://s-media-cache-ak0.pinimg.com/originals/ca/04/f5/ca04f5cbbf14c8e5a07eab9bba31808e.jpg'
 });
 f14.save((err, user) => {
   if (err) return console.log(err);
@@ -201,12 +215,14 @@ const f15 = new Freelancer({
   github: 'jDepp',
   email: 'johnny@johnny.com',
   password: 'password',
-  passwordConfirmation: 'password'
+  passwordConfirmation: 'password',
+  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
 });
 f15.save((err, user) => {
   if (err) return console.log(err);
   console.log(`${user.firstName} was saved`);
 });
+
 
 const p1 = new Project({
   name: 'Brand new Game App for GA',
@@ -246,10 +262,10 @@ const p1 = new Project({
     'AndroidDevelopers': []
   },
   liveTeamMembers: {
-    'UIDesigners': [f2],
-    'UXDesigners': [f3],
-    'FrontendDevelopers': [f4],
-    'BackendDevelopers': [f5],
+    'UIDesigners': [f2._id],
+    'UXDesigners': [f3._id],
+    'FrontendDevelopers': [f4._id],
+    'BackendDevelopers': [f5._id],
     'DataScientists': [],
     'Marketers': [],
     'ProjectManagers': [],
@@ -258,354 +274,361 @@ const p1 = new Project({
   },
 
   budget: 10000,
-  timeframe: '3'
+  timeframe: '3',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
 });
 p1.save((err, project) => {
   if (err) return console.log(err);
   console.log(`${project.name} was saved`);
 });
 
-// const p2 = new Project({
-//   name: 'A really useful mobile app',
-//   description: 'An app that will make the user\'s life so easy',
-//   leadFreelancer: f2._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [f15._id, f14._id],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f13._id, f12._id],
-//     'BackendDevelopers': [f11._id, f10._id, f9._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [f8._id, f7._id],
-//     'AndroidDevelopers': [f6._id, f5._id]
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 15000,
-//   timeframe: '6'
-// });
-// p2.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p3 = new Project({
-//   name: 'Map my life',
-//   description: 'Build and design a map based application that will track every aspect of a user\'s life',
-//   leadFreelancer: f3._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 1,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f12._id, f14._id],
-//     'BackendDevelopers': [f13._id, f15._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f8._id],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f6._id],
-//     'BackendDevelopers': [f7._id],
-//     'DataScientists': [],
-//     'Marketers': [f4._id],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 15000,
-//   timeframe: '6'
-// });
-// p3.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p4 = new Project({
-//   name: 'Highly secretive project',
-//   description: 'Lucrative money making project for educational organisation',
-//   leadFreelancer: f4._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 3,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 1,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f3._id, f1._id, f6._id, f13._id],
-//     'BackendDevelopers': [f2._id, f9._id, f12._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f11._id],
-//     'BackendDevelopers': [f8._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [f7._id],
-//     'iOSDevelopers': [f5._id],
-//     'AndroidDevelopers': [f10._id]
-//   },
-//
-//   budget: 25000,
-//   timeframe: '8'
-// });
-// p4.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p5 = new Project({
-//   name: 'The clueless wardrobe',
-//   description: 'App to dress me every morning!',
-//   leadFreelancer: f2._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 1,
-//     'AndroidDevelopers': 1
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 1
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [f9._id, f11._id, f7._id, f8._id],
-//     'BackendDevelopers': [f3._id, f5._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': [f4]
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f13._id],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [f10._id],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 15000,
-//   timeframe: '5'
-// });
-// p5.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p6 = new Project({
-//   name: 'My great new game app',
-//   description: 'A whack-a-mole style game with bright colours and sound',
-//   leadFreelancer: f2._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 1,
-//     'FrontendDevelopers': 1,
-//     'BackendDevelopers': 1,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 0,
-//     'BackendDevelopers': 0,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f12._id],
-//     'UXDesigners': [f13._id],
-//     'FrontendDevelopers': [f14._id],
-//     'BackendDevelopers': [f15._id],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 10000,
-//   timeframe: '3'
-// });
-// p6.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
-//
-// const p7 = new Project({
-//   name: 'Memory game',
-//   description: 'Memory game similar to Peak. But better.',
-//   leadFreelancer: f3._id,
-//   requiredTeamMembers: {
-//     'UIDesigners': 1,
-//     'UXDesigners': 1,
-//     'FrontendDevelopers': 2,
-//     'BackendDevelopers': 2,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   openTeamMembers: {
-//     'UIDesigners': 0,
-//     'UXDesigners': 0,
-//     'FrontendDevelopers': 0,
-//     'BackendDevelopers': 0,
-//     'DataScientists': 0,
-//     'Marketers': 0,
-//     'ProjectManagers': 0,
-//     'iOSDevelopers': 0,
-//     'AndroidDevelopers': 0
-//   },
-//   waitingTeamMembers: {
-//     'UIDesigners': [],
-//     'UXDesigners': [],
-//     'FrontendDevelopers': [],
-//     'BackendDevelopers': [],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//   liveTeamMembers: {
-//     'UIDesigners': [f12._id],
-//     'UXDesigners': [f3._id],
-//     'FrontendDevelopers': [f7._id, f10._id ],
-//     'BackendDevelopers': [f14._id, f8._id ],
-//     'DataScientists': [],
-//     'Marketers': [],
-//     'ProjectManagers': [],
-//     'iOSDevelopers': [],
-//     'AndroidDevelopers': []
-//   },
-//
-//   budget: 10000,
-//   timeframe: '3'
-// });
-// p7.save((err, project) => {
-//   if (err) return console.log(err);
-//   console.log(`${project.name} was saved`);
-// });
+const p2 = new Project({
+  name: 'A really useful mobile app',
+  description: 'An app that will make the user\'s life so easy',
+  leadFreelancer: f2._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  openTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [f15._id, f14._id],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f13._id, f12._id],
+    'BackendDevelopers': [f11._id, f10._id, f9._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [f8._id, f7._id],
+    'AndroidDevelopers': [f6._id, f5._id]
+  },
+  liveTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 15000,
+  timeframe: '6',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p2.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p3 = new Project({
+  name: 'Map my life',
+  description: 'Build and design a map based application that will track every aspect of a user\'s life',
+  leadFreelancer: f3._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 1,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f12._id, f14._id],
+    'BackendDevelopers': [f13._id, f15._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f8._id],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f6._id],
+    'BackendDevelopers': [f7._id],
+    'DataScientists': [],
+    'Marketers': [f4._id],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 15000,
+  timeframe: '6',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p3.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p4 = new Project({
+  name: 'Highly secretive project',
+  description: 'Lucrative money making project for educational organisation',
+  leadFreelancer: f4._id,
+  requiredTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 3,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 1,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f3._id, f1._id, f6._id, f13._id],
+    'BackendDevelopers': [f2._id, f9._id, f12._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f11._id],
+    'BackendDevelopers': [f8._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [f7._id],
+    'iOSDevelopers': [f5._id],
+    'AndroidDevelopers': [f10._id]
+  },
+
+  budget: 25000,
+  timeframe: '8',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p4.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p5 = new Project({
+  name: 'The clueless wardrobe',
+  description: 'App to dress me every morning!',
+  leadFreelancer: f2._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 1,
+    'AndroidDevelopers': 1
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 1
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [f9._id, f11._id, f7._id, f8._id],
+    'BackendDevelopers': [f3._id, f5._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': [f4]
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f13._id],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [f10._id],
+    'AndroidDevelopers': []
+  },
+
+  budget: 15000,
+  timeframe: '5',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p5.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p6 = new Project({
+  name: 'My great new game app',
+  description: 'A whack-a-mole style game with bright colours and sound',
+  leadFreelancer: f2._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 1,
+    'FrontendDevelopers': 1,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 0,
+    'BackendDevelopers': 0,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f12._id],
+    'UXDesigners': [f13._id],
+    'FrontendDevelopers': [f14._id],
+    'BackendDevelopers': [f15._id],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 10000,
+  timeframe: '3',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p6.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p7 = new Project({
+  name: 'Memory game',
+  description: 'Memory game similar to Peak. But better.',
+  leadFreelancer: f3._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 1,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 0,
+    'BackendDevelopers': 0,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [f12._id],
+    'UXDesigners': [f3._id],
+    'FrontendDevelopers': [f7._id, f10._id ],
+    'BackendDevelopers': [f14._id, f8._id ],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 10000,
+  timeframe: '3',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p7.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
 
 
 
@@ -618,11 +641,11 @@ p1.save((err, project) => {
 
 
 //F1 fully filled project
-f1.myProjects.push(p1);
-f2.projects.push(p1);
-f3.projects.push(p1);
-f4.projects.push(p1);
-f5.projects.push(p1);
+f1.myProjects.push(p1._id);
+f2.projects.push(p1._id);
+f3.projects.push(p1._id);
+f4.projects.push(p1._id);
+f5.projects.push(p1._id);
 
 //F2 fully open with waiting project
 f2.myProjects.push(p2._id);

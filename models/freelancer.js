@@ -8,6 +8,7 @@ const freelancerSchema = new mongoose.Schema({
   linkedIn: { type: String, trim: true },
   personalWebsite: { type: String, trim: true },
   email: { type: String, trim: true, required: true},
+  profilePicture: { type: String, trime: true, required: true},
   passwordHash: { type: String, required: true},
   projects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }],
   myProjects: [{ type: mongoose.Schema.ObjectId, ref: 'Project' }],

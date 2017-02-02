@@ -1,29 +1,33 @@
-<div class="row">
-  <h1>{{ project.name }}</h1>
-  <div class="col s12">
-    <div class="card" ng-repeat="project in projects.projects">
+<div class="row top">
+  <div class="col s12 m4 l3" ng-repeat="project in projects.projects">
+    <div class="card" ui-sref="projectsShow({ id: project._id })">
       <div class="card-image">
         <!-- NEEDS AN NG IF AROUND IT <a ui-sref="projectsApply"> -->
-        <img src="http://www.fillmurray.com/100/100">
+        <img ng-if="!project.picture" src="http://www.fillmurray.com/200/200">
+        <img ng-if="project.picture" src="{{project.picture}}">
         <!-- </a> -->
-        <span class="card-title" ui-sref="projectsShow({ id: project._id })">{{ project.name }}</span>
+        <span class="card-title">{{ project.name }}</span>
       </div>
       <div class="card-content">
-        <ul class="collection with-header">
-          <li class="collection-header"> Budget</li>
-          <li class="collection-item">{{ project.budget }}</li>
-        </ul>
-      </div>
-      <div class="card-content">
-        <ul class="collection with-header">
-          <li class="collection-header"> Time Frame</li>
-          <li class="collection-item">{{ project.timeframe }}</li>
-        </ul>
-      </div>
-      <div class="card-content">
-        <ul class="collection with-header">
-          <li class="collection-header"> Team Size </li>
-          <li class="collection-item" ng-init="temp_sizeNroles = projects.getTeamSizeNRoles(project.requiredTeamMembers)">{{ temp_sizeNroles }} </li>
+        <ul class="collection">
+          <li class="collection-item">
+            <span class="new badge" data-badge-caption="">
+              £{{ project.budget }}
+            </span>
+            Budget
+          </li>
+          <li class="collection-item">
+            <span class="new badge" data-badge-caption="">
+              {{ project.timeframe }}w
+            </span>
+            Time Frame
+          </li>
+          <li class="collection-item">
+            <span class="new badge" data-badge-caption="">
+              {{ projects.getTeamSize(project.requiredTeamMembers) }}
+            </span>
+            Team Size
+          </li>
         </ul>
       </div>
     </div>
