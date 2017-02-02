@@ -85,7 +85,7 @@ const f5 = new Freelancer({
   email: 'richardhayim@hotmail.com',
   password: 'password',
   passwordConfirmation: 'password',
-  profilePicture: 'http://68.media.tumblr.com/f57865c82c87e9aacb1f54c1da0a5fc0/tumblr_inline_mrg2zjX7Si1qz4rgp.png'
+  profilePicture: 'images/richard.jpg'
 });
 f5.save((err, user) => {
   if (err) return console.log(err);
@@ -306,7 +306,7 @@ const p1 = new Project({
   },
   budget: 10000,
   timeframe: '3',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p1.save((err, project) => {
   if (err) return console.log(err);
@@ -364,7 +364,7 @@ const p2 = new Project({
 
   budget: 15000,
   timeframe: '6',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p2.save((err, project) => {
   if (err) return console.log(err);
@@ -422,7 +422,7 @@ const p3 = new Project({
 
   budget: 15000,
   timeframe: '6',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p3.save((err, project) => {
   if (err) return console.log(err);
@@ -480,7 +480,7 @@ const p4 = new Project({
 
   budget: 25000,
   timeframe: '8',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p4.save((err, project) => {
   if (err) return console.log(err);
@@ -538,7 +538,7 @@ const p5 = new Project({
 
   budget: 15000,
   timeframe: '5',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p5.save((err, project) => {
   if (err) return console.log(err);
@@ -596,7 +596,7 @@ const p6 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p6.save((err, project) => {
   if (err) return console.log(err);
@@ -654,7 +654,7 @@ const p7 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p7.save((err, project) => {
   if (err) return console.log(err);
@@ -712,7 +712,7 @@ const p8 = new Project({
 
   budget: 100000,
   timeframe: '5',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p8.save((err, project) => {
   if (err) return console.log(err);
@@ -770,7 +770,7 @@ const p9 = new Project({
 
   budget: 100000,
   timeframe: '5',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p9.save((err, project) => {
   if (err) return console.log(err);
@@ -828,7 +828,7 @@ const p10 = new Project({
 
   budget: 8000,
   timeframe: '4',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p10.save((err, project) => {
   if (err) return console.log(err);
@@ -886,7 +886,7 @@ const p11 = new Project({
 
   budget: 10000,
   timeframe: '30',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p11.save((err, project) => {
   if (err) return console.log(err);
@@ -944,7 +944,7 @@ const p12 = new Project({
 
   budget: 10000,
   timeframe: '5',
-  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+  picture: 'images/background.png'
 });
 p12.save((err, project) => {
   if (err) return console.log(err);
