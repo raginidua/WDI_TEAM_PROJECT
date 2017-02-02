@@ -11,5 +11,11 @@ function HomeCtrl($location, $anchorScroll, $rootScope, $document){
     $document.scrollToElement(bottom, offset, 1000);
   };
 
+  vm.goToTop = function(){
+    var offset = 10;
+    var top = angular.element(document.getElementById('top'));
+    $document.scrollToElement(top, offset, 1000);
+  };
+
   $('.parallax').parallax();
 }
