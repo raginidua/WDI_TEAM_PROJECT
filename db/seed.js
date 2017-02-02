@@ -631,6 +631,122 @@ p7.save((err, project) => {
   console.log(`${project.name} was saved`);
 });
 
+const p11 = new Project({
+  name: 'F**CK Facebook!',
+  description: 'As you all know from my night journals, I HATE Mark Zuckerberg! This app is desgined to bring everyone together who\'s on the same boat.',
+  leadFreelancer: f12._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 1,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 1,
+    'DataScientists': 0,
+    'Marketers': 1,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 0,
+    'BackendDevelopers': 0,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 0,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 10000,
+  timeframe: '30',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p11.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
+const p12 = new Project({
+  name: 'Email protect.',
+  description: 'This is a project to not only help those who can be exposed to leaving nuclear codes on a mantle piece, but to maintain ones privacy to the highest levels of trust and security.',
+  leadFreelancer: f6._id,
+  requiredTeamMembers: {
+    'UIDesigners': 1,
+    'UXDesigners': 1,
+    'FrontendDevelopers': 2,
+    'BackendDevelopers': 2,
+    'DataScientists': 0,
+    'Marketers': 3,
+    'ProjectManagers': 1,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  openTeamMembers: {
+    'UIDesigners': 0,
+    'UXDesigners': 0,
+    'FrontendDevelopers': 0,
+    'BackendDevelopers': 0,
+    'DataScientists': 0,
+    'Marketers': 0,
+    'ProjectManagers': 1,
+    'iOSDevelopers': 0,
+    'AndroidDevelopers': 0
+  },
+  waitingTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+  liveTeamMembers: {
+    'UIDesigners': [],
+    'UXDesigners': [],
+    'FrontendDevelopers': [],
+    'BackendDevelopers': [],
+    'DataScientists': [],
+    'Marketers': [],
+    'ProjectManagers': [f7._id],
+    'iOSDevelopers': [],
+    'AndroidDevelopers': []
+  },
+
+  budget: 10000,
+  timeframe: '5',
+  picture: 'http://www.curriculumresources.net/wp-content/uploads/2016/03/colorful-lightbulb.jpg'
+});
+p12.save((err, project) => {
+  if (err) return console.log(err);
+  console.log(`${project.name} was saved`);
+});
+
 //can't create a project without a freelancer
 //once project created reference must be pushed back into
 //the relevant freelancers documents (e.g into pending applications,
@@ -709,3 +825,10 @@ f7.projects.push(p7._id);
 f10.projects.push(p7._id);
 f14.projects.push(p7._id);
 f8.projects.push(p7._id);
+
+//Project 11 requested but no replies
+f12.myProjects.push(p11._id);
+
+//project 12 one project manager
+f6.myProjects.push(p11._id);
+f7.projects.push(p12._id);
