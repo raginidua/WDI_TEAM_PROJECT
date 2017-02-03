@@ -60,22 +60,6 @@ f3.save((err, user) => {
   console.log(`${user.firstName} was saved`);
 });
 
-const f4 = new Freelancer({
-  firstName: 'Jack',
-  lastName: 'Mathews',
-  github: 'jackhkmathews',
-  linkedIn: 'jack',
-  personalWebsite: 'www.jack.com',
-  email: 'jackhkmatthews@gmail.com',
-  password: 'password',
-  passwordConfirmation: 'password',
-  profilePicture: 'images/jack.jpg'
-});
-f4.save((err, user) => {
-  if (err) return console.log(err);
-  console.log(`${user.firstName} was saved`);
-});
-
 const f5 = new Freelancer({
   firstName: 'Richard',
   lastName: 'Hayim',
@@ -296,7 +280,7 @@ const p1 = new Project({
   liveTeamMembers: {
     'UIDesigners': [f2._id],
     'UXDesigners': [f3._id],
-    'FrontendDevelopers': [f4._id],
+    'FrontendDevelopers': [],
     'BackendDevelopers': [f5._id],
     'DataScientists': [],
     'Marketers': [],
@@ -414,7 +398,7 @@ const p3 = new Project({
     'FrontendDevelopers': [f6._id],
     'BackendDevelopers': [f7._id],
     'DataScientists': [],
-    'Marketers': [f4._id],
+    'Marketers': [],
     'ProjectManagers': [],
     'iOSDevelopers': [],
     'AndroidDevelopers': []
@@ -425,64 +409,6 @@ const p3 = new Project({
   picture: 'https://images.unsplash.com/photo-1446305341947-847fd13db6c4?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop='
 });
 p3.save((err, project) => {
-  if (err) return console.log(err);
-  console.log(`${project.name} was saved`);
-});
-
-const p4 = new Project({
-  name: 'Highly secretive project',
-  description: 'Lucrative money making project for educational organisation',
-  leadFreelancer: f4._id,
-  requiredTeamMembers: {
-    'UIDesigners': 0,
-    'UXDesigners': 0,
-    'FrontendDevelopers': 3,
-    'BackendDevelopers': 2,
-    'DataScientists': 0,
-    'Marketers': 0,
-    'ProjectManagers': 1,
-    'iOSDevelopers': 1,
-    'AndroidDevelopers': 1
-  },
-  openTeamMembers: {
-    'UIDesigners': 0,
-    'UXDesigners': 0,
-    'FrontendDevelopers': 2,
-    'BackendDevelopers': 1,
-    'DataScientists': 0,
-    'Marketers': 0,
-    'ProjectManagers': 0,
-    'iOSDevelopers': 0,
-    'AndroidDevelopers': 0
-  },
-  waitingTeamMembers: {
-    'UIDesigners': [],
-    'UXDesigners': [],
-    'FrontendDevelopers': [f3._id, f1._id, f6._id, f13._id],
-    'BackendDevelopers': [f2._id, f9._id, f12._id],
-    'DataScientists': [],
-    'Marketers': [],
-    'ProjectManagers': [],
-    'iOSDevelopers': [],
-    'AndroidDevelopers': []
-  },
-  liveTeamMembers: {
-    'UIDesigners': [],
-    'UXDesigners': [],
-    'FrontendDevelopers': [f11._id],
-    'BackendDevelopers': [f8._id],
-    'DataScientists': [],
-    'Marketers': [],
-    'ProjectManagers': [f7._id],
-    'iOSDevelopers': [f5._id],
-    'AndroidDevelopers': [f10._id]
-  },
-
-  budget: 25000,
-  timeframe: '8',
-  picture: 'https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=compress,format&fit=crop&w=991&h=720&q=80&cs=tinysrgb&crop='
-});
-p4.save((err, project) => {
   if (err) return console.log(err);
   console.log(`${project.name} was saved`);
 });
@@ -522,7 +448,7 @@ const p5 = new Project({
     'Marketers': [],
     'ProjectManagers': [],
     'iOSDevelopers': [],
-    'AndroidDevelopers': [f4]
+    'AndroidDevelopers': []
   },
   liveTeamMembers: {
     'UIDesigners': [f13._id],
@@ -960,7 +886,6 @@ p12.save((err, project) => {
 f1.myProjects.push(p1._id);
 f2.projects.push(p1._id);
 f3.projects.push(p1._id);
-f4.projects.push(p1._id);
 f5.projects.push(p1._id);
 
 //F2 fully open with waiting project
@@ -979,7 +904,6 @@ f15.pendingProjects.push(p2._id);
 
 //F3 part open: some filled but lots waiting project
 f3.myProjects.push(p3._id);
-f4.projects.push(p3._id);
 f6.projects.push(p3._id);
 f7.projects.push(p3._id);
 f8.projects.push(p3._id);
@@ -987,21 +911,6 @@ f12.pendingProjects.push(p3._id);
 f13.pendingProjects.push(p3._id);
 f14.pendingProjects.push(p3._id);
 f15.pendingProjects.push(p3._id);
-
-//F4 part open: some filled but lots waiting project
-f4.myProjects.push(p4._id);
-f5.projects.push(p4._id);
-f7.projects.push(p4._id);
-f8.projects.push(p4._id);
-f10.projects.push(p4._id);
-f11.projects.push(p4._id);
-f2.pendingProjects.push(p4._id);
-f9.pendingProjects.push(p4._id);
-f12.pendingProjects.push(p4._id);
-f3.pendingProjects.push(p4._id);
-f1.pendingProjects.push(p4._id);
-f6.pendingProjects.push(p4._id);
-f13.pendingProjects.push(p4._id);
 
 //F5 part open: some filled but lots waiting project
 f2.myProjects.push(p5._id);
