@@ -306,7 +306,7 @@ const p1 = new Project({
   },
   budget: 10000,
   timeframe: '3',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1423592707957-3b212afa6733?dpr=2&auto=format&fit=crop&w=767&h=431&q=80&cs=tinysrgb&crop='
 });
 p1.save((err, project) => {
   if (err) return console.log(err);
@@ -422,7 +422,7 @@ const p3 = new Project({
 
   budget: 15000,
   timeframe: '6',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1446305341947-847fd13db6c4?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop='
 });
 p3.save((err, project) => {
   if (err) return console.log(err);
@@ -480,7 +480,7 @@ const p4 = new Project({
 
   budget: 25000,
   timeframe: '8',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=compress,format&fit=crop&w=991&h=720&q=80&cs=tinysrgb&crop='
 });
 p4.save((err, project) => {
   if (err) return console.log(err);
@@ -538,7 +538,7 @@ const p5 = new Project({
 
   budget: 15000,
   timeframe: '5',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?dpr=2&auto=compress,format&fit=crop&w=991&h=1487&q=80&cs=tinysrgb&crop='
 });
 p5.save((err, project) => {
   if (err) return console.log(err);
@@ -596,7 +596,7 @@ const p6 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1483709898067-9fd28d4da0c4?dpr=2&auto=compress,format&fit=crop&w=991&h=1496&q=80&cs=tinysrgb&crop='
 });
 p6.save((err, project) => {
   if (err) return console.log(err);
@@ -654,7 +654,7 @@ const p7 = new Project({
 
   budget: 10000,
   timeframe: '3',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1485609315582-cfffa02888e8?dpr=2&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop='
 });
 p7.save((err, project) => {
   if (err) return console.log(err);
@@ -712,7 +712,7 @@ const p8 = new Project({
 
   budget: 100000,
   timeframe: '5',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?dpr=2&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop='
 });
 p8.save((err, project) => {
   if (err) return console.log(err);
@@ -770,7 +770,7 @@ const p9 = new Project({
 
   budget: 100000,
   timeframe: '5',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1472461936147-645e2f311a2b?dpr=2&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop='
 });
 p9.save((err, project) => {
   if (err) return console.log(err);
@@ -828,7 +828,7 @@ const p10 = new Project({
 
   budget: 8000,
   timeframe: '4',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1476445704028-a36e0c798192?dpr=2&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop='
 });
 p10.save((err, project) => {
   if (err) return console.log(err);
@@ -886,7 +886,7 @@ const p11 = new Project({
 
   budget: 10000,
   timeframe: '30',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1446669052213-5dcff53f1f3f?dpr=2&auto=compress,format&fit=crop&w=991&h=658&q=80&cs=tinysrgb&crop='
 });
 p11.save((err, project) => {
   if (err) return console.log(err);
@@ -944,7 +944,7 @@ const p12 = new Project({
 
   budget: 10000,
   timeframe: '5',
-  picture: 'images/background.png'
+  picture: 'https://images.unsplash.com/photo-1462212018902-1ca14eec1bb2?dpr=2&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop='
 });
 p12.save((err, project) => {
   if (err) return console.log(err);
