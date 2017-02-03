@@ -7,7 +7,9 @@ function FreelancersShowCtrl($stateParams, Freelancer, $scope, CurrentFreelancer
   const vm = this;
 
   //gets currentFreelancer using CurrentFreelancerService
-  vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
+  if (CurrentFreelancerService.currentFreelancer) {
+    vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
+  }
 
   Freelancer
   .get({id: $stateParams.id})
