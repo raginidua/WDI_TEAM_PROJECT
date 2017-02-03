@@ -2,8 +2,8 @@ angular
 .module('teamBuilder')
 .controller('ProjectsEditCtrl', ProjectsEditCtrl);
 
-ProjectsEditCtrl.$inject = ['$stateParams', 'Project', 'Freelancer', 'CurrentFreelancerService'];
-function ProjectsEditCtrl($stateParams, Project, Freelancer, CurrentFreelancerService) {
+ProjectsEditCtrl.$inject = ['$state', '$stateParams', 'Project', 'Freelancer', 'CurrentFreelancerService'];
+function ProjectsEditCtrl($state, $stateParams, Project, Freelancer, CurrentFreelancerService) {
   const vm = this;
   //gets currentFreelancer using CurrentFreelancerService
   vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
@@ -58,19 +58,29 @@ function ProjectsEditCtrl($stateParams, Project, Freelancer, CurrentFreelancerSe
 
       //update project in the DB
       Project
-      .update({id: $stateParams.id }, vm.project);
+      .update({id: $stateParams.id }, vm.project)
+      .$promise
+      .then(() => {
+        //The Applicant's profile needs to be updated now -
+        //remove the project from the pending
+        //applications array and add to the projectsImIn array
+        const projectIndex = vm.applicant.pendingProjects.indexOf(vm.project._id);
+        vm.applicant.pendingProjects.splice(projectIndex, 1);
+        vm.applicant.projects.push(vm.project._id);
 
-      //The Applicant's profile needs to be updated now -
-      //remove the project from the pending
-      //applications array and add to the projectsImIn array
-      const projectIndex = vm.applicant.pendingProjects.indexOf(vm.project._id);
-      vm.applicant.pendingProjects.splice(projectIndex, 1);
-      vm.applicant.projects.push(vm.project._id);
-
-      //update freelancer in the DB
-      Freelancer
-      .update({id: vm.applicant._id }, vm.applicant);
-
+        //update freelancer in the DB
+        Freelancer
+        .update({id: vm.applicant._id }, vm.applicant)
+        .$promise
+        .then(() => {
+          Project
+          .get({id: $stateParams.id })
+          .$promise
+          .then(response => {
+            vm.project = response.project;
+          });
+        });
+      });
     });
   }
 
@@ -90,16 +100,26 @@ function ProjectsEditCtrl($stateParams, Project, Freelancer, CurrentFreelancerSe
 
       //update project in the DB
       Project
-      .update({id: $stateParams.id }, vm.project);
-
-      //The Applicant's profile needs to be updated now - remove the project from the pending //applications array and add to the projectsI'mIn array
-      const projectIndex = vm.applicant.pendingProjects.indexOf(vm.project._id);
-      vm.applicant.pendingProjects.splice(projectIndex, 1);
-      // vm.applicant.projects.push(vm.project._id);
-      // update freelancer in the DB
-      Freelancer
-      .update({id: vm.applicant._id }, vm.applicant);
-
+      .update({id: $stateParams.id }, vm.project)
+      .$promise
+      .then(() => {
+        //The Applicant's profile needs to be updated now - remove the project from the pending //applications array and add to the projectsI'mIn array
+        const projectIndex = vm.applicant.pendingProjects.indexOf(vm.project._id);
+        vm.applicant.pendingProjects.splice(projectIndex, 1);
+        // vm.applicant.projects.push(vm.project._id);
+        // update freelancer in the DB
+        Freelancer
+        .update({id: vm.applicant._id }, vm.applicant)
+        .$promise
+        .then(() => {
+          Project
+          .get({id: $stateParams.id })
+          .$promise
+          .then(response => {
+            vm.project = response.project;
+          });
+        });
+      });
     });
   }
 }
