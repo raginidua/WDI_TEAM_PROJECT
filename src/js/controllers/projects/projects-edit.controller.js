@@ -34,6 +34,14 @@ function ProjectsEditCtrl($state, $stateParams, Project, Freelancer, CurrentFree
     return count;
   };
 
+  vm.pendingApplicantCount = function(liveTeamMembersObject){
+    var count = 0;
+    for(var role in liveTeamMembersObject) {
+      count += (liveTeamMembersObject[role]).length;
+    }
+    return count;
+  };
+
   vm.acceptApplication =  acceptApplication;
 
   function acceptApplication(role, applicantID ) {
@@ -61,6 +69,13 @@ function ProjectsEditCtrl($state, $stateParams, Project, Freelancer, CurrentFree
       .update({id: $stateParams.id }, vm.project)
       .$promise
       .then(() => {
+        //update page to reflect change
+        // Project
+        // .get({id: $stateParams.id })
+        // .$promise
+        // .then(response => {
+        //   vm.project = response.project;
+        // });
         //The Applicant's profile needs to be updated now -
         //remove the project from the pending
         //applications array and add to the projectsImIn array

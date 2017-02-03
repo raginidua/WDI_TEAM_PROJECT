@@ -6,8 +6,6 @@ FreelancersShowCtrl.$inject = ['$stateParams', 'Freelancer', '$scope', 'CurrentF
 function FreelancersShowCtrl($stateParams, Freelancer, $scope, CurrentFreelancerService) {
   const vm = this;
 
-  vm.freelancer = CurrentFreelancerService.currentFreelancer.freelancer;
-
   //gets currentFreelancer using CurrentFreelancerService
   if (CurrentFreelancerService.currentFreelancer) {
     vm.currentFreelancer = CurrentFreelancerService.currentFreelancer.freelancer;
