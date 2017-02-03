@@ -1,0 +1,76 @@
+<div class="row project-info">
+  <div class="col s12 l8 offset-l2">
+    <div class="row">
+      <div class="col s12 m6">
+        <form>
+          <div class="row">
+            <h4>Project Information</h4>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input id="name" type="text" class="validate" ng-model="projectsNew.newProject.name">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <input id="picture" type="text" class="validate" ng-model="projectsNew.newProject.picture">
+              <label for="picture">Picture URL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="description" type="text" class="validate" ng-model="projectsNew.newProject.description">
+              <label for="description">Description</label>
+            </div>
+          </div>
+          <div class="row">
+            <p class="range-field col s12">
+              <label for="budget">Budget: £{{projectsNew.newProject.budget}}</label>
+              <input step="100" type="range" id="budget" min="0" max="20000" ng-model="projectsNew.newProject.budget"/>
+            </p>
+          </div>
+          <div class="row">
+            <p class="range-field col s12">
+              <label for="timeframe">Timeframe: w{{projectsNew.newProject.timeframe}}</label>
+              <input type="range" id="timeframe" min="0" max="52" ng-model="projectsNew.newProject.timeframe"/>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="col s12 m6">
+        <div class="row">
+          <div class="col s12">
+            <h4>Team Maker</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s8">
+            <select ng-model="projectsNew.newProject.memberToAdd">
+              <option ng-repeat="role in projectsNew.rolesArray" value="{{role}}">{{role}}</option>
+            </select>
+          </div>
+          <div class="col s4">
+            <a class="waves-effect waves-light btn add-member" ng-click="projectsNew.addMember()">Add</a>
+          </div>
+        </div>
+        <div class="row" ng-if="projectsNew.canSubmit">
+          <div class="col s12">
+            <ul class="collection">
+              <li href="#!" class="collection-item" ng-repeat="(role, number) in projectsNew.newProject.teamMembers track by $index" ng-if="number > 0">
+                <span class="new badge" data-badge-caption="Positions">
+                  {{number}}
+                </span>
+                {{role}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn add-member disabled" ng-if="!projectsNew.canSubmit">Submit</a>
+            <a class="waves-effect waves-light btn add-member" ng-click="projectsNew.createProject()" ng-if="projectsNew.canSubmit">Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
