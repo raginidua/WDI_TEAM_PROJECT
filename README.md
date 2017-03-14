@@ -16,6 +16,10 @@ The lead freelancer can post a job, other freelancers can apply for the job and 
 
 We set up 9 different categories for freelancers which they are required to confirm when registering: Back-end Developers, Front-end Developers, Designers, Project Managers etc. 
 
+We created the app based on two major models - Freelancers and Projects.  A freelancer had fields called 'My Projects' (projects they owned), Projects (projects they were members of not as the lead freelancer) and 'Pending projects' (projects they had applied for). 
+
+The projects model had fields including lead freelancer, required team members, open team members, waiting team members and live team members.  In hindsight, it may have been possible to do the models in a more elegant way as each time a project was created, applicants applied and were accepted or rejected, multiple fields had to be simultaneously amended. 
+
 ##How to use the app
 
 **Login/Register**
